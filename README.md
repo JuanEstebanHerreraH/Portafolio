@@ -194,5 +194,3 @@ npx serve .
 - [ ] Subir a GitHub Pages
 
 ---
-
-*Fase 1 — Página Web | Siguiente: Fase 2 — App de Administración (Flutter)*
