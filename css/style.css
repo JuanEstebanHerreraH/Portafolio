@@ -1499,3 +1499,437 @@ body.cursor-click #cursor-dot{transform:translate(-50%,-50%) scale(0.4)}
   width:7px;height:7px;border-radius:50%;flex-shrink:0;
   box-shadow:0 0 5px currentColor;
 }
+
+/* ═══════════════════════════════════════════
+   LIGHT MODE FIXES — Modo blanco (parche completo)
+   ═══════════════════════════════════════════ */
+
+/* ── Header border ── */
+[data-theme="light"] #main-header {
+  border-bottom: 1px solid rgba(0,80,160,.14);
+}
+[data-theme="light"] #main-header::after {
+  box-shadow: 0 0 12px var(--primary), 0 0 24px rgba(0,95,204,.3);
+}
+
+/* ── Logo glow ── */
+[data-theme="light"] .logo::before {
+  background: linear-gradient(135deg, rgba(0,95,204,.07), rgba(255,200,0,.05));
+  border: 1px solid rgba(0,80,160,.16);
+}
+[data-theme="light"] .logo-sym {
+  text-shadow: 0 0 14px rgba(0,95,204,.4);
+}
+
+/* ── Nav chain & dots ── */
+[data-theme="light"] .nav-chain {
+  background: linear-gradient(180deg, var(--primary) 0%, rgba(0,95,204,.2) 100%);
+}
+[data-theme="light"] .nav-item-wrapper.section-active .nav-chain {
+  box-shadow: 0 0 8px rgba(255,200,0,.5);
+}
+[data-theme="light"] .chain-dot {
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+[data-theme="light"] .nav-item-wrapper.section-active .chain-dot {
+  box-shadow: 0 0 16px var(--spark-glow), 0 0 30px var(--spark-glow);
+}
+
+/* ── Nav pills (CORRECCIÓN PRINCIPAL) ── */
+[data-theme="light"] .nav-item {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,80,160,.18);
+  color: var(--text-dim);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+[data-theme="light"] .nav-item:hover {
+  background: rgba(0,95,204,.08);
+  border-color: rgba(0,80,160,.45);
+  color: var(--primary);
+  box-shadow: 0 0 16px rgba(0,95,204,.2), inset 0 0 10px rgba(0,95,204,.05);
+}
+[data-theme="light"] .nav-item-wrapper.section-active .nav-item {
+  background: rgba(255,200,0,.08);
+  border-color: rgba(200,150,0,.35);
+  color: #b8860b;
+}
+
+/* ── Content panels ── */
+[data-theme="light"] .content-panel {
+  box-shadow: 0 12px 48px rgba(0,0,0,.12), 0 2px 8px rgba(0,80,160,.08), inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+/* ── Section title border ── */
+[data-theme="light"] .section-title {
+  border-bottom: 1px solid rgba(0,80,160,.16);
+  text-shadow: 0 0 20px rgba(0,95,204,.2);
+}
+
+/* ── About: role tag ── */
+[data-theme="light"] .about-role-tag {
+  border: 1px solid rgba(0,80,160,.22);
+  background: rgba(0,95,204,.07);
+}
+
+/* ── About: stats row ── */
+[data-theme="light"] .about-stats-row {
+  border: 1px solid rgba(0,80,160,.16);
+  background: rgba(0,95,204,.04);
+}
+[data-theme="light"] .astat-sep {
+  background: rgba(0,80,160,.14);
+}
+[data-theme="light"] .astat-num {
+  text-shadow: 0 0 16px rgba(0,95,204,.25);
+}
+
+/* ── Bento cards ── */
+[data-theme="light"] .bento-bio,
+[data-theme="light"] .bento-stats,
+[data-theme="light"] .bento-cert,
+[data-theme="light"] .bento-block {
+  border: 1px solid rgba(0,80,160,.14);
+  background: rgba(230,235,252,.7);
+}
+
+/* ── Certs table ── */
+[data-theme="light"] .certs-table-head {
+  background: rgba(0,95,204,.06);
+  border-bottom: 1px solid rgba(0,80,160,.14);
+}
+[data-theme="light"] .cert-row:hover {
+  background: rgba(0,95,204,.05);
+}
+
+/* ── Tech / filter pills ── */
+[data-theme="light"] .filter-pill {
+  background: rgba(0,95,204,.06);
+  border: 1px solid rgba(0,80,160,.18);
+  color: var(--text-dim);
+}
+[data-theme="light"] .filter-pill:hover {
+  background: rgba(0,95,204,.10);
+}
+[data-theme="light"] .filter-pill.active {
+  background: rgba(0,95,204,.14);
+  border-color: rgba(0,80,160,.45);
+  color: var(--primary);
+  box-shadow: 0 0 10px rgba(0,95,204,.12);
+}
+
+/* ── Search input ── */
+[data-theme="light"] .section-search {
+  background: rgba(255,255,255,.8);
+  border: 1px solid rgba(0,80,160,.18);
+}
+[data-theme="light"] .section-search:focus {
+  border-color: rgba(0,80,160,.45);
+  box-shadow: 0 0 10px rgba(0,95,204,.15);
+}
+
+/* ── Mobile drawer ── */
+[data-theme="light"] .mobile-nav-item {
+  color: var(--text-dim);
+  border-bottom: 1px solid rgba(0,80,160,.1);
+}
+[data-theme="light"] .mobile-nav-item:hover,
+[data-theme="light"] .mobile-nav-item.section-active {
+  color: var(--primary);
+  background: rgba(0,95,204,.07);
+}
+
+/* ── Close button ── */
+[data-theme="light"] .close-section {
+  border: 1px solid rgba(0,80,160,.2);
+}
+
+/* ── Globe / Theme toggle buttons ── */
+[data-theme="light"] .globe-btn,
+[data-theme="light"] .theme-toggle {
+  border: 1px solid rgba(0,80,160,.2);
+  background: rgba(255,255,255,.5);
+}
+[data-theme="light"] .globe-btn:hover,
+[data-theme="light"] .theme-toggle:hover {
+  border-color: rgba(0,80,160,.45);
+  box-shadow: 0 0 10px rgba(0,95,204,.15);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT MODE — OVERRIDES COMPLETOS (v2)
+   Reemplaza todos los fondos oscuros hardcodeados con !important
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Content panel principal ── */
+[data-theme="light"] .content-panel {
+  background: rgba(240,243,252,0.97) !important;
+  border-color: rgba(0,80,160,.18) !important;
+  box-shadow:
+    0 0 0 1px rgba(0,80,160,.06),
+    0 16px 48px rgba(0,0,0,.10),
+    0 4px 16px rgba(0,80,160,.06),
+    inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+[data-theme="light"] .content-panel::before {
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 30%, rgba(200,160,0,.8) 50%, var(--primary) 70%, transparent 100%);
+  opacity: .35;
+}
+
+/* ── Degree hero card (certs) ── */
+[data-theme="light"] .degree-hero {
+  background: linear-gradient(135deg, rgba(255,220,50,.12) 0%, rgba(230,235,252,.97) 50%, rgba(0,95,204,.06) 100%) !important;
+  box-shadow: 0 0 0 1px rgba(200,160,0,.12), 0 8px 28px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+
+/* ── Certs sidebar & filter panel ── */
+[data-theme="light"] .certs-sidebar,
+[data-theme="light"] .certs-filter-panel {
+  background: rgba(230,235,252,.95) !important;
+  border: 1px solid rgba(0,80,160,.18) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.07), inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+[data-theme="light"] .certs-filter-panel {
+  color: rgba(14,21,37,.5) !important;
+}
+
+/* ── Cert cards ── */
+[data-theme="light"] .cert-card {
+  background: linear-gradient(145deg, rgba(245,247,255,.98), rgba(235,240,255,.97)) !important;
+  border: 1px solid rgba(0,80,160,.14) !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,.07), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+[data-theme="light"] .cert-card:hover {
+  border-color: rgba(0,80,160,.38) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.10), 0 0 16px rgba(0,95,204,.08), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+[data-theme="light"] .cert-card::before {
+  background: var(--primary);
+}
+
+/* ── Certs main panel ── */
+[data-theme="light"] .certs-main-panel {
+  background: rgba(235,239,252,.85) !important;
+  border: 1px solid rgba(0,80,160,.14) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06) !important;
+}
+
+/* ── Filter label inside certs ── */
+[data-theme="light"] .certs-filter-label {
+  color: rgba(0,80,160,.55) !important;
+}
+[data-theme="light"] .cfp-title {
+  border-bottom: 1px solid rgba(0,80,160,.16) !important;
+}
+[data-theme="light"] .cfp-count {
+  color: rgba(0,80,160,.6) !important;
+  border-top: 1px solid rgba(0,80,160,.1) !important;
+}
+[data-theme="light"] .certs-filter-group {
+  border-bottom: 1px solid rgba(0,80,160,.08) !important;
+}
+
+/* ── Search inputs & selects ── */
+[data-theme="light"] .certs-search-input,
+[data-theme="light"] .certs-select {
+  background: rgba(255,255,255,.85) !important;
+  border: 1px solid rgba(0,80,160,.2) !important;
+  color: var(--text) !important;
+}
+[data-theme="light"] .certs-search-input:focus,
+[data-theme="light"] .certs-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px rgba(0,95,204,.12) !important;
+}
+[data-theme="light"] .certs-select option {
+  background: #eef1f8 !important;
+  color: var(--text) !important;
+}
+
+/* ── Category buttons ── */
+[data-theme="light"] .certs-cat-btn {
+  background: rgba(255,255,255,.6) !important;
+  color: rgba(14,21,37,.65) !important;
+  border: 1px solid transparent !important;
+}
+[data-theme="light"] .certs-cat-btn:hover {
+  background: rgba(0,95,204,.07) !important;
+  color: var(--text) !important;
+  border-color: rgba(0,80,160,.2) !important;
+}
+[data-theme="light"] .certs-cat-btn.active {
+  background: rgba(0,95,204,.12) !important;
+  color: var(--primary) !important;
+  border-color: rgba(0,80,160,.3) !important;
+}
+
+/* ── Tech cards (tcard) ── */
+[data-theme="light"] .tcard-inner {
+  background: rgba(240,244,255,.95) !important;
+  border: 1px solid rgba(0,80,160,.14) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06) !important;
+}
+[data-theme="light"] .tcard:hover .tcard-inner {
+  border-color: rgba(0,80,160,.35) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,.10) !important;
+}
+[data-theme="light"] .tcard-name {
+  color: var(--text) !important;
+}
+
+/* ── Filter pills (projects, apps) ── */
+[data-theme="light"] .filter-pill {
+  background: rgba(240,243,255,.9) !important;
+  border: 1px solid rgba(0,80,160,.18) !important;
+  color: var(--text-dim) !important;
+}
+[data-theme="light"] .filter-pill:hover {
+  background: rgba(0,95,204,.09) !important;
+  border-color: rgba(0,80,160,.38) !important;
+  color: var(--text) !important;
+}
+[data-theme="light"] .filter-pill.active {
+  background: rgba(0,95,204,.14) !important;
+  border-color: rgba(0,80,160,.48) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 0 10px rgba(0,95,204,.12) !important;
+}
+
+/* ── Project / App cards ── */
+[data-theme="light"] .proj-card,
+[data-theme="light"] .app-card {
+  background: linear-gradient(145deg, rgba(243,246,255,.98), rgba(234,239,255,.97)) !important;
+  border: 1px solid rgba(0,80,160,.13) !important;
+  box-shadow: 0 3px 14px rgba(0,0,0,.07) !important;
+}
+[data-theme="light"] .proj-card:hover,
+[data-theme="light"] .app-card:hover {
+  border-color: rgba(0,80,160,.36) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.10) !important;
+}
+
+/* ── Oracle / Apps hero-like cards ── */
+[data-theme="light"] .oracle-hero,
+[data-theme="light"] .app-hero-card {
+  background: linear-gradient(135deg, rgba(230,235,252,.97), rgba(240,244,255,.97)) !important;
+  border: 1px solid rgba(0,80,160,.18) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,.07) !important;
+}
+
+/* ── Lang modal ── */
+[data-theme="light"] #lang-modal {
+  background: rgba(200,210,230,.55) !important;
+}
+[data-theme="light"] .lang-modal-inner {
+  background: rgba(238,241,248,.98) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15) !important;
+}
+[data-theme="light"] .lang-opt {
+  background: rgba(230,234,248,.8) !important;
+}
+
+/* ── Texts: hardcoded white ── */
+[data-theme="light"] .cert-name,
+[data-theme="light"] .cert-row,
+[data-theme="light"] .proj-title,
+[data-theme="light"] .app-title,
+[data-theme="light"] .tcat-title,
+[data-theme="light"] .section-title {
+  color: var(--text) !important;
+}
+
+/* ── Scrollbar en modo claro ── */
+[data-theme="light"] .content-panel::-webkit-scrollbar-thumb,
+[data-theme="light"] .certs-main-panel::-webkit-scrollbar-thumb,
+[data-theme="light"] .certs-filter-panel::-webkit-scrollbar-thumb {
+  background: rgba(0,80,160,.22) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CERTS — AGRANDAR SECCIÓN COMPLETA
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Panel más ancho y más alto */
+#section-certifications {
+  width: min(1380px, 98vw) !important;
+  padding: 1.2rem 0 !important;
+}
+
+/* Altura máxima mayor para el panel principal */
+.certs-main-panel {
+  max-height: calc(100vh - var(--header-h) - 180px) !important;
+}
+
+/* Sidebar más ancho */
+.certs-dual {
+  grid-template-columns: 240px 1fr !important;
+  gap: 1.4rem !important;
+}
+
+/* Cards más grandes: 3 columnas garantizadas con más espacio */
+.certs-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+/* Card interna más cómoda */
+.cert-card {
+  padding: 1.2rem 1.3rem !important;
+  gap: .7rem !important;
+}
+
+/* Textos de la card un poco más grandes */
+.cert-card-name {
+  font-size: .9rem !important;
+  line-height: 1.4 !important;
+}
+.cert-card-platform {
+  font-size: .7rem !important;
+}
+.cert-card-year {
+  font-size: .75rem !important;
+}
+.cert-card-tag {
+  font-size: .62rem !important;
+  padding: .08rem .45rem !important;
+}
+.cert-card-link {
+  font-size: .72rem !important;
+}
+
+/* Degree hero más espacioso */
+.degree-hero {
+  padding: 1.8rem 2.2rem !important;
+  margin-bottom: 1.2rem !important;
+}
+.degree-hero-title {
+  font-size: 1.15rem !important;
+}
+.degree-hero-icon {
+  font-size: 3rem !important;
+}
+
+/* Filter panel más alto */
+.certs-filter-panel {
+  max-height: calc(100vh - var(--header-h) - 110px) !important;
+  padding: 1.3rem 1.1rem !important;
+}
+
+/* Botones de categoría más grandes */
+.certs-cat-btn {
+  font-size: .75rem !important;
+  padding: .5rem .85rem !important;
+}
+
+
+/* ═══ CERTS — más alto hacia abajo ═══ */
+#section-certifications {
+  max-height: calc(100vh - var(--header-h) - var(--chain-h) - 10px) !important;
+}
+.certs-main-panel {
+  max-height: calc(100vh - var(--header-h) - var(--chain-h) - 140px) !important;
+}
+.certs-filter-panel {
+  max-height: calc(100vh - var(--header-h) - var(--chain-h) - 120px) !important;
+}
