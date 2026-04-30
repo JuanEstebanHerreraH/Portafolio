@@ -1,0 +1,37 @@
+# Admin app (Python/Flet — local only, never deploy)
+admin-app/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+
+# Node (if ever used locally)
+node_modules/
+npm-debug.log
+
+# Build artifacts
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Secrets / sensitive
+*.key
+*.pem
+secrets.*

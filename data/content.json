@@ -1,0 +1,849 @@
+{
+  "_comment": "Portafolio de Juan Esteban Herrera — Editado con Paaph Admin o directamente aquí.",
+  "contact": {
+    "github": "https://github.com/JuanEstebanHerreraH",
+    "email": "estebanherreraherrera8@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/juan-esteban-herrera-herrera"
+  },
+  "skills": [
+    "Java",
+    "C++",
+    "JavaScript",
+    "TypeScript",
+    "Dart",
+    "Python",
+    "React",
+    "Next.js",
+    "Flutter",
+    ".NET",
+    "Node.js",
+    "Electron",
+    "Capacitor",
+    "Tomcat",
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "Supabase",
+    "AWS",
+    "Vercel",
+    "Docker",
+    "GitHub"
+  ],
+  "techstack": {
+    "Lenguajes": [
+      {
+        "name": "Java",
+        "icon": "☕",
+        "color": "#f89820"
+      },
+      {
+        "name": "C++",
+        "icon": "⚙",
+        "color": "#00599c"
+      },
+      {
+        "name": "C#",
+        "icon": "#",
+        "color": "#9b4f96"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "JS",
+        "color": "#f1e05a",
+        "dark": true
+      },
+      {
+        "name": "TypeScript",
+        "icon": "TS",
+        "color": "#3178c6"
+      },
+      {
+        "name": "Dart",
+        "icon": "🎯",
+        "color": "#00B4AB"
+      },
+      {
+        "name": "Python",
+        "icon": "🐍",
+        "color": "#3572A5"
+      }
+    ],
+    "Frameworks & Librerías": [
+      {
+        "name": "React",
+        "icon": "⚛",
+        "color": "#61dafb",
+        "dark": true
+      },
+      {
+        "name": "Next.js",
+        "icon": "▲",
+        "color": "#444444"
+      },
+      {
+        "name": "Flutter",
+        "icon": "💙",
+        "color": "#54c5f8",
+        "dark": true
+      },
+      {
+        "name": ".NET",
+        "icon": "●",
+        "color": "#512bd4"
+      }
+    ],
+    "Runtime & Plataformas": [
+      {
+        "name": "Node.js",
+        "icon": "◉",
+        "color": "#339933"
+      },
+      {
+        "name": "Electron",
+        "icon": "⚡",
+        "color": "#47848f"
+      },
+      {
+        "name": "Capacitor",
+        "icon": "⬡",
+        "color": "#119eff"
+      },
+      {
+        "name": "Tomcat",
+        "icon": "🐱",
+        "color": "#f8dc75",
+        "dark": true
+      }
+    ],
+    "Bases de Datos": [
+      {
+        "name": "MySQL",
+        "icon": "🗄",
+        "color": "#4479a1"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "🐘",
+        "color": "#336791"
+      },
+      {
+        "name": "SQLite",
+        "icon": "📦",
+        "color": "#3b7ebf"
+      },
+      {
+        "name": "Supabase",
+        "icon": "⚡",
+        "color": "#3ecf8e",
+        "dark": true
+      }
+    ],
+    "Cloud & Deployment": [
+      {
+        "name": "AWS",
+        "icon": "☁",
+        "color": "#1a1a1a"
+      },
+      {
+        "name": "Vercel",
+        "icon": "▲",
+        "color": "#222222"
+      },
+      {
+        "name": "GitHub",
+        "icon": "⬟",
+        "color": "#24292e"
+      },
+      {
+        "name": "Docker",
+        "icon": "🐳",
+        "color": "#2496ed"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "AccNized",
+      "description": "Gestor de cuentas y notas construido en Dart. Almacenamiento local sin dependencia de la nube, con enfoque en privacidad y control total del usuario.",
+      "language": "Dart",
+      "icon": "🎯",
+      "url": "https://github.com/JuanEstebanHerreraH/AccNized"
+    },
+    {
+      "name": "Sistema Trazabilidad Cafetero",
+      "description": "Plataforma E-Commerce para el sector cafetero colombiano con trazabilidad de origen, cadena de valor y comercio justo como eje central.",
+      "language": "TypeScript",
+      "icon": "☕",
+      "url": "https://github.com/JuanEstebanHerreraH/Sistema_Trazabilidad_Cafetero"
+    },
+    {
+      "name": "Network Engineering Assistant",
+      "description": "Herramienta interactiva para calcular IPv4, IPv6, VLANs y VLSM, con modo aprendizaje integrado pensado para la preparación CCNA.",
+      "language": "Dart",
+      "icon": "🌐",
+      "url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant"
+    },
+    {
+      "name": "VaultSecurity",
+      "description": "Espacio web personal cifrado para notas y datos sensibles. Sin backend: todo el cifrado ocurre en el cliente, sin servidores externos.",
+      "language": "JavaScript",
+      "icon": "🔐",
+      "url": "https://github.com/JuanEstebanHerreraH/VaultSecurity"
+    },
+    {
+      "name": "Tienda Híbrida Java",
+      "description": "E-Commerce orientado al comercio justo, desarrollado en Java con arquitectura backend completa sobre Apache Tomcat.",
+      "language": "Java",
+      "icon": "🛒",
+      "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java"
+    },
+    {
+      "name": "ApEn - App File Environment",
+      "description": "Organizador de archivos y carpetas con lanzador de aplicaciones integrado. Gestión visual del entorno de trabajo desde el escritorio.",
+      "language": "C#",
+      "icon": "📁",
+      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Spring AI: Integra una aplicación con OpenAI",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🤖",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/b99d9ec9-885f-481f-a27c-00533a382ba7?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Inteligencia Artificial y Java G9 - ONE",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🎓",
+      "tags": [
+        "Java",
+        "IA"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/35c109bd-838d-4192-ad15-81deb9b47322?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "ChatGPT y programación: aumenta tu productividad",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "💬",
+      "tags": [
+        "IA",
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/dbc5a70c-a1eb-4503-b916-b43f53af23b4?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Practicando Spring Framework: Challenge Foro Hub",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🏆",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/8fe5c022-ce68-4394-8b5d-d02fcd09753b?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Java y Spring Boot",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🎓",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/63277581-16f5-4ff9-84e6-abdad8e3a5c8?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Spring Boot 3: documentar, probar y preparar una API para su implementación",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "📄",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/ba8cb24e-a7f4-4912-bb18-3a7c585ed496?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Spring Boot 3: aplique las mejores prácticas y proteja una API Rest",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🔒",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/059b080f-507e-4b83-a554-93e068e8c7e0?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Spring Boot 3: desarrolla una API REST en Java",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "⚙",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/65da0c38-fe25-4c71-95ef-581e69b99ef7?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Practicando Java: Colecciones y Streams",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "☕",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/certificate/60abdd24-25cc-434d-b8cd-c7b1aa8e26e8?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: trabajando con lambdas, streams y Spring Framework",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "☕",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/1e94abee-29fc-46fc-a67c-220e5111e2d3?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Java Web: crea aplicaciones utilizando Spring Boot",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🎓",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/2af8187f-12b9-4bca-a8b6-a7a4bf6b1747?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Practicando Spring Boot: Challenge Literalura",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🏆",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/6c39174e-6d6e-428c-abac-396890ebb1ab?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: creando tu primera API y conectándola al Front End",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🔗",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/certificate/ebc911b7-cf99-470e-984d-be62d6248c40?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: persistencia de datos y consultas con Spring Data JPA",
+      "platform": "Alura Latam",
+      "year": 2026,
+      "badge": "🗄",
+      "tags": [
+        "Java",
+        "Spring"
+      ],
+      "url": "https://app.aluracursos.com/certificate/b7f8d401-c8c0-47c9-9c26-57e1a598ef58?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Aprende a programar en Java con Orientación a Objetos",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/d247d9db-2def-4c33-8422-76bd87f49bcd?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Java Orientado a Objetos G9 - ONE",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/6c059817-7716-43f3-a8e2-348781ab5ccd?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: consumir API, escribir archivos y manejar errores",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "☕",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/certificate/bbe9f694-4acc-4460-8b5b-cb6b7c212863?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: trabajar con listas y colecciones de datos",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "☕",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/certificate/f34bf86e-a35e-4f95-9122-94f107349920?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Emprendimiento, Agilidad y Protagonismo Profesional G9 - ONE",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/ad5f4d51-574f-4dd2-8bc1-7dbfe0b60fa9?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Emprendimiento: De la idea al plan de negocios",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "💡",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/e6b905d8-11f4-444d-b085-6e6dfe3fcb8e?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Fundamentos de Agilidad: Primeros pasos para la transformación ágil",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "⚡",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/6327e4b3-a9c0-4bab-b785-82a7c338fef2?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Java: creando tu primera aplicación",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "☕",
+      "tags": [
+        "Java"
+      ],
+      "url": "https://app.aluracursos.com/certificate/f2bf1714-ad60-409b-bb6c-d8b6e036fe33?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Propósito profesional: ser el protagonista de tu carrera",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎯",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/756853fd-a1c1-4706-a148-7c9238a19c4b?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Transición de carrera: una guía al campo de tecnología",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🔄",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/4f89a483-7b4e-409a-81f6-74d6bd8253e2?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Desarrollo de carrera: demanda del mercado",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "📈",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/2bce7d26-3205-4229-9935-ded6860a0baf?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Git y GitHub: repositorio, commit y versiones",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🐙",
+      "tags": [
+        "Herramientas"
+      ],
+      "url": "https://app.aluracursos.com/certificate/3835f40f-2af8-4796-be23-dfe3624bafca?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "HTML y CSS: trabajando con responsividad y publicación de proyectos",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🌐",
+      "tags": [
+        "Web"
+      ],
+      "url": "https://app.aluracursos.com/certificate/c829049d-537a-4253-86bd-2ece41ea9ae9?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Principiante en Programación G9 - ONE",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "JavaScript"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/0804cce7-4da6-4e82-a3f4-27f7f29dc100?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "HTML y CSS: header, footer y variables CSS",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎨",
+      "tags": [
+        "Web"
+      ],
+      "url": "https://app.aluracursos.com/certificate/203da2b6-cc12-498d-9dde-b236d2d016e2?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "HTML y CSS: Clases, Posicionamiento y Flexbox",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎨",
+      "tags": [
+        "Web"
+      ],
+      "url": "https://app.aluracursos.com/certificate/c1f223a9-f3ac-4fd1-a971-8188095e0cb0?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "HTML y CSS: ambientes de desarrollo, estructura de archivos y tags",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎨",
+      "tags": [
+        "Web"
+      ],
+      "url": "https://app.aluracursos.com/certificate/6cb8ed81-3df7-4c5b-8935-6d15b026dc20?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Ingeniería de Prompt: creando prompts eficaces para la IA generativa",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🧠",
+      "tags": [
+        "IA"
+      ],
+      "url": "https://app.aluracursos.com/certificate/ed2b1a40-d982-4b67-a64e-13e80ca99baa?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "IA: explorando el potencial de la Inteligencia Artificial Generativa",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🤖",
+      "tags": [
+        "IA"
+      ],
+      "url": "https://app.aluracursos.com/certificate/6729c631-074a-4667-812d-656fd6fd868f?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Practicando Lógica de Programación: Challenge Amigo Secreto",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🏆",
+      "tags": [
+        "JavaScript"
+      ],
+      "url": "https://app.aluracursos.com/certificate/6219a536-4636-4829-9156-30a8420e1e92?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Lógica de programación con JavaScript",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "JavaScript"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/2738bcbe-caa2-4259-9163-1f6eaa40cb2f?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Lógica de programación: explorar funciones y listas",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "📋",
+      "tags": [
+        "JavaScript"
+      ],
+      "url": "https://app.aluracursos.com/certificate/eda26041-70db-4318-8b0e-5518db2fb3a1?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Lógica de programación: sumérgete en la programación con JavaScript",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🌊",
+      "tags": [
+        "JavaScript"
+      ],
+      "url": "https://app.aluracursos.com/certificate/deddaf9c-926c-4202-94a5-333856ad74b9?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "LinkedIn para profesionales: construye tu marca y genera oportunidades",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "💼",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/b95a8695-e8e5-4caf-8315-038723ccd47f?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Hábitos: Ser productivo para cumplir sus metas personales",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "✅",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/96a76b3d-96c8-4da8-ad0e-1582522b8be6?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Foco: Enfocarse trae más resultados para el día a día",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎯",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/fb3c6f48-ff12-4b7c-b709-f068e0d2cd07?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Aprendizaje con IA: personalizando tu rutina con ChatGPT",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🤖",
+      "tags": [
+        "IA",
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/61e89bec-7722-4f18-b59f-2e3948c9ba05?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Aprender a aprender: técnicas para tu autodesarrollo",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "📚",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/certificate/0862ad29-a16b-4078-aca0-5b219dcef415?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Formación Desarrollo Personal G9 - ONE",
+      "platform": "Alura Latam",
+      "year": 2025,
+      "badge": "🎓",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://app.aluracursos.com/degree/certificate/0dec1cd2-8653-49c4-8287-4a9586e441d0?lang",
+      "institution": "Alura Latam"
+    },
+    {
+      "name": "Certificado de Aprobación de Inglés",
+      "platform": "CUN – Corporación Unificada Nacional",
+      "year": 2025,
+      "badge": "🇺🇸",
+      "tags": [
+        "Inglés"
+      ],
+      "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350599974/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs",
+      "institution": "CUN"
+    },
+    {
+      "name": "Curso de introducción a la programación",
+      "platform": "Código Facilito",
+      "year": 2025,
+      "badge": "🐊",
+      "tags": [
+        "Soft Skills"
+      ],
+      "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350475957/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs",
+      "institution": "Código Facilito"
+    },
+    {
+      "name": "Curso de fundamentos de SQL en 1 hora",
+      "platform": "Código Facilito",
+      "year": 2025,
+      "badge": "🗄",
+      "tags": [
+        "SQL"
+      ],
+      "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350416618/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs",
+      "institution": "Código Facilito"
+    },
+    {
+      "name": "Flask Master Class: Beginners to Pro",
+      "platform": "Udemy",
+      "year": 2025,
+      "badge": "🐍",
+      "tags": [
+        "Python"
+      ],
+      "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350308926/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs",
+      "institution": "Udemy"
+    },
+    {
+      "name": "Ciberseguridad en la vida real: Cómo protegernos de la Ciberdelincuencia",
+      "platform": "CUN – Proyección Social",
+      "year": 2026,
+      "badge": "🔐",
+      "tags": [
+        "Ciberseguridad"
+      ],
+      "url": "https://proyeccionsocial.cunapp.pro/printPDF/73705",
+      "institution": "CUN"
+    }
+  ],
+  "applications": [
+    {
+      "name": "AccNized",
+      "description": "App de escritorio multiplataforma para gestión de cuentas y notas. Almacenamiento 100% local con enfoque en privacidad y sin dependencia de servicios externos.",
+      "tech": [
+        "Dart",
+        "Flutter",
+        "SQLite"
+      ],
+      "icon": "🎯",
+      "license": "MIT",
+      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
+      "release_url": "https://github.com/JuanEstebanHerreraH/AccNized/releases/tag/Accnized"
+    },
+    {
+      "name": "VaultSecurity",
+      "description": "Aplicación web de espacio personal cifrado. Notas y datos protegidos con encriptación del lado del cliente, sin backend ni servidores externos.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "icon": "🔐",
+      "license": "MIT",
+      "url": "https://github.com/JuanEstebanHerreraH/VaultSecurity",
+      "release_url": "https://github.com/JuanEstebanHerreraH/VaultSecurity/releases/tag/VaultSecurity"
+    },
+    {
+      "name": "Network Engineering Assistant",
+      "description": "Herramienta de escritorio para ingeniería de redes: calcula subredes, VLANs y VLSM con modo aprendizaje integrado para práctica CCNA.",
+      "tech": [
+        "Dart",
+        "Flutter"
+      ],
+      "icon": "🌐",
+      "license": "MIT",
+      "url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant",
+      "release_url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant/releases/tag/Network_Enginnering_Assistant"
+    },
+    {
+      "name": "ApEn - App File Environment",
+      "description": "Organizador de archivos y ejecutable de apps para escritorio. Gestión visual de carpetas y lanzador integrado de aplicaciones.",
+      "tech": [
+        "C#",
+        ".NET",
+        "XAML"
+      ],
+      "icon": "📁",
+      "license": "MIT",
+      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
+      "release_url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases/tag/ApEn"
+    }
+  ],
+  "interests": [
+    {
+      "icon": "🔐",
+      "title": "Ciberseguridad",
+      "description": "Seguridad ofensiva y defensiva, gestión de datos cifrados y control total del usuario sobre su información."
+    },
+    {
+      "icon": "🌐",
+      "title": "Redes & CCNA",
+      "description": "Arquitectura de red, protocolos IPv4/IPv6, VLANs y automatización. En camino a la certificación CCNA."
+    },
+    {
+      "icon": "📱",
+      "title": "Desarrollo Multiplataforma",
+      "description": "Software que corre en desktop y móvil desde una misma base de código, con Flutter y Electron."
+    },
+    {
+      "icon": "🏗",
+      "title": "Arquitectura de Software",
+      "description": "Diseño de sistemas limpios y modulares con foco en rendimiento, escalabilidad y mantenibilidad a largo plazo."
+    }
+  ],
+  "featured_degree": {
+    "title": "Técnico Profesional en Soporte de Sistemas e Informática",
+    "institution": "CUN – Corporación Unificada Nacional de Educación Superior",
+    "year": 2026,
+    "registro_men": "102262",
+    "icon": "🎓",
+    "description": "Título otorgado por el Ministerio de Educación Nacional de Colombia. Formación técnica en infraestructura, soporte de hardware/software y redes informáticas.",
+    "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350599974/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs"
+  },
+  "featured_oracle": {
+    "title": "Oracle Next Education (ONE) — Tech Foundation",
+    "institution": "Oracle / Alura Latam",
+    "year": 2026,
+    "icon": "🏛",
+    "description": "Finalización exitosa de la ruta hiperespecializada en Tech Foundation (Back-End) con formación avanzada en ecosistemas empresariales.",
+    "tags": [
+      "Java POO",
+      "Spring",
+      "MySQL",
+      "APIs"
+    ],
+    "url": ""
+  }
+}
