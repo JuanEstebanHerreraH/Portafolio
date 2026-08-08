@@ -1,35 +1,283 @@
 {
-  "_comment": "Portafolio de Juan Esteban Herrera — Editado con Paaph Admin o directamente aquí.",
+  "_comment": "Portafolio de Juan Esteban Herrera. Editá este archivo para actualizar el sitio; no hace falta tocar el HTML.",
+  "profile": {
+    "name": "Juan Esteban Herrera",
+    "role": "Ing. Sistemas · Desarrollo de escritorio y redes",
+    "location": "Bogotá · CO",
+    "available": true,
+    "career_start": "2024-02-01",
+    "_career_start_note": "Fecha de inicio real. El sitio calcula los años de experiencia solo; no hay ningún número escrito a mano."
+  },
   "contact": {
     "github": "https://github.com/JuanEstebanHerreraH",
     "email": "estebanherreraherrera8@gmail.com",
     "linkedin": "https://www.linkedin.com/in/juan-esteban-herrera-herrera"
   },
-  "skills": [
-    "Java",
-    "C++",
-    "JavaScript",
-    "TypeScript",
-    "Dart",
-    "Python",
-    "React",
-    "Next.js",
-    "Flutter",
-    ".NET",
-    "Node.js",
-    "Electron",
-    "Capacitor",
-    "Tomcat",
-    "MySQL",
-    "PostgreSQL",
-    "SQLite",
-    "Supabase",
-    "AWS",
-    "Vercel",
-    "Docker",
-    "GitHub",
-    "Svelte",
-    "Rust"
+  "projects": [
+    {
+      "name": "CoexFix",
+      "slug": "Coexfix",
+      "language": "PowerShell",
+      "year": 2026,
+      "featured": true,
+      "icon": "signal",
+      "description": "Diagnostica y corrige la interferencia entre WiFi de 2.4 GHz y Bluetooth en Windows. Cada cambio en el sistema deja respaldo previo y se puede deshacer.",
+      "url": "https://github.com/JuanEstebanHerreraH/Coexfix",
+      "shot": "assets/shots/Coexfix.png"
+    },
+    {
+      "name": "Arcionr",
+      "slug": "Arcionr",
+      "language": "TypeScript",
+      "year": 2026,
+      "featured": true,
+      "icon": "convert",
+      "description": "Conversor de archivos por lotes que procesa todo en tu equipo: imágenes, audio, video y PDF. Escritorio en Tauri y Rust, Android en Capacitor, un solo repositorio.",
+      "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
+      "shot": "assets/shots/Arcionr.png"
+    },
+    {
+      "name": "StanSsion",
+      "slug": "StanSsion",
+      "language": "TypeScript",
+      "year": 2026,
+      "featured": false,
+      "icon": "audio",
+      "description": "Espacio de audio ambiente para concentrarse: mezcla de sonidos, radios en vivo, música propia, temporizador Pomodoro y lienzo de notas. Todo corre en el navegador.",
+      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
+      "demo": "https://stan-ssion.vercel.app",
+      "shot": "assets/shots/StanSsion.png"
+    },
+    {
+      "name": "iyiris",
+      "slug": "Iyiris",
+      "language": "Svelte",
+      "year": 2026,
+      "featured": true,
+      "icon": "palette",
+      "description": "Diseño de paletas de color con armonías cromáticas, validación de contraste WCAG y simulación de daltonismo. Exporta a variables CSS o configuración de Tailwind.",
+      "url": "https://github.com/JuanEstebanHerreraH/Iyiris",
+      "demo": "https://iyiris-mocha.vercel.app/",
+      "shot": "assets/shots/Iyiris.png"
+    },
+    {
+      "name": "FileWatch",
+      "slug": "FileWatch",
+      "language": "Rust",
+      "year": 2026,
+      "featured": true,
+      "icon": "shield",
+      "description": "Versionado automático para los archivos que Git no maneja bien: PSD, Excel, Word. Guarda snapshots comprimidos en segundo plano, con historial navegable y restauración.",
+      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
+      "shot": "assets/shots/FileWatch.png"
+    },
+    {
+      "name": "Vlanets",
+      "slug": "Vlanets",
+      "language": "Dart",
+      "year": 2026,
+      "featured": true,
+      "icon": "network",
+      "description": "Asistente de ingeniería de redes: subnetting, VLSM, IPv4 e IPv6, y generación de configuración Cisco IOS para VLAN, routing, NAT y ACL. Con modo de aprendizaje guiado.",
+      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
+      "shot": "assets/shots/Vlanets.png"
+    },
+    {
+      "name": "Retorp",
+      "slug": "Retorp",
+      "language": "Python",
+      "year": 2026,
+      "featured": false,
+      "icon": "radar",
+      "description": "Monitor de red local para Windows: escaneo ARP, detección de dispositivos, puertos abiertos, latencia e historial. Motor en FastAPI, interfaz en Flutter.",
+      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
+      "shot": "assets/shots/Retorp.png"
+    },
+    {
+      "name": "Café Almacén",
+      "slug": "Sistema_Trazabilidad_Cafetero",
+      "language": "TypeScript",
+      "year": 2026,
+      "featured": true,
+      "icon": "coffee",
+      "description": "Gestión integral para operaciones de café especial: trazabilidad de finca a cliente, inventario, producción y ventas, con estadísticas en tiempo real.",
+      "url": "https://github.com/JuanEstebanHerreraH/Sistema_Trazabilidad_Cafetero",
+      "shot": "assets/shots/Sistema_Trazabilidad_Cafetero.png"
+    },
+    {
+      "name": "VaHet",
+      "slug": "VaHet",
+      "language": "JavaScript",
+      "year": 2026,
+      "featured": false,
+      "icon": "vault",
+      "description": "Bóveda de escritorio cifrada con AES-256 y PBKDF2 para archivos, fotos, notas y tareas. Sin cuentas ni servidor: la nube es opcional y la conectás vos.",
+      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
+      "shot": "assets/shots/VaHet.png"
+    },
+    {
+      "name": "AccNized",
+      "slug": "AccNized",
+      "language": "Dart",
+      "year": 2026,
+      "featured": false,
+      "icon": "key",
+      "description": "Gestor de cuentas y notas con etiquetas y favoritos. Almacenamiento local en SQLite, sin servidores ni suscripción, para Windows y Android.",
+      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
+      "shot": "assets/shots/AccNized.png"
+    },
+    {
+      "name": "ApEn",
+      "slug": "ApEn---App-File-Environment",
+      "language": "C#",
+      "year": 2026,
+      "featured": false,
+      "icon": "folder",
+      "description": "Hub de productividad para Windows: lanzador de aplicaciones y organizador que clasifica carpetas por tipo. .NET 8 con WPF y MVVM, portable, sin instalador.",
+      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
+      "shot": "assets/shots/ApEn---App-File-Environment.png"
+    },
+    {
+      "name": "Tienda Web Pro",
+      "slug": "tiendahibrida.java",
+      "language": "Java",
+      "year": 2025,
+      "featured": true,
+      "icon": "cart",
+      "description": "Migración de un monolito local a arquitectura cloud: backend Jakarta EE containerizado en Elastic Beanstalk, base MS SQL Server en Amazon RDS y panel administrativo en Swing.",
+      "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java",
+      "shot": "assets/shots/tiendahibrida.java.png"
+    },
+    {
+      "name": "PixelGate",
+      "slug": "PixelGate",
+      "language": "HTML",
+      "year": 2026,
+      "featured": false,
+      "icon": "game",
+      "description": "Sitio estático para una academia de videojuegos, con estructura por secciones y diseño responsive. HTML, CSS, JavaScript y Bootstrap 5.",
+      "url": "https://github.com/JuanEstebanHerreraH/PixelGate",
+      "shot": "assets/shots/PixelGate.png"
+    }
+  ],
+  "applications": [
+    {
+      "name": "CoexFix",
+      "icon": "signal",
+      "license": "MIT",
+      "tech": [
+        "PowerShell",
+        "Windows"
+      ],
+      "description": "Tres utilidades para diagnosticar y corregir la interferencia WiFi/Bluetooth en Windows 10 y 11. Sin instalación ni dependencias; todo cambio es reversible.",
+      "url": "https://github.com/JuanEstebanHerreraH/Coexfix",
+      "release_url": "https://github.com/JuanEstebanHerreraH/Coexfix/releases"
+    },
+    {
+      "name": "Arcionr",
+      "icon": "convert",
+      "license": "MIT",
+      "tech": [
+        "Tauri",
+        "Rust",
+        "React",
+        "Capacitor"
+      ],
+      "description": "Conversor de archivos offline por lotes para escritorio y Android: imágenes, audio, video y PDF, más vectorización y gestión de páginas.",
+      "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
+      "release_url": "https://github.com/JuanEstebanHerreraH/Arcionr/releases"
+    },
+    {
+      "name": "FileWatch",
+      "icon": "shield",
+      "license": "MIT",
+      "tech": [
+        "Rust",
+        ".NET",
+        "SQLite"
+      ],
+      "description": "Versionado automático de archivos en segundo plano, con snapshots comprimidos, historial completo y restauración a cualquier punto.",
+      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
+      "release_url": "https://github.com/JuanEstebanHerreraH/FileWatch/releases/tag/FileWatch"
+    },
+    {
+      "name": "Vlanets",
+      "icon": "network",
+      "license": "MIT",
+      "tech": [
+        "Dart",
+        "Flutter"
+      ],
+      "description": "Calculadora y asistente de redes de escritorio: subnetting, VLSM, IPv4/IPv6 y configuración Cisco IOS, con modo de aprendizaje.",
+      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
+      "release_url": "https://github.com/JuanEstebanHerreraH/Vlanets/releases"
+    },
+    {
+      "name": "Retorp",
+      "icon": "radar",
+      "license": "MIT",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "Flutter"
+      ],
+      "description": "Monitor de red local: descubre dispositivos, escanea puertos, mide latencia y guarda historial en SQLite.",
+      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
+      "release_url": "https://github.com/JuanEstebanHerreraH/Retorp/releases/tag/Retorp"
+    },
+    {
+      "name": "VaHet",
+      "icon": "vault",
+      "license": "MIT",
+      "tech": [
+        "Electron",
+        "Node.js",
+        "AES-256"
+      ],
+      "description": "Bóveda de escritorio cifrada localmente para archivos, fotos, notas y tareas. Windows, macOS y Linux.",
+      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
+      "release_url": "https://github.com/JuanEstebanHerreraH/VaHet/releases/tag/Vahet"
+    },
+    {
+      "name": "AccNized",
+      "icon": "key",
+      "license": "MIT",
+      "tech": [
+        "Dart",
+        "Flutter",
+        "SQLite"
+      ],
+      "description": "Gestor de cuentas y notas multiplataforma con almacenamiento local. Windows y Android.",
+      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
+      "release_url": "https://github.com/JuanEstebanHerreraH/AccNized/releases/tag/Accnized"
+    },
+    {
+      "name": "StanSsion",
+      "icon": "audio",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "description": "Mezclador de audio ambiente con radios, Pomodoro y notas. Disponible como web y como ejecutable.",
+      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
+      "release_url": "https://github.com/JuanEstebanHerreraH/StanSsion/releases/tag/Exe",
+      "demo": "https://stan-ssion.vercel.app"
+    },
+    {
+      "name": "ApEn",
+      "icon": "folder",
+      "license": "MIT",
+      "tech": [
+        "C#",
+        ".NET",
+        "WPF"
+      ],
+      "description": "Lanzador de aplicaciones y organizador de archivos para Windows. Portable, sin instalador.",
+      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
+      "release_url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases/tag/ApEn"
+    }
   ],
   "techstack": {
     "Lenguajes": [
@@ -174,87 +422,77 @@
       }
     ]
   },
-  "projects": [
+  "skills": [
+    "Java",
+    "C++",
+    "JavaScript",
+    "TypeScript",
+    "Dart",
+    "Python",
+    "React",
+    "Next.js",
+    "Flutter",
+    ".NET",
+    "Node.js",
+    "Electron",
+    "Capacitor",
+    "Tomcat",
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "Supabase",
+    "AWS",
+    "Vercel",
+    "Docker",
+    "GitHub",
+    "Svelte",
+    "Rust"
+  ],
+  "interests": [
     {
-      "name": "StanSsion",
-      "description": "Espacio de audio ambiente para concentrarte y trabajar: mezcla sonidos, escucha radios del mundo, sube tu propia música, temporizador tipo Pomodoro y un lienzo libre para notas y tareas. Todo corre en el navegador, sin cuentas ni nube.",
-      "language": "TypeScript",
-      "icon": "🎧",
-      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
-      "demo": "https://stan-ssion.vercel.app"
-    },
-    {
-      "name": "Iyiris",
-      "description": "Herramienta de diseño de paletas de color: genera armonías, evalúa contraste WCAG, simula daltonismo y exporta a CSS/Tailwind. Construida con SvelteKit, TypeScript y chroma.js.",
-      "language": "Svelte",
-      "icon": "🎨",
-      "url": "https://github.com/JuanEstebanHerreraH/Iyiris",
-      "demo": "https://iyiris-mocha.vercel.app/"
-    },
-    {
-      "name": "Retorp",
-      "description": "Analizador de red local: inspecciona dispositivos, puertos y tráfico dentro de la LAN desde una interfaz de escritorio multiplataforma.",
-      "language": "Dart",
-      "icon": "📡",
-      "url": "https://github.com/JuanEstebanHerreraH/Retorp"
-    },
-    {
-      "name": "FileWatch",
-      "description": "Sistema de respaldo de archivos con temporizador controlado y ejecución en segundo plano. Núcleo de rendimiento escrito en Rust sobre una interfaz de escritorio en C#.",
-      "language": "C#",
-      "icon": "🛡",
-      "url": "https://github.com/JuanEstebanHerreraH/FileWatch"
-    },
-    {
-      "name": "Vlanets",
-      "description": "Asistente de redes para calcular IPv4, IPv6, VLANs y VLSM, con un modo de enseñanza integrado. Evolución de la calculadora de redes orientada a la preparación CCNA.",
-      "language": "Dart",
-      "icon": "🌐",
-      "url": "https://github.com/JuanEstebanHerreraH/Vlanets"
-    },
-    {
-      "name": "AccNized",
-      "description": "Gestor de cuentas y notas construido en Dart. Almacenamiento local sin dependencia de la nube, con enfoque en privacidad y control total del usuario.",
-      "language": "Dart",
-      "icon": "🎯",
-      "url": "https://github.com/JuanEstebanHerreraH/AccNized"
-    },
-    {
-      "name": "Sistema Trazabilidad Cafetero",
-      "description": "Plataforma E-Commerce para el sector cafetero colombiano con trazabilidad de origen, cadena de valor y comercio justo como eje central.",
-      "language": "TypeScript",
-      "icon": "☕",
-      "url": "https://github.com/JuanEstebanHerreraH/Sistema_Trazabilidad_Cafetero"
-    },
-    {
-      "name": "Network Engineering Assistant",
-      "description": "Herramienta interactiva para calcular IPv4, IPv6, VLANs y VLSM, con modo aprendizaje integrado pensado para la preparación CCNA.",
-      "language": "Dart",
-      "icon": "🌐",
-      "url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant"
-    },
-    {
-      "name": "VaHet",
-      "description": "Bóveda de escritorio privada y cifrada localmente (AES-256): guarda archivos, fotos, notas, tareas y recordatorios en tu propia máquina, sin cuentas ni servidores. Respaldo opcional a Google Drive. Construida con Electron.",
-      "language": "JavaScript",
       "icon": "🔐",
-      "url": "https://github.com/JuanEstebanHerreraH/VaHet"
+      "title": "Ciberseguridad",
+      "description": "Seguridad ofensiva y defensiva, gestión de datos cifrados y control total del usuario sobre su información."
     },
     {
-      "name": "Tienda Híbrida Java",
-      "description": "E-Commerce orientado al comercio justo, desarrollado en Java con arquitectura backend completa sobre Apache Tomcat.",
-      "language": "Java",
-      "icon": "🛒",
-      "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java"
+      "icon": "🌐",
+      "title": "Redes & CCNA",
+      "description": "Arquitectura de red, protocolos IPv4/IPv6, VLANs y automatización. En camino a la certificación CCNA."
     },
     {
-      "name": "ApEn - App File Environment",
-      "description": "Organizador de archivos y carpetas con lanzador de aplicaciones integrado. Gestión visual del entorno de trabajo desde el escritorio.",
-      "language": "C#",
-      "icon": "📁",
-      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment"
+      "icon": "📱",
+      "title": "Desarrollo Multiplataforma",
+      "description": "Software que corre en desktop y móvil desde una misma base de código, con Flutter y Electron."
+    },
+    {
+      "icon": "🏗",
+      "title": "Arquitectura de Software",
+      "description": "Diseño de sistemas limpios y modulares con foco en rendimiento, escalabilidad y mantenibilidad a largo plazo."
     }
   ],
+  "featured_degree": {
+    "title": "Técnico Profesional en Soporte de Sistemas e Informática",
+    "institution": "CUN – Corporación Unificada Nacional de Educación Superior",
+    "year": 2026,
+    "registro_men": "102262",
+    "icon": "🎓",
+    "description": "Título otorgado por el Ministerio de Educación Nacional de Colombia. Formación técnica en infraestructura, soporte de hardware/software y redes informáticas.",
+    "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350599974/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs"
+  },
+  "featured_oracle": {
+    "title": "Oracle Next Education (ONE) — Tech Foundation",
+    "institution": "Oracle / Alura Latam",
+    "year": 2026,
+    "icon": "🏛",
+    "description": "Finalización exitosa de la ruta hiperespecializada en Tech Foundation (Back-End) con formación avanzada en ecosistemas empresariales.",
+    "tags": [
+      "Java POO",
+      "Spring",
+      "MySQL",
+      "APIs"
+    ],
+    "url": ""
+  },
   "certifications": [
     {
       "name": "Spring AI: Integra una aplicación con OpenAI",
@@ -797,156 +1035,5 @@
       "url": "https://proyeccionsocial.cunapp.pro/printPDF/73705",
       "institution": "CUN"
     }
-  ],
-  "applications": [
-    {
-      "name": "StanSsion",
-      "description": "App de audio ambiente para concentración: mezclador de sonidos, radio mundial en vivo, reproductor propio, temporizador Pomodoro y lienzo de notas/tareas. 100% offline.",
-      "tech": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind"
-      ],
-      "icon": "🎧",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
-      "release_url": "https://github.com/JuanEstebanHerreraH/StanSsion/releases/tag/Exe",
-      "demo": "https://stan-ssion.vercel.app"
-    },
-    {
-      "name": "Retorp",
-      "description": "Analizador de red local de escritorio: descubre dispositivos, escanea puertos e inspecciona el tráfico de tu LAN en tiempo real.",
-      "tech": [
-        "Dart",
-        "Flutter",
-        "Python"
-      ],
-      "icon": "📡",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Retorp/releases/tag/Retorp"
-    },
-    {
-      "name": "FileWatch",
-      "description": "Respaldo de seguridad de archivos con temporizador controlado y ejecución en segundo plano. Motor de copia en Rust para máximo rendimiento.",
-      "tech": [
-        "C#",
-        ".NET",
-        "Rust"
-      ],
-      "icon": "🛡",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
-      "release_url": "https://github.com/JuanEstebanHerreraH/FileWatch/releases/tag/FileWatch"
-    },
-    {
-      "name": "Vlanets",
-      "description": "Calculadora de redes de escritorio: IPv4, IPv6, VLANs y VLSM con modo de enseñanza integrado para práctica CCNA.",
-      "tech": [
-        "Dart",
-        "Flutter"
-      ],
-      "icon": "🌐",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Vlanets/releases"
-    },
-    {
-      "name": "AccNized",
-      "description": "App de escritorio multiplataforma para gestión de cuentas y notas. Almacenamiento 100% local con enfoque en privacidad y sin dependencia de servicios externos.",
-      "tech": [
-        "Dart",
-        "Flutter",
-        "SQLite"
-      ],
-      "icon": "🎯",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
-      "release_url": "https://github.com/JuanEstebanHerreraH/AccNized/releases/tag/Accnized"
-    },
-    {
-      "name": "VaHet",
-      "description": "Bóveda de escritorio para archivos, fotos, notas y tareas, cifrada localmente con AES-256. Sin cuentas ni nube obligatoria; respaldo opcional a Google Drive. Disponible para Windows, macOS y Linux.",
-      "tech": [
-        "Electron",
-        "JavaScript",
-        "Node.js"
-      ],
-      "icon": "🔐",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
-      "release_url": "https://github.com/JuanEstebanHerreraH/VaHet/releases/tag/Vahet"
-    },
-    {
-      "name": "Network Engineering Assistant",
-      "description": "Herramienta de escritorio para ingeniería de redes: calcula subredes, VLANs y VLSM con modo aprendizaje integrado para práctica CCNA.",
-      "tech": [
-        "Dart",
-        "Flutter"
-      ],
-      "icon": "🌐",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Network_Enginnering_Assistant/releases/tag/Network_Enginnering_Assistant"
-    },
-    {
-      "name": "ApEn - App File Environment",
-      "description": "Organizador de archivos y ejecutable de apps para escritorio. Gestión visual de carpetas y lanzador integrado de aplicaciones.",
-      "tech": [
-        "C#",
-        ".NET",
-        "XAML"
-      ],
-      "icon": "📁",
-      "license": "MIT",
-      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
-      "release_url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases/tag/ApEn"
-    }
-  ],
-  "interests": [
-    {
-      "icon": "🔐",
-      "title": "Ciberseguridad",
-      "description": "Seguridad ofensiva y defensiva, gestión de datos cifrados y control total del usuario sobre su información."
-    },
-    {
-      "icon": "🌐",
-      "title": "Redes & CCNA",
-      "description": "Arquitectura de red, protocolos IPv4/IPv6, VLANs y automatización. En camino a la certificación CCNA."
-    },
-    {
-      "icon": "📱",
-      "title": "Desarrollo Multiplataforma",
-      "description": "Software que corre en desktop y móvil desde una misma base de código, con Flutter y Electron."
-    },
-    {
-      "icon": "🏗",
-      "title": "Arquitectura de Software",
-      "description": "Diseño de sistemas limpios y modulares con foco en rendimiento, escalabilidad y mantenibilidad a largo plazo."
-    }
-  ],
-  "featured_degree": {
-    "title": "Técnico Profesional en Soporte de Sistemas e Informática",
-    "institution": "CUN – Corporación Unificada Nacional de Educación Superior",
-    "year": 2026,
-    "registro_men": "102262",
-    "icon": "🎓",
-    "description": "Título otorgado por el Ministerio de Educación Nacional de Colombia. Formación técnica en infraestructura, soporte de hardware/software y redes informáticas.",
-    "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350599974/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs"
-  },
-  "featured_oracle": {
-    "title": "Oracle Next Education (ONE) — Tech Foundation",
-    "institution": "Oracle / Alura Latam",
-    "year": 2026,
-    "icon": "🏛",
-    "description": "Finalización exitosa de la ruta hiperespecializada en Tech Foundation (Back-End) con formación avanzada en ecosistemas empresariales.",
-    "tags": [
-      "Java POO",
-      "Spring",
-      "MySQL",
-      "APIs"
-    ],
-    "url": ""
-  }
+  ]
 }

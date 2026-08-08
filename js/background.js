@@ -140,8 +140,6 @@
   window.addEventListener('mousemove', e => {
     mouse.tx = e.clientX; mouse.ty = e.clientY;
     document.body.classList.add('has-pointer');
-    const glow = document.getElementById('cursor-glow');
-    if (glow) { glow.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`; }
   }, { passive: true });
   window.addEventListener('mouseleave', () => { mouse.tx = -9999; mouse.ty = -9999; });
 

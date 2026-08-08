@@ -26,7 +26,7 @@
     python:'#3572A5', javascript:'#f1e05a', js:'#f1e05a',
     typescript:'#3178c6', ts:'#3178c6', dart:'#00B4AB',
     flutter:'#54c5f8', rust:'#dea584', go:'#00ADD8',
-    html:'#e34c26', css:'#563d7c', shell:'#89e051', bash:'#89e051',
+    html:'#e34c26', css:'#563d7c', shell:'#89e051', bash:'#89e051', powershell:'#5391FE',
     java:'#f89820', 'c++':'#00599c', csharp:'#239120', 'c#':'#239120',
     svelte:'#ff3e00', react:'#61dafb', 'next.js':'#888888', vite:'#7c5cbf', tailwind:'#38bdf8',
   };
@@ -35,6 +35,15 @@
     if (!hex || !hex.startsWith('#')) return true;
     const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
     return (r*299+g*587+b*114)/1000 < 140;
+  }
+
+  /* Años transcurridos desde career_start. Se recalcula en cada carga:
+     no hay ningún número de experiencia escrito a mano en el código. */
+  function yearsSince(iso) {
+    if (!iso) return 0;
+    const start = new Date(iso);
+    if (isNaN(start)) return 0;
+    return Math.max(0, (Date.now() - start.getTime()) / (365.25 * 24 * 3600 * 1000));
   }
 
   function animCount(el, target, decimals) {
@@ -46,6 +55,48 @@
       el.textContent = decimals ? v.toFixed(decimals) : Math.round(v);
       if (p<1) requestAnimationFrame(step);
     })(start);
+  }
+
+
+  /* ════ ICONOS ════
+     SVG monocromo en lugar de emoji: hereda currentColor, respeta la paleta
+     y se ve igual en Windows, macOS y Android. */
+  const ICON = {
+    signal:  '<path d="M4 16a10 10 0 0116 0M7.5 13.5a6 6 0 019 0"/><circle cx="12" cy="19" r="1.6"/>',
+    convert: '<path d="M4 8h12l-3-3M20 16H8l3 3"/>',
+    audio:   '<path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/>',
+    palette: '<path d="M12 3a9 9 0 100 18c1.1 0 1.7-.9 1.4-1.8-.3-.9.3-1.8 1.3-1.8h1.6A4.7 4.7 0 0021 12.7C21 7.3 17 3 12 3z"/><circle cx="7.5" cy="12" r="1"/><circle cx="10" cy="8" r="1"/><circle cx="15" cy="8.5" r="1"/>',
+    shield:  '<path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/>',
+    network: '<rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v3h12V9M12 12v3"/>',
+    radar:   '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12l6-4"/>',
+    coffee:  '<path d="M4 8h13v6a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M17 10h1.6a2.4 2.4 0 010 4.8H17"/><path d="M8 3v2M12 3v2"/>',
+    vault:   '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v-1M12 17v-1M16 12h1M7 12h1"/>',
+    key:     '<circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M15.5 12v2.4"/>',
+    folder:  '<path d="M3 7a2 2 0 012-2h4l2 2.5h8a2 2 0 012 2V17a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>',
+    cart:    '<circle cx="9.5" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/><path d="M3 4h2.2l2.4 11h11L21 7H6"/>',
+    game:    '<rect x="2.5" y="7" width="19" height="10" rx="4"/><path d="M7 10v4M5 12h4M15.5 11.5h.01M18 13.5h.01"/>',
+    app:     '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    download:'<path d="M12 4v11M7.5 11l4.5 4.5L16.5 11M5 19h14"/>',
+  };
+  function icon(name, cls) {
+    const body = ICON[name] || ICON.app;
+    return `<svg class="${cls||'ico'}" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+  }
+
+  /* ════ CAPTURA CON RESPALDO ════
+     Si assets/shots/<slug>.png no existe, dibujamos un patrón de señal con el
+     color del proyecto. Nunca se ve una imagen rota. */
+  function shotHtml(p) {
+    const seed = (p.slug || p.name).split('').reduce((a,c)=>a+c.charCodeAt(0),0);
+    const bars = Array.from({length: 22}, (_, i) => {
+      const h = 8 + ((seed * (i+3)) % 46);
+      return `<rect x="${i*4.4}" y="${56-h}" width="2.2" height="${h}" rx="1"/>`;
+    }).join('');
+    const fallback = `<svg class="shot-fallback" viewBox="0 0 96 56" preserveAspectRatio="none" aria-hidden="true">${bars}</svg>`;
+    const img = p.shot ? `<img class="shot-img" src="${esc(p.shot)}" alt="Captura de ${esc(p.name)}" loading="lazy"
+        onload="this.parentNode.classList.add('has-shot')" onerror="this.remove()">` : '';
+    return `<div class="proj-shot">${fallback}${img}</div>`;
   }
 
   /* ════ CARD INTERACTION: spotlight + tilt ════ */
@@ -138,8 +189,11 @@
         const el = document.getElementById(id);
         if (el && el.dataset.done !== '1') { el.dataset.done='1'; animCount(el, parseInt(el.dataset.target||0)); }
       });
-      const yearsEl = document.getElementById('stat-apps');
-      if (yearsEl && yearsEl.dataset.done !== '1') { yearsEl.dataset.done='1'; animCount(yearsEl, 2.4, 1); }
+      const yearsEl = document.getElementById('stat-years');
+      if (yearsEl && yearsEl.dataset.done !== '1') {
+        yearsEl.dataset.done = '1';
+        animCount(yearsEl, parseFloat(yearsEl.dataset.target || 0), 1);
+      }
     }
   }).observe(aboutPanel, { attributes:true, attributeFilter:['class'] });
 
@@ -316,8 +370,9 @@
       return `
         <div class="proj-card" data-lang="${esc(p.language||'')}" style="--card-accent:${col}">
           <div class="proj-card-accent"></div>
+          ${shotHtml(p)}
           <div class="proj-card-header">
-            <span class="proj-icon">${p.icon||'⚡'}</span>
+            <span class="proj-icon">${icon(p.icon,'ico')}</span>
             <span class="proj-name">${esc(p.name)}</span>
             <span class="proj-lang-badge" style="background:${col};color:${dark?'#fff':'#111'}">${esc(p.language||'')}</span>
           </div>
@@ -346,14 +401,14 @@
       return `
         <div class="app-card" data-techs="${esc(techs.join(','))}" style="--card-accent:var(--signal)">
           <div class="app-card-header">
-            <span class="app-icon">${a.icon||'💻'}</span>
+            <span class="app-icon">${icon(a.icon,'ico')}</span>
             <span class="app-license">${esc(a.license||'MIT')}</span>
           </div>
           <h3>${esc(a.name)}</h3>
           <p>${esc(a.description)}</p>
           ${techs.length ? `<div class="app-tech">${techs.map(t=>`<span class="app-tech-tag">${esc(t)}</span>`).join('')}</div>` : ''}
           <div class="app-footer">
-            <a href="${esc(a.release_url || a.url)}" class="app-link app-link-install" target="_blank" rel="noopener"><span class="app-link-ico">⬇</span> Descargar</a>
+            <a href="${esc(a.release_url || a.url)}" class="app-link app-link-install" target="_blank" rel="noopener">${icon('download','ico-sm')} <span data-i18n="apps.download">Descargar</span></a>
             ${demo}
           </div>
         </div>`;
@@ -377,12 +432,13 @@
     const ohero = el('oracle-hero');
     if (ohero && featuredOracle) {
       ohero.style.display = 'flex';
-      if (el('oracle-hero-icon'))  el('oracle-hero-icon').textContent  = featuredOracle.icon || '🏛';
       if (el('oracle-hero-title')) el('oracle-hero-title').textContent = featuredOracle.title || '';
       if (el('oracle-hero-inst'))  el('oracle-hero-inst').textContent  = featuredOracle.institution || '';
       if (el('oracle-hero-year'))  el('oracle-hero-year').textContent  = featuredOracle.year || '';
     }
     if (!list.length) { const g=el('certs-table-body'); if(g) g.innerHTML='<div class="cert-no-results">Agrega certificaciones en content.json</div>'; return; }
+    const sc = el('certs-summary-count');
+    if (sc) sc.textContent = list.length;
     initCertFilters(list);
     applyCertFilters();
   }
@@ -402,9 +458,31 @@
   /* ════ HERO META (contadores en vivo) ════ */
   function fillHeroMeta(d) {
     const set = (id, n) => { const el=document.getElementById(id); if(el) animCount(el, n); };
-    set('hero-num-projects', (d.projects||[]).length);
-    set('hero-num-certs', (d.certifications||[]).length);
+    const projects = d.projects || [];
+    set('hero-num-projects', projects.length);
     set('hero-num-apps', (d.applications||[]).length);
+    /* Lenguajes distintos con proyecto real detrás. Preferimos este número al
+       de certificados: dice algo sobre lo construido, no sobre lo cursado. */
+    set('hero-num-langs', new Set(projects.map(p => p.language).filter(Boolean)).size);
+  }
+
+  /* ════ HERO: PROYECTOS DESTACADOS ════ */
+  function renderHeroFeatured(list) {
+    const mount = document.getElementById('hero-featured');
+    if (!mount) return;
+    const featured = list.filter(p => p.featured).slice(0, 3);
+    if (!featured.length) { mount.innerHTML = ''; return; }
+    mount.innerHTML = featured.map(p => {
+      const col = langColor(p.language || '');
+      return `<a class="hf-card" href="${esc(p.url)}" target="_blank" rel="noopener" style="--card-accent:${col}">
+        <span class="hf-ico">${icon(p.icon,'ico')}</span>
+        <span class="hf-body">
+          <span class="hf-name">${esc(p.name)}</span>
+          <span class="hf-lang">${esc(p.language||'')}</span>
+        </span>
+        <span class="hf-arrow" aria-hidden="true">→</span>
+      </a>`;
+    }).join('');
   }
 
   /* ════ LOAD CONTENT ════ */
@@ -413,13 +491,14 @@
       const r = await fetch('data/content.json');
       if (!r.ok) throw new Error('no content');
       const d = await r.json();
-      const sp=document.getElementById('stat-projects'), sc=document.getElementById('stat-certs'), sa=document.getElementById('stat-apps');
+      const sp=document.getElementById('stat-projects'), sc=document.getElementById('stat-certs'), sy=document.getElementById('stat-years');
       if(sp) sp.dataset.target=(d.projects||[]).length;
       if(sc) sc.dataset.target=(d.certifications||[]).length;
-      if(sa){ sa.dataset.target=0; sa.textContent='2.4'; }
+      if(sy) sy.dataset.target = yearsSince(d.profile && d.profile.career_start);
       fillHeroMeta(d);
       renderTechStack(d.techstack||{});
       renderProjects(d.projects||[]);
+      renderHeroFeatured(d.projects||[]);
       renderCerts(d.certifications||[], d.featured_degree||null, d.featured_oracle||null);
       renderApplications(d.applications||[]);
       if(d.contact) updateContact(d.contact);
@@ -434,11 +513,16 @@
     const real = document.getElementById('photo-real');
     const ph   = document.getElementById('photo-placeholder');
     if (!real || !ph) return;
-    const test = new Image();
-    test.onload  = () => { real.style.display='block'; ph.style.display='none'; real.src='assets/photo.jpg?v='+Date.now(); };
-    test.onerror = () => { real.style.display='none';  ph.style.display='flex'; };
-    test.src = 'assets/photo.jpg';
+    /* La imagen ya viene visible desde el HTML: si el JS no corre, la cara
+       se ve igual. Acá solo cubrimos el caso de que el archivo falte. */
+    ph.style.display = 'none';
+    real.addEventListener('error', () => { real.style.display='none'; ph.style.display='flex'; });
+    if (real.complete && real.naturalWidth === 0) { real.style.display='none'; ph.style.display='flex'; }
   })();
+
+  /* Botones del hero */
+  document.querySelectorAll('[data-goto]').forEach(b =>
+    b.addEventListener('click', () => window.__nav?.open(b.dataset.goto)));
 
   I18N.init();
   loadContent();

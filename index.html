@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juan Esteban Herrera — Full-Stack Developer · Redes · Software multiplataforma">
+  <meta name="description" content="Juan Esteban Herrera — Software de escritorio y herramientas de red. Aplicaciones offline-first en Rust, .NET, Flutter y Tauri.">
+  <meta property="og:title" content="Juan Esteban Herrera — Software de escritorio y herramientas de red">
+  <meta property="og:description" content="Aplicaciones que corren en tu equipo y no dependen de la nube. Rust, .NET, Flutter, Tauri.">
+  <meta property="og:type" content="website">
   <meta name="theme-color" content="#080b14">
   <title data-i18n="page.title">Portafolio — Juan Esteban Herrera</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Un solo lienzo: campo de señal reactivo al mouse -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <div id="cursor-glow" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
   <!-- Modal de idioma -->
@@ -57,7 +59,7 @@
         <button class="nav-item"><span class="nav-idx">02</span><span class="nav-label" data-i18n="nav.projects">PROYECTOS</span></button>
       </div>
       <div class="nav-item-wrapper" data-section="certifications">
-        <button class="nav-item"><span class="nav-idx">03</span><span class="nav-label" data-i18n="nav.certifications">CERTS</span></button>
+        <button class="nav-item"><span class="nav-idx">03</span><span class="nav-label" data-i18n="nav.certifications">FORMACIÓN</span></button>
       </div>
       <div class="nav-item-wrapper" data-section="applications">
         <button class="nav-item"><span class="nav-idx">04</span><span class="nav-label" data-i18n="nav.applications">APPS</span></button>
@@ -98,7 +100,7 @@
     <div class="mobile-drawer-inner">
       <div class="mobile-nav-item" data-section="about"><span>01</span>SOBRE MÍ</div>
       <div class="mobile-nav-item" data-section="projects"><span>02</span>PROYECTOS</div>
-      <div class="mobile-nav-item" data-section="certifications"><span>03</span>CERTS</div>
+      <div class="mobile-nav-item" data-section="certifications"><span>03</span>FORMACIÓN</div>
       <div class="mobile-nav-item" data-section="applications"><span>04</span>APPS</div>
       <div class="mobile-nav-item" data-section="techstack"><span>05</span>TECH</div>
       <div class="mobile-nav-item" data-section="contact"><span>06</span>CONTACTO</div>
@@ -111,27 +113,33 @@
     <section class="hero" id="hero-text">
       <div class="hero-eyebrow">
         <span class="signal-dot"></span>
-        <span class="hero-eyebrow-txt">DISPONIBLE PARA PROYECTOS</span>
+        <span class="hero-eyebrow-txt" data-i18n="hero.available">Disponible para trabajar</span>
         <span class="hero-eyebrow-sep">/</span>
         <span class="hero-loc">BOGOTÁ · CO</span>
       </div>
 
       <h1 class="hero-title">
-        <span class="hero-line">Construyo</span>
-        <span class="hero-rotator"><span class="hero-rotator-word" id="hero-rotator-word">software que se usa</span><span class="hero-caret">_</span></span>
+        <span class="hero-line" data-i18n="hero.line1">Software de escritorio</span>
+        <span class="hero-line hero-line-2" data-i18n="hero.line2">y herramientas de red.</span>
       </h1>
 
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Programador · Redes · Proyectos Digitales</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Aplicaciones que corren en tu equipo y no dependen de la nube. Rust, .NET, Flutter y Tauri.</p>
 
-      <div class="hero-meta" id="hero-meta">
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-projects">—</span><span class="hero-meta-lbl">proyectos</span></div>
-        <span class="hero-meta-div"></span>
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-certs">—</span><span class="hero-meta-lbl">certificados</span></div>
-        <span class="hero-meta-div"></span>
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-apps">—</span><span class="hero-meta-lbl">apps</span></div>
+      <!-- Proyectos destacados: visibles sin hacer clic -->
+      <div class="hero-featured" id="hero-featured" aria-label="Proyectos destacados"></div>
+
+      <div class="hero-actions">
+        <button class="hero-btn hero-btn-primary" data-goto="projects" data-i18n="hero.seeAll">Ver todos los proyectos</button>
+        <button class="hero-btn hero-btn-ghost" data-goto="contact" data-i18n="hero.contact">Contacto</button>
       </div>
 
-      <div class="hero-cta" data-i18n="hero.cta">↑ Elegí una sección para explorar</div>
+      <div class="hero-meta" id="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-projects">—</span><span class="hero-meta-lbl" data-i18n="hero.mProjects">proyectos</span></div>
+        <span class="hero-meta-div"></span>
+        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-apps">—</span><span class="hero-meta-lbl" data-i18n="hero.mApps">apps descargables</span></div>
+        <span class="hero-meta-div"></span>
+        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-langs">—</span><span class="hero-meta-lbl" data-i18n="hero.mLangs">lenguajes</span></div>
+      </div>
     </section>
 
     <!-- ═══ ABOUT ═══ -->
@@ -148,7 +156,7 @@
               <div class="photo-wrapper" id="photo-wrapper">
                 <div class="photo-frame"></div>
                 <div class="photo-placeholder" id="photo-placeholder"><span class="photo-icon">◈</span></div>
-                <img class="photo-real" id="photo-real" src="assets/photo.jpg" alt="Foto de Juan Esteban Herrera" style="display:none">
+                <img class="photo-real" id="photo-real" src="assets/photo.jpg" alt="Foto de Juan Esteban Herrera" loading="lazy">
               </div>
               <div class="about-name-tag">Juan Esteban Herrera</div>
               <div class="about-role-tag">Ing. Sistemas · Full-Stack Dev</div>
@@ -166,8 +174,8 @@
                   <span class="astat-lbl" data-i18n="about.stat2">Certificaciones</span>
                 </div>
                 <div class="astat">
-                  <span class="astat-num" id="stat-apps" data-target="0">0</span>
-                  <span class="astat-lbl">Años exp.</span>
+                  <span class="astat-num" id="stat-years" data-target="0">0</span>
+                  <span class="astat-lbl" data-i18n="about.stat3">Años construyendo</span>
                 </div>
               </div>
             </div>
@@ -204,7 +212,8 @@
       <div class="panel-scroll">
         <div class="panel-head">
           <span class="panel-kicker">03 / CREDENCIALES</span>
-          <h2 class="section-title" data-i18n="certs.title">Certificaciones</h2>
+          <h2 class="section-title" data-i18n="certs.title">Formación</h2>
+          <p class="panel-sub" data-i18n="certs.sub">El título y la ruta de Oracle son lo que sostiene el resto. Debajo, el detalle completo de cursos.</p>
         </div>
         <div class="section-body">
 
@@ -212,7 +221,7 @@
           <div class="degree-hero" id="degree-hero" style="display:none">
             <div class="degree-hero-inner">
               <div class="degree-hero-left">
-                <span class="degree-hero-icon">🎓</span>
+                <span class="degree-hero-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 4.5-9 4.5-9-4.5z"/><path d="M6.5 10.5V16c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-5.5"/><path d="M21 8.5V14"/></svg></span>
                 <div class="degree-hero-meta">
                   <span class="degree-hero-label">TÍTULO TÉCNICO PROFESIONAL</span>
                   <h3 class="degree-hero-title" id="degree-hero-title"></h3>
@@ -231,7 +240,7 @@
           <!-- Oracle ONE -->
           <div class="oracle-hero" id="oracle-hero" style="display:none">
             <div class="oracle-hero-left">
-              <span class="oracle-hero-icon" id="oracle-hero-icon"></span>
+              <span class="oracle-hero-icon" id="oracle-hero-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 4l9 5.5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg></span>
               <div class="oracle-hero-meta">
                 <span class="oracle-hero-label">ORACLE NEXT EDUCATION — ONE</span>
                 <h3 class="oracle-hero-title" id="oracle-hero-title"></h3>
@@ -247,6 +256,12 @@
             </div>
           </div>
 
+          <details class="certs-details" id="certs-details">
+            <summary class="certs-summary">
+              <span class="certs-summary-txt" data-i18n="certs.showAll">Ver el detalle de cursos</span>
+              <span class="certs-summary-count" id="certs-summary-count"></span>
+              <span class="certs-summary-caret" aria-hidden="true">▾</span>
+            </summary>
           <div class="certs-dual">
             <aside class="certs-filter-panel">
               <div class="cfp-title">Filtros</div>
@@ -295,6 +310,7 @@
               <div class="certs-grid" id="certs-table-body"></div>
             </div>
           </div>
+          </details>
 
         </div>
       </div>

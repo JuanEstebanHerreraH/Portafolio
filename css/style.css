@@ -21,7 +21,8 @@
   --signal-glow:  rgba(91,134,255,0.42);
 
   /* Paquete (ámbar cálido) — el acento humano */
-  --packet:       #ff9d54;
+  --packet:       #ff9d54;   /* AA 9.26:1 — reservado para demos en vivo */
+  --packet-ink:   #ff9d54;
   --packet-soft:  rgba(255,157,84,0.14);
   --packet-glow:  rgba(255,157,84,0.40);
 
@@ -35,14 +36,14 @@
   /* Texto */
   --text:         #e8edf8;
   --text-dim:     #9aa6c0;
-  --text-mute:    #616d88;
+  --text-mute:    #7b88a6;   /* AA 5.37:1 — era #616d88 (3.68, no pasaba) */
 
   /* Sistema */
   --header-h:     66px;
   --radius:       12px;
   --radius-lg:    18px;
   --font-display: 'Space Grotesk', sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-body:    'Space Grotesk', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
   --ease:         cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring:  cubic-bezier(0.34, 1.4, 0.5, 1);
@@ -57,18 +58,19 @@
   --elevated:     #ffffff;
   --line:         rgba(40,70,150,0.14);
   --line-strong:  rgba(40,70,150,0.32);
-  --signal:       #2f5fe0;
-  --signal-2:     #2f5fe0;
+  --signal:       #2450c9;   /* AA 6.06:1 — era #2f5fe0 (4.85, justo) */
+  --signal-2:     #2450c9;
   --signal-soft:  rgba(47,95,224,0.10);
   --signal-glow:  rgba(47,95,224,0.30);
-  --packet:       #d9741f;
+  --packet:       #d9741f;   /* solo decorativo: 2.87:1, nunca para texto */
+  --packet-ink:   #9a4a08;   /* AA 5.54:1 — el ámbar legible del tema claro */
   --packet-soft:  rgba(217,116,31,0.12);
   --packet-glow:  rgba(217,116,31,0.30);
   --btn-bg:       #2f5fe0;
   --btn-bg-h:     #244fc4;
   --text:         #0f1626;
   --text-dim:     #46516b;
-  --text-mute:    #7c869c;
+  --text-mute:    #59647c;   /* AA 5.25:1 — era #7c869c (3.23, no pasaba) */
 }
 
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -107,20 +109,13 @@ button { font-family: inherit; }
 }
 body.panel-open #bg-canvas { opacity: 0.4; filter: blur(2px); }
 
-/* Glow suave que ACOMPAÑA al cursor real (sin ocultarlo) */
-#cursor-glow {
-  position: fixed; width: 460px; height: 460px; border-radius: 50%;
-  pointer-events: none; z-index: 1; transform: translate(-50%,-50%);
-  background: radial-gradient(circle, var(--signal-soft) 0%, transparent 68%);
-  opacity: 0; transition: opacity .5s var(--ease);
-  will-change: transform;
-}
-body.has-pointer #cursor-glow { opacity: 1; }
+/* El cursor-glow se eliminó: competía con el canvas y el grano. Una capa de
+   atmósfera es atmósfera; tres son ruido. */
 
 /* Grano sutil para dar textura y matar el banding de los gradientes */
 .grain {
   position: fixed; inset: -50%; z-index: 1; pointer-events: none;
-  opacity: 0.035; mix-blend-mode: overlay;
+  opacity: 0.028; mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -263,7 +258,7 @@ body.panel-open .hero { opacity: 0; transform: translateY(-20px); pointer-events
   box-shadow: 0 0 0 0 var(--online); animation: ping 2.4s ease-out infinite;
 }
 .hero-eyebrow-sep { color: var(--text-mute); }
-.hero-loc { color: var(--packet); }
+.hero-loc { color: var(--packet-ink); }
 
 .hero-title {
   font-family: var(--font-display); font-weight: 700;
@@ -276,7 +271,7 @@ body.panel-open .hero { opacity: 0; transform: translateY(-20px); pointer-events
   color: var(--signal); opacity: 0; animation: heroUp .8s var(--ease) .34s forwards;
 }
 .hero-rotator-word { display: inline-block; }
-.hero-caret { display: inline-block; width: .5ch; color: var(--packet); animation: blink 1.05s step-end infinite; }
+.hero-caret { display: inline-block; width: .5ch; color: var(--packet-ink); animation: blink 1.05s step-end infinite; }
 
 .hero-subtitle {
   font-family: var(--font-mono); font-size: clamp(.8rem, 2vw, .95rem);
@@ -489,7 +484,7 @@ body.panel-open .hero { opacity: 0; transform: translateY(-20px); pointer-events
 }
 .proj-link { color: var(--text-dim); }
 .proj-link:hover { color: var(--text); border-color: var(--signal); background: var(--signal-soft); }
-.proj-demo { color: var(--packet); border-color: var(--packet-soft); }
+.proj-demo { color: var(--packet-ink); border-color: var(--packet-soft); }
 .proj-demo:hover { background: var(--packet-soft); border-color: var(--packet); }
 
 /* ══════════════ APPS ══════════════ */
@@ -622,7 +617,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .hero-meta { gap: .8rem; }
   .hero-meta-num { font-size: 1.3rem; }
   .about-stats-row { gap: 1.6rem; flex-wrap: wrap; }
-  #cursor-glow { display: none; }
 }
 
 /* ══════════════ REDUCED MOTION ══════════════ */
@@ -630,3 +624,155 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .signal-dot, .hero-caret { animation: none !important; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   AÑADIDOS — revisión de agosto 2026
+   · iconos SVG en lugar de emoji
+   · capturas de proyecto con respaldo dibujado
+   · destacados en el hero (contenido sin pedir un clic)
+   · formación plegada: el título manda, los cursos respaldan
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Iconos ─────────────────────────────────────────────────── */
+.ico    { width: 1.15em; height: 1.15em; display: block; }
+.ico-sm { width: .95em;  height: .95em;  display: inline-block; vertical-align: -.12em; }
+
+.proj-icon, .app-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 9px; flex: none;
+  color: var(--card-accent, var(--signal));
+  background: color-mix(in srgb, var(--card-accent, var(--signal)) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--card-accent, var(--signal)) 26%, transparent);
+  font-size: 1.05rem;
+}
+
+/* ── Captura de proyecto ────────────────────────────────────── */
+.proj-shot {
+  position: relative; aspect-ratio: 16 / 9; margin: -.15rem 0 .9rem;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(160deg,
+      color-mix(in srgb, var(--card-accent, var(--signal)) 14%, transparent),
+      transparent 62%),
+    var(--elevated);
+}
+.shot-fallback {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  fill: color-mix(in srgb, var(--card-accent, var(--signal)) 42%, transparent);
+  opacity: .5;
+}
+.shot-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top center; opacity: 0;
+  transition: opacity .4s var(--ease);
+}
+.proj-shot.has-shot .shot-img     { opacity: 1; }
+.proj-shot.has-shot .shot-fallback{ opacity: 0; }
+
+/* ── Destacados del hero ────────────────────────────────────── */
+.hero-featured {
+  display: grid; gap: .5rem; width: 100%; max-width: 520px;
+  margin-bottom: 1.8rem;
+  opacity: 0; animation: heroUp .8s var(--ease) .52s forwards;
+}
+.hf-card {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .7rem .9rem; border-radius: 11px;
+  border: 1px solid var(--line); background: var(--surface);
+  text-decoration: none; color: inherit;
+  transition: border-color var(--t), transform var(--t), background var(--t);
+}
+.hf-card:hover {
+  border-color: color-mix(in srgb, var(--card-accent, var(--signal)) 55%, transparent);
+  background: var(--surface-2); transform: translateX(3px);
+}
+.hf-ico {
+  display: inline-flex; width: 30px; height: 30px; flex: none;
+  align-items: center; justify-content: center; border-radius: 8px;
+  color: var(--card-accent, var(--signal));
+  background: color-mix(in srgb, var(--card-accent, var(--signal)) 13%, transparent);
+}
+.hf-body { display: flex; flex-direction: column; gap: .05rem; min-width: 0; }
+.hf-name { font-weight: 600; font-size: .92rem; color: var(--text); }
+.hf-lang {
+  font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-mute);
+}
+.hf-arrow { margin-left: auto; color: var(--text-mute); transition: transform var(--t), color var(--t); }
+.hf-card:hover .hf-arrow { color: var(--card-accent, var(--signal)); transform: translateX(3px); }
+
+/* ── Acciones del hero ──────────────────────────────────────── */
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2.2rem;
+  opacity: 0; animation: heroUp .8s var(--ease) .62s forwards;
+}
+.hero-btn {
+  font-family: var(--font-body); font-size: .85rem; font-weight: 500;
+  padding: .68rem 1.25rem; border-radius: 30px; cursor: pointer;
+  transition: background var(--t), border-color var(--t), transform var(--t), color var(--t);
+}
+.hero-btn:hover { transform: translateY(-2px); }
+.hero-btn-primary { background: var(--btn-bg); color: #fff; border: 1px solid transparent; }
+.hero-btn-primary:hover { background: var(--btn-bg-h); }
+.hero-btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--line-strong); }
+.hero-btn-ghost:hover { color: var(--text); border-color: var(--signal); }
+
+.hero-line-2 { color: var(--signal); }
+.hero-subtitle { max-width: 46ch; line-height: 1.55; }
+
+/* ── Formación plegada ──────────────────────────────────────── */
+.panel-sub {
+  margin-top: .5rem; max-width: 62ch;
+  font-size: .9rem; color: var(--text-dim); line-height: 1.6;
+}
+.certs-details { margin-top: 1.6rem; }
+.certs-summary {
+  display: flex; align-items: center; gap: .7rem; cursor: pointer;
+  list-style: none; padding: .8rem 1.1rem; border-radius: 11px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-family: var(--font-mono); font-size: .72rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim);
+  transition: border-color var(--t), color var(--t);
+}
+.certs-summary::-webkit-details-marker { display: none; }
+.certs-summary:hover { border-color: var(--line-strong); color: var(--text); }
+.certs-summary-count {
+  font-size: .68rem; padding: .12rem .5rem; border-radius: 20px;
+  background: var(--signal-soft); color: var(--signal);
+}
+.certs-summary-caret { margin-left: auto; transition: transform var(--t); }
+.certs-details[open] .certs-summary-caret { transform: rotate(180deg); }
+.certs-details[open] .certs-summary { margin-bottom: 1.2rem; }
+
+/* ── Accesibilidad: foco visible en todo lo enfocable ────────── */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Móvil ──────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .hero-featured { max-width: 100%; }
+  .hero-actions  { width: 100%; }
+  .hero-btn      { flex: 1 1 auto; text-align: center; }
+  .proj-shot     { aspect-ratio: 2 / 1; }
+}
+
+/* ── Menos movimiento si el sistema lo pide ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .hero-line, .hero-subtitle,
+  .hero-featured, .hero-actions, .hero-meta {
+    opacity: 1 !important; animation: none !important;
+  }
+  .hf-card:hover, .hero-btn:hover { transform: none; }
+}
+
+/* La malla en tema claro cruzaba el texto del hero: la bajamos un punto. */
+[data-theme="light"] #bg-canvas { opacity: .55; }
+.degree-hero-icon, .oracle-hero-icon { display:inline-flex; align-items:center; font-size:1.6rem; }
+.degree-hero-icon .ico, .oracle-hero-icon .ico { width:1.6rem; height:1.6rem; }
+.oracle-hero-icon { color: var(--packet-ink); }
+.degree-hero-icon { color: var(--signal); }
