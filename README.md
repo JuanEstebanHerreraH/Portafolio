@@ -1,77 +1,70 @@
-# Juan Esteban Herrera · Código & curiosidad
+# Juan Esteban Herrera · Aurora
 
-Portafolio personal de Juan Esteban Herrera Herrera. Una bitácora visual de aplicaciones, IA local, backend, escritorio y redes, con proyectos personales, académicos y colaborativos.
+Portafolio de desarrollo, sistemas y herramientas. Una escena interactiva con auroras abre el recorrido; el visitante elige una aplicación, explora su uso y consulta su implementación.
 
-![Vista del portafolio](docs/vista-escritorio.jpg)
+![Portada](docs/portada.jpg)
 
-## Qué incluye
+## Experiencia
 
-- Diseño editorial con textura de papel, líneas de fondo animadas y una mesa de trabajo que presenta xIas.
-- Tema claro y oscuro, español e inglés, menú móvil y control de animaciones.
-- 18 proyectos: seis seleccionados y doce exploraciones en el archivo.
-- Casos con problema, aporte personal, tecnologías, límites y enlaces al código, las demos o las descargas disponibles.
-- Capturas reales de xIas, Recorta y LogiTree. Las demás portadas son ilustraciones y se identifican como tales en sus casos.
-- Formación actualizada, herramientas con contexto y buscador de 48 cursos y rutas de formación.
-- Fuentes, imágenes e iconos incluidos; sin dependencias de ejecución, analítica ni formularios que envíen datos.
+- Encabezado con cielo animado, rueda de marca, órbitas y puntos que llevan a proyectos reales.
+- Movimiento activado al entrar, con opción de pausa y preferencia guardada.
+- Tipografías locales: Montserrat, Open Sans y Roboto Mono.
+- Explorador único de 18 herramientas, con búsqueda y filtros. Una herramienta se muestra a la vez, en una vista amplia.
+- Casos con flujo de uso, propósito, participación, implementación y límites.
+- Cinco áreas de conocimiento: redes/soporte, web/backend, escritorio/IA local, ofimática e IA/automatización.
+- Tres hitos visibles: título técnico obtenido, formación ONE/Alura e Ingeniería de Sistemas en curso.
+- 48 cursos y rutas organizados por áreas, con explicación, buscador y carga progresiva.
+- Cuatro CV descargables: desarrollo, soporte/redes, ofimática y desarrollo ENG.
+- Español/inglés, modo claro/oscuro y diseño adaptable.
 
-## Abrir el portafolio
+La paleta cálida de las secciones se conserva. La barra de progreso, la numeración de secciones, las tarjetas de catálogo y el bloque separado de exploraciones se retiraron.
 
-Extrae la carpeta y abre **index.html** en un navegador moderno. No abras el HTML dentro del ZIP. Mantén junto al archivo las carpetas assets, css, data y js.
+## Abrir
 
-El sitio usa scripts clásicos y recursos relativos para permitir la apertura como archivo. Algunas funciones del navegador, como copiar el correo, pueden depender de sus permisos; se muestra una alternativa si no están disponibles.
+Extrae el ZIP y abre **index.html**. Mantén juntas todas las carpetas. El sitio usa recursos relativos y scripts clásicos para permitir abrirlo sin instalar herramientas.
 
-Para previsualizarlo por HTTP, con Node.js 18 o posterior instalado:
+Para la vista por HTTP, con Node.js 18 o posterior:
 
 ```text
 npm run preview
 ```
 
-Abre http://127.0.0.1:8080. Detén la vista previa con Ctrl+C. No hace falta instalar paquetes ni ejecutar npm install.
+Abre http://127.0.0.1:8080. Detén la vista previa con Ctrl+C. No es necesario instalar paquetes.
 
-## Actualizar el repositorio de GitHub Pages
+## Actualizar GitHub Pages
 
-1. Conserva una copia de la versión actual.
-2. Copia **el contenido de esta carpeta** a la raíz del repositorio Portafolio: index.html debe quedar en la raíz.
-3. Incluye los archivos ocultos .nojekyll y .gitignore. Conserva la carpeta .git de tu repositorio si trabajas con una copia local.
-4. Guarda los cambios y súbelos a la rama que ya publica tu GitHub Pages.
-5. Revisa https://juanestebanherrerah.github.io/Portafolio/ cuando termine la publicación.
+1. Conserva una copia de tu versión actual.
+2. Copia el contenido de esta carpeta a la raíz del repositorio Portafolio. index.html debe quedar en la raíz.
+3. Incluye .nojekyll, .gitignore, assets/cv y las fuentes. Conserva la carpeta .git si trabajas sobre una copia local del repositorio.
+4. Guarda y sube los cambios a la rama que ya publica GitHub Pages.
+5. Comprueba https://juanestebanherrerah.github.io/Portafolio/ después de la publicación.
 
-Este paquete no modifica automáticamente el repositorio ni publica cambios. No necesita un backend ni un proceso de compilación para alojarse en GitHub Pages.
+No se ha modificado la web pública desde este paquete.
 
-## Editar proyectos y formación
+## Contenido y mantenimiento
 
-1. Modifica data/content.json.
-2. Ejecuta npm run sync para regenerar data/content.js.
-3. Ejecuta npm run check.
-4. Revisa la página en escritorio y móvil.
+Edita data/content.json para modificar proyectos y capacidades. Luego ejecuta:
 
-Las dos versiones del contenido se incluyen para mantener una fuente legible en JSON y permitir abrir el sitio sin un servidor. Publica ambas después de editar.
+```text
+npm run sync
+npm run check
+```
 
-Los textos de portada, perfil, contacto y SEO están en index.html; sus traducciones al inglés están en js/app.js. Consulta [la guía de contenido](docs/CONTENIDO.md) antes de cambiarlos.
+Los textos de portada y perfil están en index.html; la traducción al inglés y los textos de hitos/CV están en js/app.js. Consulta [la guía de contenido](docs/CONTENIDO.md).
 
-## Estructura
+## CV
 
-- index.html: contenido principal, navegación, metadatos y estructura accesible.
-- css/style.css: diseño adaptable, temas, textura, animaciones y estilos de impresión.
-- data/content.json: proyectos, educación, herramientas y certificados.
-- data/content.js: copia generada del contenido.
-- js/app.js: filtros, buscadores, diálogos, idioma y preferencias.
-- js/background.js: fondo animado ligero en Canvas.
-- assets/: fotografía, imágenes, SVG y tipografías locales.
-- scripts/: sincronización de datos, revisión de integridad y servidor de vista previa.
-- docs/: mantenimiento, diseño, recursos y verificación.
+Los cuatro archivos se encuentran en assets/cv y son copias de los PDF ATS de octubre de 2026 disponibles en el espacio de trabajo. Se han añadido como descargas; su contenido no se ha reescrito en esta revisión del sitio.
+
+Al publicar el portafolio, esos PDF formarán parte de los archivos públicos. Para sustituirlos, conserva los nombres o actualiza las referencias en js/app.js y en el bloque noscript de index.html.
 
 ## Documentación
 
-- [Editar información y proyectos](docs/CONTENIDO.md)
-- [Diseño, accesibilidad y rendimiento](docs/DISENO.md)
-- [Recursos y créditos](docs/RECURSOS.md)
-- [Pruebas realizadas y límites](docs/VERIFICACION.md)
+- [Contenido y archivos](docs/CONTENIDO.md)
+- [Diseño y rendimiento](docs/DISENO.md)
+- [Recursos y fuentes de información](docs/RECURSOS.md)
+- [Verificación](docs/VERIFICACION.md)
 
-## Información profesional
+No requiere servicios, claves, modelos de IA ni base de datos para funcionar. No utiliza analítica ni envía formularios. Los enlaces externos abren sus propios sitios.
 
-El perfil presenta el título de Técnico Profesional en Soporte de Sistemas e Informática obtenido el 26 de febrero de 2026 y la Ingeniería de Sistemas en curso. La experiencia se describe mediante proyectos, sin convertirla en empleo formal. LogiTree y Dotaciones App se identifican como colaborativos.
-
-Los certificados conservan sus enlaces originales; sus nombres no equivalen todos a certificaciones profesionales. Cada aplicación mantiene sus propios requisitos y licencias.
-
-Los textos, la fotografía y la identidad pertenecen a su titular. Las tipografías incluyen sus licencias OFL en assets/fonts. Este paquete no añade una licencia general de código abierto a todo el portafolio.
+La identidad, fotografía y contenido profesional pertenecen a su titular. Las fuentes incluyen sus licencias OFL. No se añade una licencia general al portafolio ni se reutilizan imágenes, música, logotipos o recursos de Halo o Jujutsu Kaisen.

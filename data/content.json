@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "3.0",
   "updated": "2026-10-26",
   "profile": {
     "name": "Juan Esteban Herrera Herrera",
@@ -32,7 +32,6 @@
         "ONNX",
         "Tesseract"
       ],
-      "featured": true,
       "url": "https://github.com/JuanEstebanHerreraH/xIas",
       "download": "https://github.com/JuanEstebanHerreraH/xIas/releases/tag/xIas2.2.0",
       "demo": null,
@@ -67,7 +66,19 @@
         "en": "Calculations are saved as values; this is not a complete Excel engine. Google Sheets requires connection setup and authorization."
       },
       "image": "assets/shots/xIas.png",
-      "imageType": "screenshot"
+      "imageType": "screenshot",
+      "flow": {
+        "es": [
+          "Importa o crea",
+          "Revisa y organiza",
+          "Exporta por trabajo"
+        ],
+        "en": [
+          "Import or create",
+          "Review and organize",
+          "Export each document"
+        ]
+      }
     },
     {
       "id": "Recorta",
@@ -82,7 +93,6 @@
         "Tauri",
         "Transformers.js"
       ],
-      "featured": true,
       "url": "https://github.com/JuanEstebanHerreraH/Recorta",
       "download": "https://github.com/JuanEstebanHerreraH/Recorta/releases",
       "demo": null,
@@ -117,7 +127,19 @@
         "en": "Accuracy and speed depend on the model and hardware. Models have their own licenses."
       },
       "image": "assets/shots/Recorta.png",
-      "imageType": "screenshot"
+      "imageType": "screenshot",
+      "flow": {
+        "es": [
+          "Elige una imagen",
+          "Ajusta la máscara",
+          "Exporta a tu medida"
+        ],
+        "en": [
+          "Choose an image",
+          "Refine the mask",
+          "Export to your needs"
+        ]
+      }
     },
     {
       "id": "logitree",
@@ -133,7 +155,6 @@
         "MockMvc",
         "JavaScript"
       ],
-      "featured": true,
       "url": "https://github.com/No-Country-simulation/g9-br-team-34-techmind",
       "download": null,
       "demo": null,
@@ -168,7 +189,19 @@
         "en": "This is shared work. The ML service, models and infrastructure belong to the team effort; my main contribution was backend and also frontend."
       },
       "image": "assets/shots/logitree.png",
-      "imageType": "screenshot"
+      "imageType": "screenshot",
+      "flow": {
+        "es": [
+          "Explora contenido",
+          "Conecta temas",
+          "Recorre el árbol"
+        ],
+        "en": [
+          "Explore content",
+          "Connect topics",
+          "Navigate the tree"
+        ]
+      }
     },
     {
       "id": "cafe-almacen",
@@ -182,7 +215,6 @@
         "Supabase",
         "PostgreSQL"
       ],
-      "featured": true,
       "url": "https://github.com/JuanEstebanHerreraH/Sistema_Trazabilidad_Cafetero",
       "download": null,
       "demo": null,
@@ -215,7 +247,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/cafe-almacen.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Registra el origen",
+          "Sigue el proceso",
+          "Consulta el lote"
+        ],
+        "en": [
+          "Record the origin",
+          "Follow the process",
+          "Trace the lot"
+        ]
+      }
     },
     {
       "id": "Arcionr",
@@ -230,7 +274,6 @@
         "Tauri",
         "Capacitor"
       ],
-      "featured": true,
       "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
       "download": "https://github.com/JuanEstebanHerreraH/Arcionr/releases",
       "demo": null,
@@ -263,7 +306,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Arcionr.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Selecciona archivos",
+          "Elige la operación",
+          "Procesa por lotes"
+        ],
+        "en": [
+          "Select files",
+          "Choose an operation",
+          "Process in batches"
+        ]
+      }
     },
     {
       "id": "StanSsion",
@@ -278,7 +333,6 @@
         "Web Audio API",
         "Vite"
       ],
-      "featured": true,
       "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
       "download": "https://github.com/JuanEstebanHerreraH/StanSsion/releases",
       "demo": "https://stan-ssion.vercel.app/",
@@ -311,7 +365,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/StanSsion.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Elige sonidos",
+          "Configura tu sesión",
+          "Trabaja a tu ritmo"
+        ],
+        "en": [
+          "Choose sounds",
+          "Set up your session",
+          "Work at your pace"
+        ]
+      }
     },
     {
       "id": "FileWatch",
@@ -326,7 +392,6 @@
         "Rust",
         "SQLite"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
       "download": "https://github.com/JuanEstebanHerreraH/FileWatch/releases",
       "demo": null,
@@ -359,7 +424,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/FileWatch.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Elige archivos",
+          "Conserva versiones",
+          "Recupera cambios"
+        ],
+        "en": [
+          "Choose files",
+          "Keep versions",
+          "Recover changes"
+        ]
+      }
     },
     {
       "id": "Vlanets",
@@ -374,7 +451,6 @@
         "IPv4 / IPv6",
         "Cisco IOS"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
       "download": "https://github.com/JuanEstebanHerreraH/Vlanets/releases",
       "demo": null,
@@ -392,12 +468,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Cálculos IPv4/IPv6 y VLSM con explicación del procedimiento.",
+          "Planificación de VLAN y generación de configuraciones Cisco IOS para inter-VLAN, rutas, NAT y ACL.",
+          "Interfaz Flutter/Dart y aprendizaje guiado de conceptos de routing, incluidos RIP y OSPF."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "IPv4/IPv6 and VLSM calculations with explained steps.",
+          "VLAN planning and Cisco IOS configuration generation for inter-VLAN routing, routes, NAT and ACLs.",
+          "Flutter/Dart interface and guided routing concepts, including RIP and OSPF."
         ]
       },
       "limits": {
@@ -405,7 +483,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Vlanets.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Define la red",
+          "Calcula y planifica",
+          "Genera configuración"
+        ],
+        "en": [
+          "Define the network",
+          "Calculate and plan",
+          "Generate configuration"
+        ]
+      }
     },
     {
       "id": "Coexfix",
@@ -417,7 +507,6 @@
         "PowerShell",
         "Windows"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Coexfix",
       "download": "https://github.com/JuanEstebanHerreraH/Coexfix/releases",
       "demo": null,
@@ -435,12 +524,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Utilidades PowerShell para respaldo, diagnóstico y reparación, con tareas de lectura separadas de los cambios.",
+          "Informes de adaptadores, controladores, bandas WiFi, Bluetooth, USB y eventos de conectividad.",
+          "Simulación de ajustes y mecanismos de reversión para revisar las modificaciones antes de aplicarlas."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "PowerShell backup, diagnostics and repair utilities, separating read-only tasks from changes.",
+          "Reports on adapters, drivers, WiFi bands, Bluetooth, USB and connectivity events.",
+          "Adjustment simulation and rollback mechanisms to review changes before applying them."
         ]
       },
       "limits": {
@@ -448,7 +539,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Coexfix.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Respalda el estado",
+          "Diagnostica el equipo",
+          "Revisa los ajustes"
+        ],
+        "en": [
+          "Back up the state",
+          "Diagnose the machine",
+          "Review adjustments"
+        ]
+      }
     },
     {
       "id": "dotaciones",
@@ -462,7 +565,6 @@
         "Supabase",
         "PostgreSQL"
       ],
-      "featured": false,
       "url": "https://github.com/samuelgcruz/dotaciones-app",
       "download": null,
       "demo": null,
@@ -495,7 +597,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/dotaciones.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Explora el catálogo",
+          "Configura el pedido",
+          "Actualiza existencias"
+        ],
+        "en": [
+          "Browse the catalog",
+          "Configure the order",
+          "Update stock"
+        ]
+      }
     },
     {
       "id": "Focus",
@@ -508,7 +622,6 @@
         "Rust",
         "React"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Focus",
       "download": "https://github.com/JuanEstebanHerreraH/Focus/releases",
       "demo": null,
@@ -526,12 +639,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Interfaz que presenta una sola tarea, con pasos concretos y un motor de puntuación por criterios.",
+          "Persistencia local en JSON y coordinación entre React/TypeScript y el backend Rust/Tauri.",
+          "Bloqueo de sitios mediante hosts de Windows, con opciones de salida y restauración documentadas."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "An interface presenting one task with concrete steps and a criteria-based scoring engine.",
+          "Local JSON persistence and coordination between React/TypeScript and the Rust/Tauri backend.",
+          "Website blocking through the Windows hosts file, with documented exits and restoration options."
         ]
       },
       "limits": {
@@ -539,7 +654,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Focus.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Define pasos concretos",
+          "Elige una propuesta",
+          "Enfócate en una tarea"
+        ],
+        "en": [
+          "Define concrete steps",
+          "Choose a suggestion",
+          "Focus on one task"
+        ]
+      }
     },
     {
       "id": "Iyiris",
@@ -552,7 +679,6 @@
         "TypeScript",
         "chroma.js"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Iyiris",
       "download": null,
       "demo": "https://iyiris-mocha.vercel.app/",
@@ -570,12 +696,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Generación de armonías y conversiones de color con TypeScript y chroma.js.",
+          "Comparación de contraste, simulación de daltonismo y vista previa de una interfaz en claro/oscuro.",
+          "Exportación de paletas a CSS, configuración Tailwind y JSON; favoritos en localStorage."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "Color harmony generation and conversions with TypeScript and chroma.js.",
+          "Contrast comparison, color vision simulations and light/dark interface previews.",
+          "Palette export to CSS, Tailwind configuration and JSON; favorites in localStorage."
         ]
       },
       "limits": {
@@ -583,7 +711,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Iyiris.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Elige un color",
+          "Explora armonías",
+          "Exporta la paleta"
+        ],
+        "en": [
+          "Choose a color",
+          "Explore harmonies",
+          "Export the palette"
+        ]
+      }
     },
     {
       "id": "Retorp",
@@ -598,7 +738,6 @@
         "Flutter",
         "SQLite"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Retorp",
       "download": "https://github.com/JuanEstebanHerreraH/Retorp/releases",
       "demo": null,
@@ -616,12 +755,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "API local con Python/FastAPI e interfaz Flutter para explorar dispositivos de una red local.",
+          "Integración de exploración ARP, consulta de puertos y latencia con Scapy y Nmap.",
+          "Historial local de dispositivos y sesiones en SQLite."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "A local Python/FastAPI API and Flutter interface for exploring local network devices.",
+          "ARP discovery, port inspection and latency integration with Scapy and Nmap.",
+          "Local device and session history in SQLite."
         ]
       },
       "limits": {
@@ -629,7 +770,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/Retorp.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Explora tu red",
+          "Consulta dispositivos",
+          "Revisa el historial"
+        ],
+        "en": [
+          "Explore your network",
+          "Inspect devices",
+          "Review history"
+        ]
+      }
     },
     {
       "id": "ApEn---App-File-Environment",
@@ -643,7 +796,6 @@
         "WPF",
         "MVVM"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
       "download": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases",
       "demo": null,
@@ -661,12 +813,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Lanzador WPF de aplicaciones con favoritos, nombres personalizados y etiquetas.",
+          "Clasificación de archivos en subcarpetas según su tipo.",
+          "Organización de la interfaz con MVVM y persistencia de configuración en JSON local."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "A WPF application launcher with favorites, custom names and labels.",
+          "File sorting into subfolders according to type.",
+          "MVVM interface structure and settings persisted in local JSON."
         ]
       },
       "limits": {
@@ -674,7 +828,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/ApEn---App-File-Environment.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Añade tus aplicaciones",
+          "Organiza con etiquetas",
+          "Clasifica archivos"
+        ],
+        "en": [
+          "Add your applications",
+          "Organize with labels",
+          "Sort files"
+        ]
+      }
     },
     {
       "id": "tiendahibrida.java",
@@ -690,7 +856,6 @@
         "AWS",
         "SQL Server"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java",
       "download": null,
       "demo": null,
@@ -708,12 +873,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Aplicación académica con catálogo, carrito, control de existencias y roles de cliente/administrador.",
+          "Backend Java/Jakarta EE y panel administrativo Java Swing conectado mediante JDBC.",
+          "Preparación de contenedores Docker y documentación de despliegue en AWS Elastic Beanstalk y RDS."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "An academic application with catalog, cart, stock control and customer/admin roles.",
+          "Java/Jakarta EE backend and a Java Swing administration panel connected through JDBC.",
+          "Docker container setup and AWS Elastic Beanstalk/RDS deployment documentation."
         ]
       },
       "limits": {
@@ -721,7 +888,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/tiendahibrida.java.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Explora los productos",
+          "Gestiona el inventario",
+          "Conecta web y escritorio"
+        ],
+        "en": [
+          "Explore products",
+          "Manage inventory",
+          "Connect web and desktop"
+        ]
+      }
     },
     {
       "id": "PixelGate",
@@ -735,7 +914,6 @@
         "JavaScript",
         "Bootstrap"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/PixelGate",
       "download": null,
       "demo": "https://juanestebanherrerah.github.io/PixelGate/",
@@ -753,12 +931,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Sitio estático para presentar una academia, sus cursos, juegos y equipo.",
+          "Diseño adaptable con HTML, CSS, JavaScript y Bootstrap.",
+          "Pantalla de entrada y animaciones con una identidad visual retro-pixel."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "A static site presenting an academy, its courses, games and team.",
+          "Responsive design using HTML, CSS, JavaScript and Bootstrap.",
+          "An entrance screen and animations with a retro-pixel visual identity."
         ]
       },
       "limits": {
@@ -766,7 +946,19 @@
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
       "image": "assets/shots/PixelGate.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Entra a la academia",
+          "Explora juegos y cursos",
+          "Conoce la propuesta"
+        ],
+        "en": [
+          "Enter the academy",
+          "Explore games and courses",
+          "Discover the concept"
+        ]
+      }
     },
     {
       "id": "VaHet",
@@ -778,7 +970,6 @@
         "Electron",
         "Node.js"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/VaHet",
       "download": null,
       "demo": null,
@@ -796,12 +987,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Interfaz Electron para organizar archivos, imágenes y notas con grupos y etiquetas.",
+          "Integración de herramientas de conversión, PDF y calendario en un entorno de escritorio.",
+          "Exploración de almacenamiento cifrado y conexión opcional con Drive; límites de seguridad documentados."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "An Electron interface organizing files, images and notes with groups and labels.",
+          "Conversion, PDF and calendar tools integrated into a desktop environment.",
+          "Exploration of encrypted storage and optional Drive connectivity, with documented security limits."
         ]
       },
       "limits": {
@@ -809,7 +1002,19 @@
         "en": "Learning prototype. Not presented as an audited security tool."
       },
       "image": "assets/shots/VaHet.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Crea un espacio local",
+          "Organiza tus archivos",
+          "Gestiona notas y tareas"
+        ],
+        "en": [
+          "Create a local space",
+          "Organize files",
+          "Manage notes and tasks"
+        ]
+      }
     },
     {
       "id": "AccNized",
@@ -822,7 +1027,6 @@
         "Dart",
         "SQLite"
       ],
-      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/AccNized",
       "download": null,
       "demo": null,
@@ -840,12 +1044,14 @@
       },
       "contributions": {
         "es": [
-          "Implementación de la interfaz y del flujo principal.",
-          "Integración de tecnologías y documentación del proyecto."
+          "Gestión local de cuentas, notas y etiquetas en Flutter/Dart.",
+          "Relaciones entre cuentas, servicios utilizados y notas mediante SQLite.",
+          "Personalización visual, filtrado por etiquetas y controles de acceso por cuenta dentro del prototipo."
         ],
         "en": [
-          "UI and main workflow implementation.",
-          "Technology integration and project documentation."
+          "Local account, note and label management in Flutter/Dart.",
+          "SQLite relationships between accounts, used services and notes.",
+          "Visual customization, label filters and per-account access controls within the prototype."
         ]
       },
       "limits": {
@@ -853,7 +1059,19 @@
         "en": "Learning prototype. Not recommended as a production credential manager."
       },
       "image": "assets/shots/AccNized.svg",
-      "imageType": "concept"
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Registra una cuenta",
+          "Vincula notas y usos",
+          "Organiza con etiquetas"
+        ],
+        "en": [
+          "Add an account",
+          "Link notes and usage",
+          "Organize with labels"
+        ]
+      }
     }
   ],
   "certifications": [
@@ -1437,63 +1655,216 @@
       }
     }
   ],
-  "toolGroups": [
+  "skills": [
     {
+      "id": "networks",
+      "label": {
+        "es": "Redes y soporte TI",
+        "en": "Networking & IT support"
+      },
       "title": {
+        "es": "Entender la red. Encontrar el problema.",
+        "en": "Understand the network. Find the problem."
+      },
+      "intro": {
+        "es": "Formación técnica y práctica universitaria, acompañadas por herramientas que construí para planificar y diagnosticar redes.",
+        "en": "Technical training and university practice, supported by tools I built to plan and diagnose networks."
+      },
+      "knowledge": {
+        "es": [
+          "IPv4/IPv6, subnetting y VLSM; planificación de direccionamiento.",
+          "VLAN, trunking 802.1Q e inter-VLAN; rutas estáticas, RIP y fundamentos de OSPF en Vlanets.",
+          "NAT, ACL y simulación de topologías en Cisco Packet Tracer.",
+          "Windows 10/11, componentes, controladores, mantenimiento y documentación de incidencias."
+        ],
+        "en": [
+          "IPv4/IPv6, subnetting and VLSM; address planning.",
+          "VLANs, 802.1Q trunking and inter-VLAN; static routes, RIP and OSPF fundamentals in Vlanets.",
+          "NAT, ACLs and topology simulation in Cisco Packet Tracer.",
+          "Windows 10/11, hardware, drivers, maintenance and incident documentation."
+        ]
+      },
+      "practice": {
+        "es": "Tres años de práctica académica en redes y PowerShell. En Vlanets desarrollo cálculos y configuraciones Cisco; en CoexFix, diagnóstico WiFi/Bluetooth con respaldo y reversión.",
+        "en": "Three years of academic networking and PowerShell practice. Vlanets covers calculations and Cisco configurations; CoexFix supports WiFi/Bluetooth diagnostics with backup and rollback."
+      },
+      "status": {
+        "es": "Preparación CCNA en curso; certificación aún no obtenida. Interés en soporte, mesa de ayuda y soporte de aplicaciones.",
+        "en": "Preparing for CCNA; certification not yet obtained. Interested in IT support, service desk and application support."
+      },
+      "projects": [
+        "Vlanets",
+        "Coexfix",
+        "Retorp"
+      ]
+    },
+    {
+      "id": "development",
+      "label": {
+        "es": "Desarrollo web y backend",
+        "en": "Web & backend development"
+      },
+      "title": {
+        "es": "De la interfaz a los datos.",
+        "en": "From interface to data."
+      },
+      "intro": {
+        "es": "Construyo interfaces y servicios, conecto bases de datos y organizo flujos completos de una aplicación.",
+        "en": "I build interfaces and services, connect databases and organize complete application workflows."
+      },
+      "knowledge": {
+        "es": [
+          "React, TypeScript, JavaScript y Next.js para interfaces web.",
+          "Java, Spring Boot, APIs REST, DTO, validación y persistencia con JPA.",
+          "PostgreSQL, SQL, Supabase y SQLite; consultas y operaciones transaccionales.",
+          "Git/GitHub, pruebas con MockMvc y Vitest; práctica con Docker y despliegue en Vercel."
+        ],
+        "en": [
+          "React, TypeScript, JavaScript and Next.js for web interfaces.",
+          "Java, Spring Boot, REST APIs, DTOs, validation and JPA persistence.",
+          "PostgreSQL, SQL, Supabase and SQLite; queries and transactional operations.",
+          "Git/GitHub, MockMvc and Vitest testing; practice with Docker and Vercel deployments."
+        ]
+      },
+      "practice": {
+        "es": "Tres años de práctica académica en Java y .NET. En LogiTree colaboré como full stack con énfasis backend; en Café Almacén y Dotaciones conecté interfaz, datos y procesos.",
+        "en": "Three years of academic Java and .NET practice. I contributed to LogiTree as a full stack developer focused on backend; in Café Almacén and Dotaciones I connected interfaces, data and workflows."
+      },
+      "status": {
+        "es": "Experiencia de proyectos personales, académicos y de equipo. Busco oportunidades junior para seguir trabajando con buenas prácticas.",
+        "en": "Personal, academic and team project experience. Seeking junior opportunities to keep applying good engineering practices."
+      },
+      "projects": [
+        "logitree",
+        "cafe-almacen",
+        "dotaciones"
+      ]
+    },
+    {
+      "id": "desktop",
+      "label": {
         "es": "Escritorio e IA local",
         "en": "Desktop & local AI"
       },
-      "tools": [
-        "C#",
-        ".NET",
-        "WPF",
-        "Rust",
-        "Tauri",
-        "ONNX",
-        "Tesseract"
-      ],
-      "context": {
-        "es": "xIas · Recorta · FileWatch",
-        "en": "xIas · Recorta · FileWatch"
-      }
+      "title": {
+        "es": "Herramientas que trabajan en tu equipo.",
+        "en": "Tools that work on your machine."
+      },
+      "intro": {
+        "es": "Aplicaciones para procesar documentos, imágenes y archivos, con modelos preentrenados y controles de revisión.",
+        "en": "Applications for documents, images and files, integrating pretrained models and review controls."
+      },
+      "knowledge": {
+        "es": [
+          "C#/.NET 8 y WPF; interfaces web de escritorio con Tauri y Rust.",
+          "ONNX Runtime, MiniLM y Transformers.js para integrar modelos preentrenados.",
+          "OCR con Tesseract; procesamiento en CPU, WebAssembly o WebGPU según el proyecto.",
+          "Web Workers, procesamiento por lotes, historial reversible y exportación."
+        ],
+        "en": [
+          "C#/.NET 8 and WPF; desktop web interfaces with Tauri and Rust.",
+          "ONNX Runtime, MiniLM and Transformers.js for pretrained model integration.",
+          "Tesseract OCR; CPU, WebAssembly or WebGPU processing depending on the project.",
+          "Web Workers, batch processing, reversible history and exports."
+        ]
+      },
+      "practice": {
+        "es": "xIas organiza y compara tablas; Recorta elimina fondos y permite corregir máscaras; FileWatch conserva y restaura versiones de archivos.",
+        "en": "xIas organizes and compares tables; Recorta removes backgrounds and supports mask corrections; FileWatch keeps and restores file versions."
+      },
+      "status": {
+        "es": "Integro modelos existentes: no presento estos proyectos como entrenamiento de modelos propios. Los requisitos y límites están en cada repositorio.",
+        "en": "I integrate existing models; these projects do not represent training original models. Requirements and limits are documented in each repository."
+      },
+      "projects": [
+        "xIas",
+        "Recorta",
+        "FileWatch"
+      ]
     },
     {
-      "title": {
-        "es": "Web, backend y datos",
-        "en": "Web, backend & data"
+      "id": "office",
+      "label": {
+        "es": "Ofimática e información",
+        "en": "Office tools & information"
       },
-      "tools": [
-        "Java",
-        "Spring Boot",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "PostgreSQL",
-        "Supabase"
-      ],
-      "context": {
-        "es": "LogiTree · Café Almacén · Dotaciones",
-        "en": "LogiTree · Café Almacén · Dotaciones"
-      }
+      "title": {
+        "es": "Información clara. Menos trabajo repetitivo.",
+        "en": "Clear information. Less repetitive work."
+      },
+      "intro": {
+        "es": "Organizo datos y documentos, preparo material y aplico automatizaciones con revisión de resultados.",
+        "en": "I organize data and documents, prepare materials and apply automation with reviewed results."
+      },
+      "knowledge": {
+        "es": [
+          "Excel básico e intermedio por formación universitaria; organización y revisión de planillas.",
+          "Tres años de práctica académica con Excel y dos años de práctica con macros.",
+          "Word para documentación, guías y procedimientos; PowerPoint para presentaciones.",
+          "Limpieza, comparación y consolidación de datos; organización de documentos con apoyo de IA."
+        ],
+        "en": [
+          "Basic and intermediate Excel through university training; spreadsheet organization and review.",
+          "Three years of academic Excel practice and two years practicing macros.",
+          "Word for documentation, guides and procedures; PowerPoint for presentations.",
+          "Data cleaning, comparison and consolidation; AI-assisted document organization."
+        ]
+      },
+      "practice": {
+        "es": "En xIas incorporé creación de tablas, importación/exportación, operaciones de datos y conexión con Google Sheets. Arcionr apoya la conversión y organización de archivos.",
+        "en": "In xIas I added table creation, import/export, data operations and a Google Sheets connection. Arcionr supports file conversion and organization."
+      },
+      "status": {
+        "es": "El CV de ofimática está orientado a asistencia digital y documentación. Los años de práctica corresponden a estudio y proyectos, no a empleo formal.",
+        "en": "The office tools CV focuses on digital assistance and documentation. Practice years describe study and projects, not formal employment."
+      },
+      "projects": [
+        "xIas",
+        "Arcionr",
+        "Recorta"
+      ]
     },
     {
-      "title": {
-        "es": "Redes y automatización",
-        "en": "Networking & automation"
+      "id": "automation",
+      "label": {
+        "es": "Automatización con IA",
+        "en": "AI-assisted automation"
       },
-      "tools": [
-        "PowerShell",
-        "Python",
-        "Flutter",
-        "Dart",
-        "IPv4 / IPv6",
-        "VLAN",
-        "Excel"
-      ],
-      "context": {
-        "es": "CoexFix · Vlanets · Retorp · formación en ofimática",
-        "en": "CoexFix · Vlanets · Retorp · office software training"
-      }
+      "title": {
+        "es": "Acelerar el proceso sin perder el criterio.",
+        "en": "Speed up the process. Keep human judgment."
+      },
+      "intro": {
+        "es": "Uso desarrollo asistido por IA —también llamado vibe coding— para prototipar, iterar y documentar, con revisión y pruebas de lo generado.",
+        "en": "I use AI-assisted development, also called vibe coding, to prototype, iterate and document, while reviewing and testing generated work."
+      },
+      "knowledge": {
+        "es": [
+          "Prompts con contexto, restricciones y revisión de resultados para programación y documentación.",
+          "PowerShell y fundamentos de Python para tareas repetitivas y trabajo con archivos.",
+          "Integración de IA en flujos: OCR → datos; similitud → revisión; imagen → máscara → exportación.",
+          "Formación en IA generativa, productividad con ChatGPT y Spring AI; integración de modelos locales en aplicaciones."
+        ],
+        "en": [
+          "Context-rich prompts, constraints and result review for programming and documentation.",
+          "PowerShell and Python fundamentals for repetitive tasks and file workflows.",
+          "AI in workflows: OCR → data; similarity → review; image → mask → export.",
+          "Training in generative AI, ChatGPT productivity and Spring AI; local model integration in applications."
+        ]
+      },
+      "practice": {
+        "es": "La IA apoya la construcción y la optimización. xIas y Recorta también la integran como función visible para la persona que usa la herramienta.",
+        "en": "AI supports building and optimization. xIas and Recorta also integrate it as a visible feature for the person using the tool."
+      },
+      "status": {
+        "es": "Distingo automatización por reglas de inferencia con IA. Valido cambios, documento límites y dejo decisiones de revisión en manos del usuario.",
+        "en": "I distinguish rule-based automation from AI inference. I validate changes, document limits and leave review decisions to the user."
+      },
+      "projects": [
+        "xIas",
+        "Recorta",
+        "Coexfix"
+      ]
     }
   ]
 }

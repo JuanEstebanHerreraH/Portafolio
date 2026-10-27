@@ -1,66 +1,62 @@
-# Mantener el contenido
+# Contenido y mantenimiento
 
 ## Proyectos
 
-Edita el arreglo projects en data/content.json. Cada proyecto contiene:
+data/content.json contiene projects. El orden del arreglo establece el orden del explorador. Ya no hay un bloque de archivo ni una selección basada en tarjetas.
 
 | Campo | Uso |
 | --- | --- |
-| id | Identificador estable del enlace directo. Evita cambiarlo después de compartirlo. |
+| id | Identificador estable del proyecto. |
 | name | Nombre visible. |
-| featured | true para aparecer en la selección inicial; false para el archivo. |
-| categories | Una o varias de: ai, web, desktop, network. |
-| tech | Tecnologías que aparecen en etiquetas y en la búsqueda. |
-| summary | Descripción corta en es y en. |
-| role | Tipo de participación en es y en. |
-| problem | Problema que aborda, en es y en. |
-| contributions | Lista de aportes personales en es y en. |
-| limits | Alcance real y limitaciones, en es y en. |
-| image | Ruta relativa de una imagen incluida en assets/shots. |
-| imageType | screenshot para una captura real; concept para una ilustración. |
+| categories | ai, web, desktop y/o network. |
+| tech | Tecnologías, también utilizadas por el buscador. |
+| summary | Qué hace la herramienta, en es y en. |
+| problem | Qué problema aborda. |
+| role | Participación personal y contexto del proyecto. |
+| flow | Tres pasos de uso o recorrido, en es y en. |
+| contributions | Funciones e implementación, en listas es/en. |
+| limits | Alcance y límites reales. |
+| image | Ruta local de la captura o ilustración. |
+| imageType | screenshot para captura; concept para ilustración. |
 | url | Repositorio HTTPS. |
-| demo / download | Enlace HTTPS o null si no existe. |
+| demo / download | Enlaces HTTPS o null. |
 
-El orden del arreglo establece el orden de presentación. La búsqueda y los filtros recorren los 18 proyectos; la vista inicial muestra solo los marcados como featured. Las doce exploraciones también aparecen en el archivo desplegable.
+El explorador muestra un proyecto a la vez; sus botones anterior/siguiente recorren los resultados de la búsqueda y del filtro actual.
 
-El enlace directo tiene el formato #proyecto/xIas. Permite compartir un caso dentro del mismo HTML sin configurar rutas especiales en GitHub Pages.
+#herramienta/xIas selecciona una herramienta y lleva a su vista. #proyecto/xIas abre su caso. No se necesitan rutas de servidor.
 
-No uses una ilustración como si fuese una captura del producto. Sustituye la imagen y cambia imageType cuando tengas una captura real sin datos privados.
+Los puntos de la escena inicial están en index.html y usan data-select-tool. Si cambias sus proyectos, actualiza sus nombres, textos y traducciones.
 
-## Formación y cursos
+## Capacidades
 
-education contiene título y detalle bilingües, institución y periodo. El periodo «En curso / In progress» se adapta al idioma.
+El arreglo skills incluye etiqueta, título, introducción, conocimientos, práctica, estado y proyectos de evidencia. Los textos tienen versiones es y en.
 
-certifications conserva nombre, institución, año, etiquetas y URL. La búsqueda utiliza esos campos. Un curso, una ruta de aprendizaje y una certificación profesional son credenciales diferentes: conserva la denominación de su emisor.
+Los conocimientos de redes incluyen direccionamiento, VLSM, VLAN, trunking, inter-VLAN, routing, NAT/ACL, Packet Tracer y soporte Windows. Ofimática tiene su área propia; la automatización asistida por IA también.
 
-toolGroups organiza tecnologías por área y las relaciona con proyectos. No contiene porcentajes de dominio ni años calculados automáticamente.
+No conviertas años de práctica académica en años de empleo formal. La preparación CCNA sigue en curso.
 
-## Perfil, portada y contacto
+## Formación
 
-Los textos estáticos están en index.html, identificados por data-i18n o data-i18n-html. La traducción al inglés está en el objeto english de js/app.js. Actualiza ambas versiones.
+Los tres hitos principales se escriben en los diccionarios es/en de js/app.js:
 
-Si cambias el correo, modifica data/content.json y todas sus apariciones visibles y enlaces mailto en index.html.
+- Titulación técnica obtenida el 26 de febrero de 2026.
+- Formación especializada Oracle Next Education / Alura.
+- Ingeniería de Sistemas en curso; hito tecnológico previsto para 2027.
 
-Si cambias de repositorio o dominio, actualiza la URL canónica, og:url, og:image y los datos estructurados del encabezado de index.html. La imagen del adelanto social usa la fotografía local, no la vista completa del sitio.
+certifications conserva las 48 evidencias con nombre, institución, fecha, etiquetas y enlace. La función certArea las organiza por áreas, y certType distingue rutas y cursos. Si añades una credencial de otro tipo, revisa su clasificación.
 
-La portada de xIas tiene su propia imagen, etiquetas y textos en index.html. Cambiar solo el orden de projects no cambia automáticamente esa portada.
+Cada área muestra seis resultados inicialmente y permite cargar más. Buscar filtra dentro del área elegida. Cambiar de área limpia la búsqueda.
 
-## Flujo de edición
+## Perfil y traducciones
 
-Después de guardar content.json:
+Los textos estáticos en español están en index.html; su traducción está en el diccionario en de js/app.js. Actualiza ambos.
 
-```text
-npm run sync
-npm run check
-npm run preview
-```
+Los textos de proyectos y capacidades se editan en content.json. content.js es la copia generada para permitir abrir el HTML sin fetch.
 
-No necesitas instalar dependencias. Revisa el resultado, sube content.json y content.js junto con los archivos modificados y comprueba la versión publicada.
+Si cambias el correo, actualiza data/profile y sus enlaces visibles en index.html. Si cambias de dominio o repositorio, actualiza la URL canónica, los metadatos OG y el bloque Person.
 
-No incluyas credenciales, documentos de identidad, datos de clientes ni capturas con información privada. El sitio es público.
+## Descargas
 
-## Preferencias de la visita
+Los PDF están en assets/cv. Sus enlaces y descripciones se definen en renderCVs, dentro de js/app.js. Hay enlaces alternativos en noscript. El sitio utiliza el atributo download; el navegador puede preguntar dónde guardar el PDF según la configuración de la persona.
 
-Tema, idioma y movimiento se guardan en localStorage del navegador. No se envían a un servidor. Si el almacenamiento no está disponible, la página continúa con valores predeterminados.
-
-Para comprobar el diseño original después de tus pruebas, elige español, tema claro y ajusta el movimiento desde los botones del encabezado.
+Después de modificar el JSON ejecuta npm run sync y npm run check. Revisa el diseño y publica los dos archivos de datos.

@@ -1,44 +1,39 @@
-# Diseño y funcionamiento
+# Diseño y movimiento
 
-## Dirección visual
+## Dirección
 
-La idea es una bitácora de alguien que construye herramientas: papel, anotaciones, líneas de trabajo y una tipografía expresiva. La portada destaca una aplicación real en lugar de una ilustración genérica de programación.
+La experiencia toma ideas de menús de campaña y entornos de exploración: atmósfera, profundidad, señales y una navegación que deja elegir un destino. La composición, los gráficos y las animaciones son originales.
 
-La paleta combina papel cálido, tinta verde oscura, acento arcilla y detalles lima. El perfil usa un bloque oscuro; el contacto, un tono cálido distinto. Los bordes y la textura conectan las secciones.
+La portada es un cielo azul con auroras, terreno y una constelación de herramientas. Cada punto enlaza una aplicación real. El logotipo conserva una rueda geométrica en rotación. El encabezado mantiene su atmósfera al recorrer las secciones.
 
-Tipografías: Syne para titulares, DM Sans para lectura e IBM Plex Mono para etiquetas. Los acentos editoriales en cursiva usan Georgia del sistema.
+El explorador sustituye el catálogo por una lista de selección y una escena dedicada al proyecto activo. Los casos muestran primero la herramienta y su recorrido de uso; después, el problema y la implementación.
 
-Los colores y tamaños principales se controlan mediante variables al inicio de css/style.css. Los temas se seleccionan con data-theme en el elemento html. No hay bibliotecas de componentes ni un framework.
+Se conserva la paleta de papel, tinta verde, lima y arcilla en las secciones interiores y el cierre cálido.
+
+## Tipografía
+
+Montserrat para títulos, Open Sans para lectura y Roboto Mono para etiquetas. Las fuentes se incluyen localmente. No hay solicitudes de fuentes durante una visita.
 
 ## Movimiento
 
-- El fondo Canvas dibuja líneas y partículas a una frecuencia limitada, con resolución y cantidad de elementos acotadas.
-- Las órbitas y algunos elementos de la portada usan animación CSS.
-- Las secciones entran suavemente mediante IntersectionObserver.
-- El control del encabezado permite pausar o activar el movimiento.
-- La preferencia de movimiento reducido del sistema determina el valor inicial. Una elección explícita de la persona se conserva.
-- El Canvas se pausa cuando la página queda oculta. En ahorro de datos o memoria muy limitada usa un fondo estático.
+El movimiento está activo por defecto, de acuerdo con la dirección solicitada. El botón del encabezado permite pausarlo; esa elección se guarda. No se reproducen sonidos y no hay una pantalla que obligue a esperar para entrar.
 
-Son efectos visuales: el portafolio no descarga ni ejecuta un modelo de IA. La IA local pertenece a algunos proyectos presentados.
+El cielo se dibuja en Canvas a una frecuencia limitada de aproximadamente 24 cuadros por segundo. Su resolución está acotada; se detiene cuando queda fuera de vista o la pestaña está oculta. Las órbitas, la rueda y el ambiente del encabezado usan CSS. El puntero aporta una inclinación suave en equipos que tienen un puntero preciso.
 
-## Adaptación
+El portafolio no ejecuta inferencia ni descarga modelos de IA. Las funciones de IA corresponden a algunas de las aplicaciones presentadas.
 
-El contenido usa una página continua. Las tarjetas pasan a una columna en móvil; el menú se transforma en un desplegable y los diálogos mantienen su desplazamiento dentro de la pantalla.
+## Adaptación y accesibilidad
 
-Las imágenes se cargan desde el propio sitio. Las de proyectos se cargan de forma diferida. Las capturas se presentan con proporciones coherentes sin deformarlas.
+En móvil, la escena se acomoda debajo del menú principal y las herramientas se eligen en una fila desplazable. El panel de capacidades usa pestañas con navegación de flechas y foco visible. Los cursos se presentan en la página, por áreas.
 
-## Accesibilidad
+Se incluyen salto al contenido, encabezados, etiquetas, estados de selección, mensajes de resultado, cierre con Escape y un diálogo nativo para los casos.
 
-Hay enlace para saltar al contenido, encabezados jerárquicos, etiquetas de botones y buscadores, foco visible, mensajes de estado y navegación de teclado. Los casos y certificados usan el elemento dialog del navegador y se pueden cerrar con Escape.
+Las capturas reales y las ilustraciones se distinguen en la vista y en sus textos alternativos. Los PDF tienen enlaces con etiquetas descriptivas. El modo oscuro se aplica al contenido manteniendo el cielo inicial.
 
-Los textos alternativos distinguen capturas de ilustraciones. El sitio ofrece un control de movimiento y estilos de impresión.
+No se declara una conformidad WCAG auditada.
 
-Se hicieron comprobaciones manuales; no se ha realizado una auditoría formal de conformidad WCAG ni una prueba completa con lectores de pantalla.
+## Hardware
 
-## Hardware y software
+Un navegador moderno con Canvas, dialog, CSS Grid e IntersectionObserver. No exige GPU dedicada ni una instalación de desarrollo para la visita. No se ha establecido un mínimo de RAM con mediciones en equipos físicos.
 
-No se requiere GPU dedicada, modelo de IA, backend ni una instalación especial para visitar el portafolio. Se utiliza un navegador moderno con soporte para dialog, Canvas e IntersectionObserver.
-
-Se probaron anchos de 320, 390, 768 y 1366 píxeles en un navegador Chromium. No se estableció un mínimo de RAM mediante mediciones en equipos físicos. Las reducciones automáticas de efectos ayudan en equipos modestos, pero no equivalen a una garantía de rendimiento en todos los dispositivos.
-
-Node.js 18 o posterior solo se necesita para las herramientas opcionales de revisión, sincronización y vista previa. Los visitantes no necesitan Node.js.
+Node.js 18 o posterior se utiliza solamente para los comandos opcionales de mantenimiento. No es necesario para los visitantes.

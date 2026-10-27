@@ -1,8 +1,8 @@
 {
   "name": "juan-esteban-portfolio",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
-  "description": "Portafolio personal estático de Juan Esteban Herrera Herrera.",
+  "description": "Portafolio inmersivo de herramientas de Juan Esteban Herrera.",
   "scripts": {
     "sync": "node scripts/sync-data.mjs",
     "check": "node scripts/check.mjs",
