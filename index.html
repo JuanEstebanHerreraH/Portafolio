@@ -1,402 +1,132 @@
-<!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<!doctype html>
+<html lang="es" data-theme="light" data-motion="off">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juan Esteban Herrera — Software de escritorio y herramientas de red. Aplicaciones offline-first en Rust, .NET, Flutter y Tauri.">
-  <meta property="og:title" content="Juan Esteban Herrera — Software de escritorio y herramientas de red">
-  <meta property="og:description" content="Aplicaciones que corren en tu equipo y no dependen de la nube. Rust, .NET, Flutter, Tauri.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Juan Esteban Herrera Herrera. Técnico profesional y desarrollador junior en Bogotá. Aplicaciones de escritorio, IA local, backend, web y redes. Explora xIas, Recorta, LogiTree y más proyectos.">
+  <meta name="theme-color" content="#f2f0e8">
+  <meta property="og:title" content="Juan Esteban Herrera · Ideas que se vuelven herramientas">
+  <meta property="og:description" content="Desarrollo web y de escritorio, IA local y redes. Un portafolio de proyectos personales, académicos y colaborativos.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#080b14">
-  <title data-i18n="page.title">Portafolio — Juan Esteban Herrera</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta property="og:url" content="https://juanestebanherrerah.github.io/Portafolio/">
+  <meta property="og:image" content="https://juanestebanherrerah.github.io/Portafolio/assets/photo.jpg">
+  <meta property="og:locale" content="es_CO">
+  <link rel="canonical" href="https://juanestebanherrerah.github.io/Portafolio/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <title>Juan Esteban Herrera · Ideas que se vuelven herramientas</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('jeh-theme')||'light';document.documentElement.dataset.motion=localStorage.getItem('jeh-motion')||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'on')}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="data/content.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/background.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Juan Esteban Herrera Herrera","url":"https://juanestebanherrerah.github.io/Portafolio/","image":"https://juanestebanherrerah.github.io/Portafolio/assets/photo.jpg","jobTitle":"Técnico Profesional en Soporte de Sistemas e Informática · Desarrollo de software junior","sameAs":["https://github.com/JuanEstebanHerreraH","https://www.linkedin.com/in/juan-esteban-herrera-herrera/"],"homeLocation":{"@type":"City","name":"Bogotá"}}</script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+  <canvas id="signal-field" aria-hidden="true"></canvas>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 17h18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V3H3v13h5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  </defs></svg>
 
-  <!-- Un solo lienzo: campo de señal reactivo al mouse -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- Modal de idioma -->
-  <div id="lang-modal" role="dialog" aria-modal="true" aria-label="Idioma" hidden>
-    <div class="lang-modal-inner">
-      <div class="lang-modal-header">
-        <span class="lang-modal-title" data-i18n="ui.selectLang">Seleccionar idioma</span>
-        <button class="lang-modal-close" id="lang-modal-close" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="lang-grid" id="lang-grid">
-        <button class="lang-opt active" data-lang="es">🇪🇸 Español</button>
-        <button class="lang-opt" data-lang="en">🇺🇸 English</button>
-        <button class="lang-opt" data-lang="fr">🇫🇷 Français</button>
-        <button class="lang-opt" data-lang="zh">🇨🇳 中文</button>
-        <button class="lang-opt" data-lang="pt">🇧🇷 Português</button>
-        <button class="lang-opt" data-lang="de">🇩🇪 Deutsch</button>
-        <button class="lang-opt" data-lang="it">🇮🇹 Italiano</button>
-        <button class="lang-opt" data-lang="ja">🇯🇵 日本語</button>
-        <button class="lang-opt" data-lang="ko">🇰🇷 한국어</button>
-        <button class="lang-opt" data-lang="ru">🇷🇺 Русский</button>
-        <button class="lang-opt" data-lang="ar">🇸🇦 العربية</button>
-        <button class="lang-opt" data-lang="hi">🇮🇳 हिन्दी</button>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#inicio" aria-label="Juan Esteban Herrera, inicio">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 20h32M20 4v32M9 9l22 22M31 9 9 31"/><circle cx="20" cy="20" r="11"/></svg>
+        <span>juan esteban<span class="brand-dot">.</span><small data-i18n="brandSub">CÓDIGO & CURIOSIDAD</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#proyectos" data-i18n="navWork">Proyectos</a>
+        <a href="#perfil" data-i18n="navAbout">Sobre mí</a>
+        <a href="#formacion" data-i18n="navEducation">Formación</a>
+        <a class="nav-contact" href="#contacto"><span data-i18n="navContact">Hablemos</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+      </nav>
+      <div class="header-tools">
+        <button class="lang-button" id="language-toggle" aria-label="Switch to English">ES<span>/ EN</span></button>
+        <button class="icon-button" id="theme-toggle" aria-label="Cambiar a tema oscuro" title="Cambiar tema"><svg class="icon"><use href="#i-sun"/></svg></button>
+        <button class="icon-button" id="motion-toggle" aria-label="Pausar animaciones" title="Pausar animaciones" aria-pressed="true"><svg class="icon"><use href="#i-pause"/></svg></button>
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
       </div>
     </div>
-  </div>
-
-  <!-- HEADER -->
-  <header id="main-header">
-    <a class="logo" href="#" aria-label="Inicio">
-      <span class="logo-bracket">[</span><span class="logo-name">jeh</span><span class="logo-sym">.dev</span><span class="logo-bracket">]</span>
-    </a>
-
-    <nav class="main-nav" role="navigation" id="main-nav" aria-label="Secciones">
-      <span class="nav-indicator" aria-hidden="true"></span>
-      <div class="nav-item-wrapper" data-section="about">
-        <button class="nav-item"><span class="nav-idx">01</span><span class="nav-label" data-i18n="nav.about">SOBRE MÍ</span></button>
-      </div>
-      <div class="nav-item-wrapper" data-section="projects">
-        <button class="nav-item"><span class="nav-idx">02</span><span class="nav-label" data-i18n="nav.projects">PROYECTOS</span></button>
-      </div>
-      <div class="nav-item-wrapper" data-section="certifications">
-        <button class="nav-item"><span class="nav-idx">03</span><span class="nav-label" data-i18n="nav.certifications">FORMACIÓN</span></button>
-      </div>
-      <div class="nav-item-wrapper" data-section="applications">
-        <button class="nav-item"><span class="nav-idx">04</span><span class="nav-label" data-i18n="nav.applications">APPS</span></button>
-      </div>
-      <div class="nav-item-wrapper" data-section="techstack">
-        <button class="nav-item"><span class="nav-idx">05</span><span class="nav-label" data-i18n="nav.techstack">TECH</span></button>
-      </div>
-      <div class="nav-item-wrapper" data-section="contact">
-        <button class="nav-item"><span class="nav-idx">06</span><span class="nav-label" data-i18n="nav.contact">CONTACTO</span></button>
-      </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="#proyectos" data-i18n="navWork">Proyectos</a><a href="#perfil" data-i18n="navAbout">Sobre mí</a><a href="#formacion" data-i18n="navEducation">Formación</a><a href="#contacto" data-i18n="navContact">Hablemos</a>
     </nav>
-
-    <div class="header-controls">
-      <button class="globe-btn" id="globe-btn" aria-label="Idioma">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-        </svg>
-        <span id="globe-lang-label">ES</span>
-      </button>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="12" cy="12" r="5"/>
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-        </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-      </button>
-      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
   </header>
 
-  <!-- Drawer móvil -->
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-    <div class="mobile-drawer-inner">
-      <div class="mobile-nav-item" data-section="about"><span>01</span>SOBRE MÍ</div>
-      <div class="mobile-nav-item" data-section="projects"><span>02</span>PROYECTOS</div>
-      <div class="mobile-nav-item" data-section="certifications"><span>03</span>FORMACIÓN</div>
-      <div class="mobile-nav-item" data-section="applications"><span>04</span>APPS</div>
-      <div class="mobile-nav-item" data-section="techstack"><span>05</span>TECH</div>
-      <div class="mobile-nav-item" data-section="contact"><span>06</span>CONTACTO</div>
-    </div>
-  </div>
-
-  <main id="main-content">
-
-    <!-- HERO -->
-    <section class="hero" id="hero-text">
-      <div class="hero-eyebrow">
-        <span class="signal-dot"></span>
-        <span class="hero-eyebrow-txt" data-i18n="hero.available">Disponible para trabajar</span>
-        <span class="hero-eyebrow-sep">/</span>
-        <span class="hero-loc">BOGOTÁ · CO</span>
+  <main id="contenido">
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow hero-eyebrow"><span class="status-dot"></span><span data-i18n="available">Disponible para oportunidades junior</span></div>
+        <h1 id="hero-title"><span data-i18n="hero1">Ideas que</span><br><span data-i18n="hero2">se vuelven</span><br><em data-i18n="hero3">herramientas.</em></h1>
+        <p class="hero-description" data-i18n="heroDescription">Soy Juan Esteban Herrera. Desarrollo aplicaciones web y de escritorio, exploro la IA local y construyo soluciones para las tareas de todos los días.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos"><span data-i18n="explore">Explorar proyectos</span><svg class="icon"><use href="#i-down"/></svg></a>
+          <a class="text-link" href="https://github.com/JuanEstebanHerreraH" target="_blank" rel="noopener noreferrer">GitHub<svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="hero-identity"><img src="assets/photo.jpg" alt="Juan Esteban Herrera" width="48" height="48"><div><strong>Juan Esteban Herrera Herrera</strong><span data-i18n="heroRole">Técnico profesional · Estudiante de Ing. de Sistemas</span></div></div>
       </div>
-
-      <h1 class="hero-title">
-        <span class="hero-line" data-i18n="hero.line1">Software de escritorio</span>
-        <span class="hero-line hero-line-2" data-i18n="hero.line2">y herramientas de red.</span>
-      </h1>
-
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Aplicaciones que corren en tu equipo y no dependen de la nube. Rust, .NET, Flutter y Tauri.</p>
-
-      <!-- Proyectos destacados: visibles sin hacer clic -->
-      <div class="hero-featured" id="hero-featured" aria-label="Proyectos destacados"></div>
-
-      <div class="hero-actions">
-        <button class="hero-btn hero-btn-primary" data-goto="projects" data-i18n="hero.seeAll">Ver todos los proyectos</button>
-        <button class="hero-btn hero-btn-ghost" data-goto="contact" data-i18n="hero.contact">Contacto</button>
+      <div class="hero-atelier" aria-label="Proyecto reciente: xIas">
+        <svg class="hero-orbits" viewBox="0 0 620 600" fill="none" aria-hidden="true"><g class="orbit-system" transform-origin="310 300"><ellipse cx="310" cy="300" rx="272" ry="177"/><ellipse cx="310" cy="300" rx="272" ry="177" transform="rotate(60 310 300)"/><ellipse cx="310" cy="300" rx="272" ry="177" transform="rotate(120 310 300)"/><circle cx="310" cy="300" r="272" stroke-dasharray="2 9"/><circle cx="569" cy="219" r="7" class="orbit-node"/><circle cx="96" cy="462" r="5" class="orbit-node"/></g></svg>
+        <span class="atelier-note" data-i18n="onDesk">EN MI MESA DE TRABAJO</span>
+        <div class="orbit-tag tag-top"><span class="tiny-dot"></span>IA LOCAL / CPU</div>
+        <figure class="workspace-card" id="workspace-card">
+          <div class="window-chrome"><span class="window-dots"><i></i><i></i><i></i></span><span>xIas · v2.2</span><svg class="icon"><use href="#i-code"/></svg></div>
+          <img class="workspace-shot" src="assets/shots/xIas.png" alt="Captura real de xIas: tabla editable en modo oscuro con datos de demostración" width="1880" height="992" fetchpriority="high">
+          <figcaption><div><span class="eyebrow" data-i18n="latest">ÚLTIMA ENTREGA / 2026</span><strong>xIas<span>↗</span></strong><p data-i18n="heroProject">Menos caos en tus tablas.</p></div><button class="round-button" data-project="xIas" aria-label="Conocer el proyecto xIas"><svg class="icon"><use href="#i-arrow"/></svg></button></figcaption>
+        </figure>
+        <span class="orbit-tag tag-bottom">.NET 8 <span>×</span> ONNX</span>
+        <div class="hand-note" aria-hidden="true"><svg viewBox="0 0 90 65"><path d="M6 7C6 35 43 59 82 26M68 25l15-1-3 15"/></svg><span data-i18n="handNote">de la idea al ejecutable</span></div>
       </div>
-
-      <div class="hero-meta" id="hero-meta">
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-projects">—</span><span class="hero-meta-lbl" data-i18n="hero.mProjects">proyectos</span></div>
-        <span class="hero-meta-div"></span>
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-apps">—</span><span class="hero-meta-lbl" data-i18n="hero.mApps">apps descargables</span></div>
-        <span class="hero-meta-div"></span>
-        <div class="hero-meta-item"><span class="hero-meta-num" id="hero-num-langs">—</span><span class="hero-meta-lbl" data-i18n="hero.mLangs">lenguajes</span></div>
-      </div>
+      <div class="hero-bottom"><span class="location"><span class="location-cross">+</span>BOGOTÁ, CO <span class="muted">/ UTC−5</span></span><span class="hero-disciplines" data-i18n="disciplines">WEB · ESCRITORIO · REDES · AUTOMATIZACIÓN</span><a href="#proyectos" class="scroll-link" aria-label="Ir a proyectos"><svg class="icon"><use href="#i-down"/></svg></a></div>
     </section>
 
-    <!-- ═══ ABOUT ═══ -->
-    <section class="content-panel" id="section-about" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">01 / SOBRE MÍ</span>
-          <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+    <section class="work-section wrap section-space" id="proyectos" aria-labelledby="work-title">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="section-number">01</span><span data-i18n="workKicker">PROYECTOS / CÓDIGO EN ACCIÓN</span></p><h2 id="work-title" data-i18n-html="workTitle">Hechos para<br><em>resolver algo.</em></h2></div><p class="section-intro" data-i18n="workIntro">Una selección de lo que construyo y aprendo. Abre cada proyecto para ver el problema, mi aporte y cómo está hecho.</p></div>
+      <div class="work-toolbar">
+        <div class="filter-list" id="project-filters" role="group" aria-label="Filtrar proyectos">
+          <button class="filter-button active" data-filter="all" aria-pressed="true" data-i18n="all">Selección</button>
+          <button class="filter-button" data-filter="ai" aria-pressed="false" data-i18n="filterAI">IA</button>
+          <button class="filter-button" data-filter="web" aria-pressed="false" data-i18n="filterWeb">Web y backend</button>
+          <button class="filter-button" data-filter="desktop" aria-pressed="false" data-i18n="filterDesktop">Escritorio</button>
+          <button class="filter-button" data-filter="network" aria-pressed="false" data-i18n="filterNetwork">Redes</button>
         </div>
-        <div class="section-body">
-          <div class="about-hero">
-            <div class="about-photo-col">
-              <div class="photo-wrapper" id="photo-wrapper">
-                <div class="photo-frame"></div>
-                <div class="photo-placeholder" id="photo-placeholder"><span class="photo-icon">◈</span></div>
-                <img class="photo-real" id="photo-real" src="assets/photo.jpg" alt="Foto de Juan Esteban Herrera" loading="lazy">
-              </div>
-              <div class="about-name-tag">Juan Esteban Herrera</div>
-              <div class="about-role-tag">Ing. Sistemas · Full-Stack Dev</div>
-            </div>
-            <div class="about-bio-col">
-              <p class="about-intro" data-i18n="about.intro">Estudiante de Ingeniería de Sistemas y Técnico Profesional en Soporte de Sistemas e Informática. Construyo software que resuelve problemas reales: offline-first, multiplataforma y con enfoque en privacidad del usuario.</p>
-              <p class="about-body" data-i18n="about.professional">Trabajo con Java, Dart, TypeScript, Python y C# a lo largo de la pila completa. Certificado Oracle ONE · En camino a CCNA. Creo que la mejor forma de aprender es construyendo — por eso cada proyecto que hago resuelve un problema concreto.</p>
-              <div class="about-stats-row">
-                <div class="astat">
-                  <span class="astat-num" id="stat-projects" data-target="0">0</span>
-                  <span class="astat-lbl" data-i18n="about.stat1">Proyectos</span>
-                </div>
-                <div class="astat">
-                  <span class="astat-num" id="stat-certs" data-target="0">0</span>
-                  <span class="astat-lbl" data-i18n="about.stat2">Certificaciones</span>
-                </div>
-                <div class="astat">
-                  <span class="astat-num" id="stat-years" data-target="0">0</span>
-                  <span class="astat-lbl" data-i18n="about.stat3">Años construyendo</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <label class="project-search"><svg class="icon"><use href="#i-search"/></svg><input id="project-search" type="search" placeholder="Buscar proyecto o tecnología" aria-label="Buscar proyecto o tecnología" autocomplete="off" data-i18n-placeholder="searchProjects"></label>
       </div>
+      <p class="results-caption eyebrow" id="project-count" role="status" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid"></div>
+      <div class="empty-state" id="empty-projects" hidden><svg class="icon"><use href="#i-search"/></svg><h3 data-i18n="noProjects">No encontré ese proyecto.</h3><p data-i18n="trySearch">Prueba con Java, redes, IA o el nombre de una aplicación.</p><button class="button button-secondary" id="reset-search" data-i18n="resetSearch">Limpiar búsqueda</button></div>
+      <details class="project-archive" id="project-archive"><summary><span><small class="eyebrow" data-i18n="archiveKicker">EL RESTO DE LA BITÁCORA</small><strong data-i18n="archiveTitle">Más herramientas, más exploraciones.</strong></span><span class="archive-count" id="archive-count"></span><svg class="icon"><use href="#i-plus"/></svg></summary><div id="archive-list"></div></details>
+      <div class="work-footer"><span data-i18n="projectsNote">Proyectos personales, académicos y colaborativos. Código y alcance disponibles en cada repositorio.</span><a class="text-link" href="https://github.com/JuanEstebanHerreraH?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepos">Todos los repositorios</span><svg class="icon"><use href="#i-arrow"/></svg></a></div>
     </section>
 
-    <!-- ═══ PROJECTS ═══ -->
-    <section class="content-panel" id="section-projects" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">02 / REPOSITORIOS</span>
-          <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
-        </div>
-        <div class="section-body">
-          <div class="proj-toolbar">
-            <div class="search-wrap">
-              <span class="search-ico">⌕</span>
-              <input class="section-search" id="search-projects" type="text" placeholder="Buscar proyectos…" autocomplete="off">
-            </div>
-            <div class="filter-dropdown" id="proj-filter"></div>
-            <span class="filter-count" id="proj-count"></span>
-          </div>
-          <div class="projects-bento" id="projects-grid"></div>
-        </div>
-      </div>
-    </section>
+    <section class="about-section" id="perfil" aria-labelledby="about-title"><div class="wrap about-inner">
+      <div class="about-heading reveal"><p class="eyebrow"><span class="section-number">02</span><span data-i18n="aboutKicker">LA PERSONA DETRÁS DEL CÓDIGO</span></p><h2 id="about-title" data-i18n-html="aboutTitle">La curiosidad<br>es el punto<br><em>de partida.</em></h2><div class="portrait-note"><img src="assets/photo.jpg" alt="Retrato de Juan Esteban Herrera" width="104" height="104" loading="lazy"><span data-i18n="portraitNote">Hola, soy Juan.</span><svg viewBox="0 0 80 50" aria-hidden="true"><path d="M74 4C61 35 32 38 8 23m10-7L6 22l8 10"/></svg></div></div>
+      <div class="about-content reveal"><p class="about-lead" data-i18n="aboutLead">Me gusta entender cómo funcionan las cosas. Y, cuando algo puede hacerse mejor, intentar construirlo.</p><p data-i18n="aboutBody">Soy Técnico Profesional en Soporte de Sistemas e Informática, graduado el 26 de febrero de 2026, y estudiante de Ingeniería de Sistemas en la CUN. Mi experiencia se ha formado en proyectos personales, académicos y colaborativos.</p><p data-i18n="aboutBody2">Me muevo entre el backend, las interfaces, el escritorio y las redes. Esa mezcla me ayuda a pensar tanto en lo que necesita una persona como en lo que ocurre detrás de la pantalla.</p><div class="about-principles"><span><i>01 /</i><span data-i18n="principle1">Empezar por un problema concreto.</span></span><span><i>02 /</i><span data-i18n="principle2">Construir, probar y volver a ajustar.</span></span><span><i>03 /</i><span data-i18n="principle3">Documentar lo que funciona y sus límites.</span></span></div><p class="ai-note" data-i18n="aiNote">Uso IA como apoyo para desarrollar y documentar. La revisión del código, las pruebas y el criterio siguen siendo parte del trabajo.</p><div class="about-footer"><span class="availability-label"><span class="status-dot"></span><span data-i18n="remote">Prioridad remoto · Híbrido en Bogotá</span></span><span data-i18n="languages">Español nativo · Inglés A2</span></div></div>
+    </div></section>
 
-    <!-- ═══ CERTIFICATIONS ═══ -->
-    <section class="content-panel" id="section-certifications" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">03 / CREDENCIALES</span>
-          <h2 class="section-title" data-i18n="certs.title">Formación</h2>
-          <p class="panel-sub" data-i18n="certs.sub">El título y la ruta de Oracle son lo que sostiene el resto. Debajo, el detalle completo de cursos.</p>
-        </div>
-        <div class="section-body">
+    <section class="tools-section wrap section-space" aria-labelledby="tools-title"><div class="section-heading reveal"><div><p class="eyebrow"><span class="section-number">03</span><span data-i18n="toolsKicker">MI CAJA DE HERRAMIENTAS</span></p><h2 id="tools-title" data-i18n-html="toolsTitle">Tecnología<br><em>con contexto.</em></h2></div><p class="section-intro" data-i18n="toolsIntro">Lo que utilizo en mis proyectos y lo que sigo estudiando. Cada herramienta tiene un lugar y un propósito.</p></div><div class="tool-groups" id="tool-groups"></div><p class="tools-note" data-i18n="officeNote">También tengo formación en Excel básico e intermedio, práctica con macros y uso de Word, PowerPoint e IA para organizar información y documentación. Continúo mi preparación en redes y CCNA.</p></section>
 
-          <!-- Grado destacado -->
-          <div class="degree-hero" id="degree-hero" style="display:none">
-            <div class="degree-hero-inner">
-              <div class="degree-hero-left">
-                <span class="degree-hero-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 4.5-9 4.5-9-4.5z"/><path d="M6.5 10.5V16c0 1.4 2.5 2.6 5.5 2.6s5.5-1.2 5.5-2.6v-5.5"/><path d="M21 8.5V14"/></svg></span>
-                <div class="degree-hero-meta">
-                  <span class="degree-hero-label">TÍTULO TÉCNICO PROFESIONAL</span>
-                  <h3 class="degree-hero-title" id="degree-hero-title"></h3>
-                  <span class="degree-hero-inst" id="degree-hero-inst"></span>
-                </div>
-              </div>
-              <div class="degree-hero-right">
-                <div class="degree-hero-stat">
-                  <span class="degree-hero-stat-label">Año</span>
-                  <span class="degree-hero-stat-val" id="degree-hero-year"></span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="education-section wrap section-space" id="formacion" aria-labelledby="education-title"><div class="section-heading reveal"><div><p class="eyebrow"><span class="section-number">04</span><span data-i18n="educationKicker">FORMACIÓN / EN CONSTRUCCIÓN CONTINUA</span></p><h2 id="education-title" data-i18n-html="educationTitle">Aprender.<br><em>Aplicar. Repetir.</em></h2></div><div class="education-intro"><p class="section-intro" data-i18n="educationIntro">Formación técnica, carrera universitaria en curso y una ruta de aprendizaje que llevo a proyectos reales.</p><button class="text-link" id="open-certificates"><span data-i18n="viewCertificates">Explorar cursos y certificados</span><span class="small-count" id="cert-count">48</span><svg class="icon"><use href="#i-arrow"/></svg></button></div></div><div class="education-timeline" id="education-timeline"></div></section>
 
-          <!-- Oracle ONE -->
-          <div class="oracle-hero" id="oracle-hero" style="display:none">
-            <div class="oracle-hero-left">
-              <span class="oracle-hero-icon" id="oracle-hero-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 4l9 5.5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg></span>
-              <div class="oracle-hero-meta">
-                <span class="oracle-hero-label">ORACLE NEXT EDUCATION — ONE</span>
-                <h3 class="oracle-hero-title" id="oracle-hero-title"></h3>
-                <span class="oracle-hero-inst" id="oracle-hero-inst"></span>
-              </div>
-            </div>
-            <div class="oracle-hero-right">
-              <div class="oracle-hero-tags" id="oracle-hero-tags"></div>
-              <div class="oracle-year-block">
-                <span class="oracle-year-label">AÑO</span>
-                <span class="oracle-hero-year" id="oracle-hero-year"></span>
-              </div>
-            </div>
-          </div>
-
-          <details class="certs-details" id="certs-details">
-            <summary class="certs-summary">
-              <span class="certs-summary-txt" data-i18n="certs.showAll">Ver el detalle de cursos</span>
-              <span class="certs-summary-count" id="certs-summary-count"></span>
-              <span class="certs-summary-caret" aria-hidden="true">▾</span>
-            </summary>
-          <div class="certs-dual">
-            <aside class="certs-filter-panel">
-              <div class="cfp-title">Filtros</div>
-
-              <div class="certs-filter-group">
-                <label class="certs-filter-label">Buscar</label>
-                <input class="certs-search-input" id="search-certs" type="text" placeholder="Buscar…" autocomplete="off">
-              </div>
-
-              <div class="certs-filter-group">
-                <label class="certs-filter-label">Categoría</label>
-                <select class="certs-select" id="cert-cat-select">
-                  <option value="all">Todas</option>
-                </select>
-              </div>
-
-              <div class="certs-filter-group">
-                <label class="certs-filter-label">Institución</label>
-                <select class="certs-select" id="cert-inst-select">
-                  <option value="all">Todos</option>
-                </select>
-              </div>
-
-              <div class="certs-filter-group">
-                <label class="certs-filter-label">Año</label>
-                <select class="certs-select" id="cert-year-select">
-                  <option value="all">Todos</option>
-                </select>
-              </div>
-
-              <div class="certs-filter-group">
-                <label class="certs-filter-label">Ordenar</label>
-                <select class="certs-select" id="cert-sort-select">
-                  <option value="desc">Más recientes</option>
-                  <option value="asc">Más antiguos</option>
-                  <option value="az">A → Z</option>
-                </select>
-              </div>
-
-              <div class="cfp-count">
-                <span id="cert-visible-count">0</span> resultados
-              </div>
-            </aside>
-
-            <div class="certs-main-panel">
-              <div class="certs-grid" id="certs-table-body"></div>
-            </div>
-          </div>
-          </details>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ APPLICATIONS ═══ -->
-    <section class="content-panel" id="section-applications" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">04 / DESCARGABLES</span>
-          <h2 class="section-title" data-i18n="apps.title">Aplicaciones</h2>
-        </div>
-        <div class="section-body">
-          <div class="app-toolbar">
-            <div class="search-wrap">
-              <span class="search-ico">⌕</span>
-              <input class="section-search" id="search-apps" type="text" placeholder="Buscar…" autocomplete="off">
-            </div>
-            <div class="filter-dropdown" id="app-filter"></div>
-            <span class="filter-count" id="app-count"></span>
-          </div>
-          <div class="apps-bento" id="apps-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ TECH STACK ═══ -->
-    <section class="content-panel" id="section-techstack" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">05 / HERRAMIENTAS</span>
-          <h2 class="section-title" data-i18n="techstack.title">Entorno Tecnológico</h2>
-        </div>
-        <div class="section-body">
-          <div class="techstack-container" id="techstack-container"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ CONTACT ═══ -->
-    <section class="content-panel" id="section-contact" aria-hidden="true">
-      <button class="close-section" aria-label="Cerrar">✕</button>
-      <div class="panel-scroll">
-        <div class="panel-head">
-          <span class="panel-kicker">06 / CONECTEMOS</span>
-          <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
-        </div>
-        <div class="section-body">
-          <p class="contact-intro" data-i18n="contact.intro">¿Tienes un proyecto en mente? Conectemos.</p>
-          <div class="contact-links" id="contact-links">
-            <a href="https://github.com/JuanEstebanHerreraH" class="contact-link" target="_blank" rel="noopener">
-              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></span>
-              <span class="contact-label">GitHub</span><span class="contact-arrow">→</span>
-            </a>
-            <a href="mailto:estebanherreraherrera8@gmail.com" class="contact-link">
-              <span class="contact-icon">✉</span>
-              <span class="contact-label">estebanherreraherrera8@gmail.com</span>
-              <span class="contact-arrow">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/juan-esteban-herrera-herrera" class="contact-link" target="_blank" rel="noopener">
-              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
-              <span class="contact-label">LinkedIn</span><span class="contact-arrow">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title"><div class="wrap contact-inner"><p class="eyebrow"><span class="section-number">05</span><span data-i18n="contactKicker">EL SIGUIENTE PROYECTO</span></p><div class="contact-grid"><div class="reveal"><h2 id="contact-title" data-i18n-html="contactTitle">¿Construimos<br><em>algo útil?</em></h2><p data-i18n="contactText">Busco oportunidades junior y proyectos de alcance definido. Si mi forma de trabajar encaja con lo que necesitas, conversemos.</p><a class="button button-ink" id="email-link" href="mailto:jehproyectos@gmail.com"><span data-i18n="emailMe">Escríbeme</span><svg class="icon"><use href="#i-arrow"/></svg></a></div><div class="contact-links reveal"><a href="mailto:jehproyectos@gmail.com"><small data-i18n="emailLabel">CORREO / PROYECTOS</small><strong>jehproyectos@gmail.com</strong><svg class="icon"><use href="#i-mail"/></svg></a><button id="copy-email" class="copy-email"><svg class="icon"><use href="#i-copy"/></svg><span data-i18n="copyEmail">Copiar correo</span></button><a href="https://www.linkedin.com/in/juan-esteban-herrera-herrera/" target="_blank" rel="noopener noreferrer"><small data-i18n="linkedinLabel">PERFIL PROFESIONAL</small><strong>LinkedIn</strong><svg class="icon"><use href="#i-arrow"/></svg></a><a href="https://github.com/JuanEstebanHerreraH" target="_blank" rel="noopener noreferrer"><small data-i18n="githubLabel">CÓDIGO & DOCUMENTACIÓN</small><strong>GitHub</strong><svg class="icon"><use href="#i-arrow"/></svg></a></div></div><footer class="site-footer"><a class="footer-brand" href="#inicio">JEH<span>✳</span></a><span data-i18n="footerNote">Hecho con curiosidad, código y revisión.</span><span>© <span id="current-year">2026</span> · BOGOTÁ, CO</span><a href="#inicio" class="back-top" aria-label="Volver al inicio"><svg class="icon"><use href="#i-down"/></svg></a></footer></div></section>
   </main>
 
-  <footer id="main-footer">
-    <span class="footer-text">
-      <span class="footer-sym">//</span>
-      <span data-i18n="footer.built">Construido con</span>
-      <span class="footer-heart">♥</span>
-      <span data-i18n="footer.by">por</span>
-      <span class="footer-name">Juan Esteban Herrera</span>
-    </span>
-    <span id="footer-year"></span>
-  </footer>
-
-  <script src="js/background.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/app.js"></script>
+  <dialog class="case-dialog" id="project-dialog" aria-labelledby="case-title"><div class="dialog-bar"><span class="eyebrow" data-i18n="projectCase">BITÁCORA / CASO DE PROYECTO</span><button class="icon-button close-dialog" data-close-dialog aria-label="Cerrar proyecto"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="case-content"></div></dialog>
+  <dialog class="cert-dialog" id="cert-dialog" aria-labelledby="cert-dialog-title"><div class="dialog-bar"><span class="eyebrow" data-i18n="certificatesKicker">FORMACIÓN COMPLEMENTARIA</span><button class="icon-button close-dialog" data-close-dialog aria-label="Cerrar certificados"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="cert-dialog-body"><h2 id="cert-dialog-title" data-i18n="certificatesTitle">Lo que sigo aprendiendo.</h2><p data-i18n="certificatesText">Cursos y rutas de formación con sus enlaces originales. Los certificados conservan el título y el idioma de la institución.</p><label class="project-search cert-search"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="cert-search" placeholder="Buscar curso, institución o tema" aria-label="Buscar certificados" data-i18n-placeholder="searchCertificates"></label><p class="eyebrow" id="cert-results" role="status" aria-live="polite"></p><div id="cert-list"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="noscript-note">Este portafolio utiliza JavaScript para los filtros y los casos de proyecto. También puedes explorar directamente <a href="https://github.com/JuanEstebanHerreraH">mis repositorios en GitHub</a> o escribirme a <a href="mailto:jehproyectos@gmail.com">jehproyectos@gmail.com</a>.</div></noscript>
 </body>
 </html>

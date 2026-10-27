@@ -1,0 +1,14 @@
+{
+  "name": "juan-esteban-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portafolio personal estático de Juan Esteban Herrera Herrera.",
+  "scripts": {
+    "sync": "node scripts/sync-data.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

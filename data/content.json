@@ -1,498 +1,861 @@
 {
-  "_comment": "Portafolio de Juan Esteban Herrera. Editá este archivo para actualizar el sitio; no hace falta tocar el HTML.",
+  "version": "2.0",
+  "updated": "2026-10-26",
   "profile": {
-    "name": "Juan Esteban Herrera",
-    "role": "Ing. Sistemas · Desarrollo de escritorio y redes",
-    "location": "Bogotá · CO",
-    "available": true,
-    "career_start": "2024-02-01",
-    "_career_start_note": "Fecha de inicio real. El sitio calcula los años de experiencia solo; no hay ningún número escrito a mano."
-  },
-  "contact": {
+    "name": "Juan Esteban Herrera Herrera",
+    "shortName": "Juan Esteban Herrera",
+    "location": "Bogotá, Colombia",
+    "role": {
+      "es": "Técnico profesional · Desarrollo de software junior",
+      "en": "Professional technician · Junior software development"
+    },
+    "email": "jehproyectos@gmail.com",
     "github": "https://github.com/JuanEstebanHerreraH",
-    "email": "estebanherreraherrera8@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/juan-esteban-herrera-herrera"
+    "linkedin": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/",
+    "languages": {
+      "es": "Español nativo · Inglés A2",
+      "en": "Native Spanish · English A2"
+    }
   },
   "projects": [
     {
-      "name": "CoexFix",
-      "slug": "Coexfix",
-      "language": "PowerShell",
-      "year": 2026,
+      "id": "xIas",
+      "name": "xIas",
+      "categories": [
+        "ai",
+        "desktop"
+      ],
+      "tech": [
+        "C#",
+        ".NET 8",
+        "WPF",
+        "ONNX",
+        "Tesseract"
+      ],
       "featured": true,
-      "icon": "signal",
-      "description": "Diagnostica y corrige la interferencia entre WiFi de 2.4 GHz y Bluetooth en Windows. Cada cambio en el sistema deja respaldo previo y se puede deshacer.",
-      "url": "https://github.com/JuanEstebanHerreraH/Coexfix",
-      "shot": "assets/shots/Coexfix.png"
+      "url": "https://github.com/JuanEstebanHerreraH/xIas",
+      "download": "https://github.com/JuanEstebanHerreraH/xIas/releases/tag/xIas2.2.0",
+      "demo": null,
+      "summary": {
+        "es": "Tablas e inventarios, cada trabajo en su lugar. OCR, limpieza y coincidencias con IA local.",
+        "en": "Tables and inventories, with each document kept separate. OCR, data cleaning and local AI matching."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Importar varios archivos no debería convertirlos en una única planilla confusa. xIas organiza documentos separados y permite revisar los cambios antes de aplicarlos.",
+        "en": "Importing files should not create one confusing spreadsheet. xIas keeps documents separate and lets users review changes before applying them."
+      },
+      "contributions": {
+        "es": [
+          "Creación de tablas desde cero, edición e importación de Excel, CSV, PDF con texto e imágenes mediante OCR.",
+          "Integración de MiniLM multilingüe con ONNX Runtime y Tesseract para procesamiento en CPU.",
+          "Limpieza con vista previa, comparación con origen y destino, operaciones de tablas y exportación por trabajo.",
+          "Conexión con Google Sheets mediante OAuth; documentación, ejemplos y pruebas automatizadas."
+        ],
+        "en": [
+          "Table creation, editing and import from Excel, CSV, text PDFs and images through OCR.",
+          "Multilingual MiniLM integration with ONNX Runtime and Tesseract for CPU processing.",
+          "Cleaning previews, explicit source/target comparisons, table operations and per-document exports.",
+          "Google Sheets integration through OAuth, documentation, examples and automated tests."
+        ]
+      },
+      "limits": {
+        "es": "Los cálculos se guardan como valores: no es un motor completo de Excel. Google Sheets necesita configurar y autorizar la conexión.",
+        "en": "Calculations are saved as values; this is not a complete Excel engine. Google Sheets requires connection setup and authorization."
+      },
+      "image": "assets/shots/xIas.png",
+      "imageType": "screenshot"
     },
     {
-      "name": "Arcionr",
-      "slug": "Arcionr",
-      "language": "TypeScript",
-      "year": 2026,
+      "id": "Recorta",
+      "name": "Recorta",
+      "categories": [
+        "ai",
+        "desktop"
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tauri",
+        "Transformers.js"
+      ],
       "featured": true,
-      "icon": "convert",
-      "description": "Conversor de archivos por lotes que procesa todo en tu equipo: imágenes, audio, video y PDF. Escritorio en Tauri y Rust, Android en Capacitor, un solo repositorio.",
-      "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
-      "shot": "assets/shots/Arcionr.png"
+      "url": "https://github.com/JuanEstebanHerreraH/Recorta",
+      "download": "https://github.com/JuanEstebanHerreraH/Recorta/releases",
+      "demo": null,
+      "summary": {
+        "es": "Quitar fondos, afinar bordes y exportar imágenes con el tamaño y los DPI adecuados.",
+        "en": "Remove backgrounds, refine edges and export images at the right size and DPI."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Preparar una imagen también implica revisar bordes, dimensiones y peso. Recorta reúne esas decisiones en un flujo local de edición y exportación.",
+        "en": "Preparing an image involves its edges, dimensions and file size. Recorta brings these decisions into a local editing and export workflow."
+      },
+      "contributions": {
+        "es": [
+          "Integración de modelos preentrenados y selección de nivel de hardware: WebGPU o CPU mediante WebAssembly.",
+          "Máscaras, pinceles, ajuste de bordes, limpieza de halos e historial reversible.",
+          "Procesamiento por lotes y exportación PNG, WebP y JPG.",
+          "Separación de inferencia y procesamiento mediante Web Workers; aplicación de escritorio con Tauri."
+        ],
+        "en": [
+          "Pretrained model integration and hardware tiers: WebGPU or CPU through WebAssembly.",
+          "Masks, brushes, edge adjustments, halo cleanup and reversible history.",
+          "Batch processing and PNG, WebP and JPG export.",
+          "Web Workers for inference and image processing; Tauri desktop application."
+        ]
+      },
+      "limits": {
+        "es": "La precisión y la velocidad dependen del modelo y del equipo. Los modelos tienen sus propias licencias.",
+        "en": "Accuracy and speed depend on the model and hardware. Models have their own licenses."
+      },
+      "image": "assets/shots/Recorta.png",
+      "imageType": "screenshot"
     },
     {
-      "name": "StanSsion",
-      "slug": "StanSsion",
-      "language": "TypeScript",
-      "year": 2026,
-      "featured": false,
-      "icon": "audio",
-      "description": "Espacio de audio ambiente para concentrarse: mezcla de sonidos, radios en vivo, música propia, temporizador Pomodoro y lienzo de notas. Todo corre en el navegador.",
-      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
-      "demo": "https://stan-ssion.vercel.app",
-      "shot": "assets/shots/StanSsion.png"
-    },
-    {
-      "name": "iyiris",
-      "slug": "Iyiris",
-      "language": "Svelte",
-      "year": 2026,
+      "id": "logitree",
+      "name": "LogiTree",
+      "categories": [
+        "web",
+        "ai"
+      ],
+      "tech": [
+        "Java 17",
+        "Spring Boot",
+        "JPA",
+        "MockMvc",
+        "JavaScript"
+      ],
       "featured": true,
-      "icon": "palette",
-      "description": "Diseño de paletas de color con armonías cromáticas, validación de contraste WCAG y simulación de daltonismo. Exporta a variables CSS o configuración de Tailwind.",
-      "url": "https://github.com/JuanEstebanHerreraH/Iyiris",
-      "demo": "https://iyiris-mocha.vercel.app/",
-      "shot": "assets/shots/Iyiris.png"
+      "url": "https://github.com/No-Country-simulation/g9-br-team-34-techmind",
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Contenido técnico conectado en un árbol de conocimiento. Trabajo en equipo, con foco backend.",
+        "en": "Technical content connected in a knowledge tree. A team project with a backend focus."
+      },
+      "role": {
+        "es": "Colaborador full stack, principalmente backend. Hackathon Oracle/Alura y No Country · equipo TechMind.",
+        "en": "Full stack collaborator, mainly backend. Oracle/Alura and No Country hackathon · TechMind team."
+      },
+      "problem": {
+        "es": "Los apuntes y documentos técnicos crecen sin estructura. El sistema del equipo clasifica contenido y lo conecta en un árbol interactivo.",
+        "en": "Technical notes and documents grow without structure. The team system classifies content and connects it in an interactive tree."
+      },
+      "contributions": {
+        "es": [
+          "Contrato REST/JSON entre backend e inferencia; DTOs, validación y errores.",
+          "Entidad ContenidoAnalizado, persistencia JPA y consulta por categoría.",
+          "Endpoints de eliminación y contenidos relacionados; métricas y pruebas MockMvc.",
+          "Cliente frontend que consume la API, árbol interactivo, dashboard y manejo de errores."
+        ],
+        "en": [
+          "REST/JSON contract between backend and inference; DTOs, validation and errors.",
+          "ContenidoAnalizado entity, JPA persistence and category queries.",
+          "Deletion and related-content endpoints, metrics and MockMvc tests.",
+          "API-consuming frontend, interactive tree, dashboard and error handling."
+        ]
+      },
+      "limits": {
+        "es": "Es una autoría compartida. El servicio de ML, los modelos y la infraestructura forman parte del trabajo del equipo; mi aporte principal fue backend y también frontend.",
+        "en": "This is shared work. The ML service, models and infrastructure belong to the team effort; my main contribution was backend and also frontend."
+      },
+      "image": "assets/shots/logitree.png",
+      "imageType": "screenshot"
     },
     {
-      "name": "FileWatch",
-      "slug": "FileWatch",
-      "language": "Rust",
-      "year": 2026,
-      "featured": true,
-      "icon": "shield",
-      "description": "Versionado automático para los archivos que Git no maneja bien: PSD, Excel, Word. Guarda snapshots comprimidos en segundo plano, con historial navegable y restauración.",
-      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
-      "shot": "assets/shots/FileWatch.png"
-    },
-    {
-      "name": "Vlanets",
-      "slug": "Vlanets",
-      "language": "Dart",
-      "year": 2026,
-      "featured": true,
-      "icon": "network",
-      "description": "Asistente de ingeniería de redes: subnetting, VLSM, IPv4 e IPv6, y generación de configuración Cisco IOS para VLAN, routing, NAT y ACL. Con modo de aprendizaje guiado.",
-      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
-      "shot": "assets/shots/Vlanets.png"
-    },
-    {
-      "name": "Retorp",
-      "slug": "Retorp",
-      "language": "Python",
-      "year": 2026,
-      "featured": false,
-      "icon": "radar",
-      "description": "Monitor de red local para Windows: escaneo ARP, detección de dispositivos, puertos abiertos, latencia e historial. Motor en FastAPI, interfaz en Flutter.",
-      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
-      "shot": "assets/shots/Retorp.png"
-    },
-    {
+      "id": "cafe-almacen",
       "name": "Café Almacén",
-      "slug": "Sistema_Trazabilidad_Cafetero",
-      "language": "TypeScript",
-      "year": 2026,
+      "categories": [
+        "web"
+      ],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL"
+      ],
       "featured": true,
-      "icon": "coffee",
-      "description": "Gestión integral para operaciones de café especial: trazabilidad de finca a cliente, inventario, producción y ventas, con estadísticas en tiempo real.",
       "url": "https://github.com/JuanEstebanHerreraH/Sistema_Trazabilidad_Cafetero",
-      "shot": "assets/shots/Sistema_Trazabilidad_Cafetero.png"
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Del productor a la venta: trazabilidad, procesos e inventario de café en una sola plataforma.",
+        "en": "From producer to sale: coffee traceability, processing and inventory in one platform."
+      },
+      "role": {
+        "es": "Desarrollo full stack en un proyecto personal y académico.",
+        "en": "Full stack development in a personal and academic project."
+      },
+      "problem": {
+        "es": "Una operación cafetera necesita relacionar fincas, lotes, procesos y ventas sin perder la historia de cada movimiento.",
+        "en": "Coffee operations need to connect farms, batches, processing and sales while preserving the history of each movement."
+      },
+      "contributions": {
+        "es": [
+          "Flujos para productores, fincas, lotes, procesos, almacenes, clientes y ventas.",
+          "Relación de movimientos de inventario para consultar la trazabilidad de los lotes.",
+          "Panel de estadísticas y gestión de usuarios y roles con Next.js y Supabase."
+        ],
+        "en": [
+          "Workflows for producers, farms, batches, processing, warehouses, customers and sales.",
+          "Inventory movement relationships for batch traceability.",
+          "Statistics dashboard and user/role management with Next.js and Supabase."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/cafe-almacen.svg",
+      "imageType": "concept"
     },
     {
-      "name": "VaHet",
-      "slug": "VaHet",
-      "language": "JavaScript",
-      "year": 2026,
-      "featured": false,
-      "icon": "vault",
-      "description": "Bóveda de escritorio cifrada con AES-256 y PBKDF2 para archivos, fotos, notas y tareas. Sin cuentas ni servidor: la nube es opcional y la conectás vos.",
-      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
-      "shot": "assets/shots/VaHet.png"
-    },
-    {
-      "name": "AccNized",
-      "slug": "AccNized",
-      "language": "Dart",
-      "year": 2026,
-      "featured": false,
-      "icon": "key",
-      "description": "Gestor de cuentas y notas con etiquetas y favoritos. Almacenamiento local en SQLite, sin servidores ni suscripción, para Windows y Android.",
-      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
-      "shot": "assets/shots/AccNized.png"
-    },
-    {
-      "name": "ApEn",
-      "slug": "ApEn---App-File-Environment",
-      "language": "C#",
-      "year": 2026,
-      "featured": false,
-      "icon": "folder",
-      "description": "Hub de productividad para Windows: lanzador de aplicaciones y organizador que clasifica carpetas por tipo. .NET 8 con WPF y MVVM, portable, sin instalador.",
-      "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
-      "shot": "assets/shots/ApEn---App-File-Environment.png"
-    },
-    {
-      "name": "Tienda Web Pro",
-      "slug": "tiendahibrida.java",
-      "language": "Java",
-      "year": 2025,
+      "id": "Arcionr",
+      "name": "Arcionr",
+      "categories": [
+        "desktop"
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Rust",
+        "Tauri",
+        "Capacitor"
+      ],
       "featured": true,
-      "icon": "cart",
-      "description": "Migración de un monolito local a arquitectura cloud: backend Jakarta EE containerizado en Elastic Beanstalk, base MS SQL Server en Amazon RDS y panel administrativo en Swing.",
-      "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java",
-      "shot": "assets/shots/tiendahibrida.java.png"
+      "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
+      "download": "https://github.com/JuanEstebanHerreraH/Arcionr/releases",
+      "demo": null,
+      "summary": {
+        "es": "Conversión de archivos por lotes y organización de carpetas, con procesamiento en el equipo.",
+        "en": "Batch file conversion and folder organization, processed on the device."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Conversión de archivos por lotes y organización de carpetas, con procesamiento en el equipo.",
+        "en": "Batch file conversion and folder organization, processed on the device."
+      },
+      "contributions": {
+        "es": [
+          "Conversión de imágenes y PDF, combinación de documentos y gestión de páginas.",
+          "Monorepositorio de escritorio con Tauri/React/Rust y Android con Capacitor.",
+          "Alcance móvil centrado en imágenes y PDF; herramientas opcionales de audio y video en escritorio."
+        ],
+        "en": [
+          "Image/PDF conversion, document merging and page management.",
+          "Desktop monorepo with Tauri/React/Rust and Android with Capacitor.",
+          "Mobile scope focused on images and PDF; optional audio/video tools on desktop."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Arcionr.svg",
+      "imageType": "concept"
     },
     {
-      "name": "PixelGate",
-      "slug": "PixelGate",
-      "language": "HTML",
-      "year": 2026,
-      "featured": false,
-      "icon": "game",
-      "description": "Sitio estático para una academia de videojuegos, con estructura por secciones y diseño responsive. HTML, CSS, JavaScript y Bootstrap 5.",
-      "url": "https://github.com/JuanEstebanHerreraH/PixelGate",
-      "shot": "assets/shots/PixelGate.png"
-    }
-  ],
-  "applications": [
+      "id": "StanSsion",
+      "name": "StanSsion",
+      "categories": [
+        "web",
+        "desktop"
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Web Audio API",
+        "Vite"
+      ],
+      "featured": true,
+      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
+      "download": "https://github.com/JuanEstebanHerreraH/StanSsion/releases",
+      "demo": "https://stan-ssion.vercel.app/",
+      "summary": {
+        "es": "Sonidos de ambiente, radio, música, Pomodoro y notas para acompañar la concentración.",
+        "en": "Ambient sound, radio, music, Pomodoro and notes for focused work."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Sonidos de ambiente, radio, música, Pomodoro y notas para acompañar la concentración.",
+        "en": "Ambient sound, radio, music, Pomodoro and notes for focused work."
+      },
+      "contributions": {
+        "es": [
+          "Mezcla de sonidos ambientales, radios en vivo y música propia.",
+          "Temporizadores Pomodoro y espacio de notas en una misma interfaz.",
+          "Estado y reproducción de audio con React, TypeScript y Web Audio API."
+        ],
+        "en": [
+          "Ambient sound mixing, live radio and local music.",
+          "Pomodoro timers and notes in one interface.",
+          "Audio playback and state management with React, TypeScript and Web Audio API."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/StanSsion.svg",
+      "imageType": "concept"
+    },
     {
+      "id": "FileWatch",
+      "name": "FileWatch",
+      "categories": [
+        "desktop"
+      ],
+      "tech": [
+        "C#",
+        ".NET",
+        "WPF",
+        "Rust",
+        "SQLite"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
+      "download": "https://github.com/JuanEstebanHerreraH/FileWatch/releases",
+      "demo": null,
+      "summary": {
+        "es": "Historial local, capturas de archivos y restauración de versiones anteriores.",
+        "en": "Local file history, snapshots and restoration of previous versions."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Historial local, capturas de archivos y restauración de versiones anteriores.",
+        "en": "Local file history, snapshots and restoration of previous versions."
+      },
+      "contributions": {
+        "es": [
+          "Vigilancia de carpetas y capturas comprimidas en segundo plano.",
+          "Consulta del historial, restauración y exportación de versiones.",
+          "Interfaz WPF y núcleo Rust comunicados mediante Named Pipes; metadatos en SQLite."
+        ],
+        "en": [
+          "Folder watching and compressed background snapshots.",
+          "History browsing, restoration and version export.",
+          "WPF interface and Rust core connected through Named Pipes; SQLite metadata."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/FileWatch.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "Vlanets",
+      "name": "Vlanets",
+      "categories": [
+        "network",
+        "desktop"
+      ],
+      "tech": [
+        "Flutter",
+        "Dart",
+        "IPv4 / IPv6",
+        "Cisco IOS"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
+      "download": "https://github.com/JuanEstebanHerreraH/Vlanets/releases",
+      "demo": null,
+      "summary": {
+        "es": "Subnetting, VLSM, VLAN y configuración de redes con explicación del procedimiento.",
+        "en": "Subnetting, VLSM, VLAN and network configuration with guided explanations."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Subnetting, VLSM, VLAN y configuración de redes con explicación del procedimiento.",
+        "en": "Subnetting, VLSM, VLAN and network configuration with guided explanations."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Vlanets.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "Coexfix",
       "name": "CoexFix",
-      "icon": "signal",
-      "license": "MIT",
+      "categories": [
+        "network"
+      ],
       "tech": [
         "PowerShell",
         "Windows"
       ],
-      "description": "Tres utilidades para diagnosticar y corregir la interferencia WiFi/Bluetooth en Windows 10 y 11. Sin instalación ni dependencias; todo cambio es reversible.",
+      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/Coexfix",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Coexfix/releases"
+      "download": "https://github.com/JuanEstebanHerreraH/Coexfix/releases",
+      "demo": null,
+      "summary": {
+        "es": "Diagnóstico WiFi/Bluetooth con informes, simulación de ajustes, respaldo y reversión.",
+        "en": "WiFi/Bluetooth diagnostics with reports, adjustment previews, backups and rollback."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Diagnóstico WiFi/Bluetooth con informes, simulación de ajustes, respaldo y reversión.",
+        "en": "WiFi/Bluetooth diagnostics with reports, adjustment previews, backups and rollback."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Coexfix.svg",
+      "imageType": "concept"
     },
     {
-      "name": "Arcionr",
-      "icon": "convert",
-      "license": "MIT",
+      "id": "dotaciones",
+      "name": "Dotaciones App",
+      "categories": [
+        "web"
+      ],
+      "tech": [
+        "Next.js",
+        "React",
+        "Supabase",
+        "PostgreSQL"
+      ],
+      "featured": false,
+      "url": "https://github.com/samuelgcruz/dotaciones-app",
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Catálogo y pedidos de dotaciones: tallas, accesorios e inventario conectado a base de datos.",
+        "en": "Uniform catalog and orders: sizes, accessories and database-connected inventory."
+      },
+      "role": {
+        "es": "Colaborador full stack y base de datos. Proyecto desarrollado con un amigo.",
+        "en": "Full stack and database collaborator. A project developed with a friend."
+      },
+      "problem": {
+        "es": "Catálogo y pedidos de dotaciones: tallas, accesorios e inventario conectado a base de datos.",
+        "en": "Uniform catalog and orders: sizes, accessories and database-connected inventory."
+      },
+      "contributions": {
+        "es": [
+          "Catálogo, categorías, tallas, accesorios, resumen y formularios de pedidos.",
+          "Capa de consultas con Supabase/PostgreSQL y validación de disponibilidad.",
+          "Función PostgreSQL para crear pedido e ítems, descontar stock y registrar trazabilidad en una transacción atómica."
+        ],
+        "en": [
+          "Catalog, categories, sizes, accessories, order summary and forms.",
+          "Supabase/PostgreSQL query layer and availability validation.",
+          "PostgreSQL function to create orders/items, reduce stock and record traceability in an atomic transaction."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/dotaciones.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "Focus",
+      "name": "Foco / Focus",
+      "categories": [
+        "desktop"
+      ],
       "tech": [
         "Tauri",
         "Rust",
-        "React",
-        "Capacitor"
+        "React"
       ],
-      "description": "Conversor de archivos offline por lotes para escritorio y Android: imágenes, audio, video y PDF, más vectorización y gestión de páginas.",
-      "url": "https://github.com/JuanEstebanHerreraH/Arcionr",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Arcionr/releases"
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/Focus",
+      "download": "https://github.com/JuanEstebanHerreraH/Focus/releases",
+      "demo": null,
+      "summary": {
+        "es": "Una sola tarea a la vez: priorización y concentración desde una aplicación para Windows.",
+        "en": "One task at a time: prioritization and focus in a Windows application."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Una sola tarea a la vez: priorización y concentración desde una aplicación para Windows.",
+        "en": "One task at a time: prioritization and focus in a Windows application."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Focus.svg",
+      "imageType": "concept"
     },
     {
-      "name": "FileWatch",
-      "icon": "shield",
-      "license": "MIT",
+      "id": "Iyiris",
+      "name": "Iyiris",
+      "categories": [
+        "web"
+      ],
       "tech": [
-        "Rust",
-        ".NET",
-        "SQLite"
+        "SvelteKit",
+        "TypeScript",
+        "chroma.js"
       ],
-      "description": "Versionado automático de archivos en segundo plano, con snapshots comprimidos, historial completo y restauración a cualquier punto.",
-      "url": "https://github.com/JuanEstebanHerreraH/FileWatch",
-      "release_url": "https://github.com/JuanEstebanHerreraH/FileWatch/releases/tag/FileWatch"
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/Iyiris",
+      "download": null,
+      "demo": "https://iyiris-mocha.vercel.app/",
+      "summary": {
+        "es": "Paletas de color, armonías y revisión de contraste para interfaces.",
+        "en": "Color palettes, harmonies and contrast checking for interfaces."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Paletas de color, armonías y revisión de contraste para interfaces.",
+        "en": "Color palettes, harmonies and contrast checking for interfaces."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Iyiris.svg",
+      "imageType": "concept"
     },
     {
-      "name": "Vlanets",
-      "icon": "network",
-      "license": "MIT",
-      "tech": [
-        "Dart",
-        "Flutter"
-      ],
-      "description": "Calculadora y asistente de redes de escritorio: subnetting, VLSM, IPv4/IPv6 y configuración Cisco IOS, con modo de aprendizaje.",
-      "url": "https://github.com/JuanEstebanHerreraH/Vlanets",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Vlanets/releases"
-    },
-    {
+      "id": "Retorp",
       "name": "Retorp",
-      "icon": "radar",
-      "license": "MIT",
+      "categories": [
+        "network",
+        "desktop"
+      ],
       "tech": [
         "Python",
         "FastAPI",
-        "Flutter"
-      ],
-      "description": "Monitor de red local: descubre dispositivos, escanea puertos, mide latencia y guarda historial en SQLite.",
-      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
-      "release_url": "https://github.com/JuanEstebanHerreraH/Retorp/releases/tag/Retorp"
-    },
-    {
-      "name": "VaHet",
-      "icon": "vault",
-      "license": "MIT",
-      "tech": [
-        "Electron",
-        "Node.js",
-        "AES-256"
-      ],
-      "description": "Bóveda de escritorio cifrada localmente para archivos, fotos, notas y tareas. Windows, macOS y Linux.",
-      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
-      "release_url": "https://github.com/JuanEstebanHerreraH/VaHet/releases/tag/Vahet"
-    },
-    {
-      "name": "AccNized",
-      "icon": "key",
-      "license": "MIT",
-      "tech": [
-        "Dart",
         "Flutter",
         "SQLite"
       ],
-      "description": "Gestor de cuentas y notas multiplataforma con almacenamiento local. Windows y Android.",
-      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
-      "release_url": "https://github.com/JuanEstebanHerreraH/AccNized/releases/tag/Accnized"
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/Retorp",
+      "download": "https://github.com/JuanEstebanHerreraH/Retorp/releases",
+      "demo": null,
+      "summary": {
+        "es": "Exploración y monitoreo de una red local: dispositivos, puertos y latencia.",
+        "en": "Local network exploration and monitoring: devices, ports and latency."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Exploración y monitoreo de una red local: dispositivos, puertos y latencia.",
+        "en": "Local network exploration and monitoring: devices, ports and latency."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/Retorp.svg",
+      "imageType": "concept"
     },
     {
-      "name": "StanSsion",
-      "icon": "audio",
-      "license": "MIT",
-      "tech": [
-        "React",
-        "TypeScript",
-        "Vite"
-      ],
-      "description": "Mezclador de audio ambiente con radios, Pomodoro y notas. Disponible como web y como ejecutable.",
-      "url": "https://github.com/JuanEstebanHerreraH/StanSsion",
-      "release_url": "https://github.com/JuanEstebanHerreraH/StanSsion/releases/tag/Exe",
-      "demo": "https://stan-ssion.vercel.app"
-    },
-    {
+      "id": "ApEn---App-File-Environment",
       "name": "ApEn",
-      "icon": "folder",
-      "license": "MIT",
+      "categories": [
+        "desktop"
+      ],
       "tech": [
         "C#",
         ".NET",
-        "WPF"
+        "WPF",
+        "MVVM"
       ],
-      "description": "Lanzador de aplicaciones y organizador de archivos para Windows. Portable, sin instalador.",
+      "featured": false,
       "url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment",
-      "release_url": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases/tag/ApEn"
+      "download": "https://github.com/JuanEstebanHerreraH/ApEn---App-File-Environment/releases",
+      "demo": null,
+      "summary": {
+        "es": "Lanzador de aplicaciones y organización de archivos por tipo para Windows.",
+        "en": "Application launcher and file organization by type for Windows."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Lanzador de aplicaciones y organización de archivos por tipo para Windows.",
+        "en": "Application launcher and file organization by type for Windows."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/ApEn---App-File-Environment.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "tiendahibrida.java",
+      "name": "Tienda Web Pro",
+      "categories": [
+        "web",
+        "desktop"
+      ],
+      "tech": [
+        "Java",
+        "Jakarta EE",
+        "Swing",
+        "AWS",
+        "SQL Server"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/tiendahibrida.java",
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Aplicación web y cliente de escritorio en un proyecto académico de despliegue en AWS.",
+        "en": "Web application and desktop client in an academic AWS deployment project."
+      },
+      "role": {
+        "es": "Proyecto académico: Java web, cliente Swing y configuración de despliegue.",
+        "en": "Academic project: Java web, Swing client and deployment configuration."
+      },
+      "problem": {
+        "es": "Aplicación web y cliente de escritorio en un proyecto académico de despliegue en AWS.",
+        "en": "Web application and desktop client in an academic AWS deployment project."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/tiendahibrida.java.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "PixelGate",
+      "name": "PixelGate",
+      "categories": [
+        "web"
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/PixelGate",
+      "download": null,
+      "demo": "https://juanestebanherrerah.github.io/PixelGate/",
+      "summary": {
+        "es": "Sitio responsive para una academia de videojuegos.",
+        "en": "Responsive website for a video game academy."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Sitio responsive para una academia de videojuegos.",
+        "en": "Responsive website for a video game academy."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
+        "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
+      },
+      "image": "assets/shots/PixelGate.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "VaHet",
+      "name": "VaHet",
+      "categories": [
+        "desktop"
+      ],
+      "tech": [
+        "Electron",
+        "Node.js"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/VaHet",
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Exploración de una bóveda local de archivos y notas.",
+        "en": "An exploration of a local file and note vault."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Exploración de una bóveda local de archivos y notas.",
+        "en": "An exploration of a local file and note vault."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Prototipo de aprendizaje. No se presenta como una herramienta de seguridad auditada.",
+        "en": "Learning prototype. Not presented as an audited security tool."
+      },
+      "image": "assets/shots/VaHet.svg",
+      "imageType": "concept"
+    },
+    {
+      "id": "AccNized",
+      "name": "AccNized",
+      "categories": [
+        "desktop"
+      ],
+      "tech": [
+        "Flutter",
+        "Dart",
+        "SQLite"
+      ],
+      "featured": false,
+      "url": "https://github.com/JuanEstebanHerreraH/AccNized",
+      "download": null,
+      "demo": null,
+      "summary": {
+        "es": "Prototipo de organización local de cuentas y notas con etiquetas.",
+        "en": "Prototype for local organization of accounts and tagged notes."
+      },
+      "role": {
+        "es": "Proyecto personal, desarrollado con apoyo de IA y revisión de resultados.",
+        "en": "Personal project, developed with AI assistance and review."
+      },
+      "problem": {
+        "es": "Prototipo de organización local de cuentas y notas con etiquetas.",
+        "en": "Prototype for local organization of accounts and tagged notes."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la interfaz y del flujo principal.",
+          "Integración de tecnologías y documentación del proyecto."
+        ],
+        "en": [
+          "UI and main workflow implementation.",
+          "Technology integration and project documentation."
+        ]
+      },
+      "limits": {
+        "es": "Prototipo de aprendizaje. No se recomienda como gestor de credenciales de producción.",
+        "en": "Learning prototype. Not recommended as a production credential manager."
+      },
+      "image": "assets/shots/AccNized.svg",
+      "imageType": "concept"
     }
   ],
-  "techstack": {
-    "Lenguajes": [
-      {
-        "name": "Java",
-        "icon": "☕",
-        "color": "#f89820"
-      },
-      {
-        "name": "C++",
-        "icon": "⚙",
-        "color": "#00599c"
-      },
-      {
-        "name": "C#",
-        "icon": "#",
-        "color": "#9b4f96"
-      },
-      {
-        "name": "JavaScript",
-        "icon": "JS",
-        "color": "#f1e05a",
-        "dark": true
-      },
-      {
-        "name": "TypeScript",
-        "icon": "TS",
-        "color": "#3178c6"
-      },
-      {
-        "name": "Dart",
-        "icon": "🎯",
-        "color": "#00B4AB"
-      },
-      {
-        "name": "Python",
-        "icon": "🐍",
-        "color": "#3572A5"
-      },
-      {
-        "name": "Rust",
-        "icon": "🦀",
-        "color": "#dea584",
-        "dark": true
-      }
-    ],
-    "Frameworks & Librerías": [
-      {
-        "name": "React",
-        "icon": "⚛",
-        "color": "#61dafb",
-        "dark": true
-      },
-      {
-        "name": "Next.js",
-        "icon": "▲",
-        "color": "#444444"
-      },
-      {
-        "name": "Flutter",
-        "icon": "💙",
-        "color": "#54c5f8",
-        "dark": true
-      },
-      {
-        "name": ".NET",
-        "icon": "●",
-        "color": "#512bd4"
-      },
-      {
-        "name": "Svelte",
-        "icon": "S",
-        "color": "#ff3e00"
-      }
-    ],
-    "Runtime & Plataformas": [
-      {
-        "name": "Node.js",
-        "icon": "◉",
-        "color": "#339933"
-      },
-      {
-        "name": "Electron",
-        "icon": "⚡",
-        "color": "#47848f"
-      },
-      {
-        "name": "Capacitor",
-        "icon": "⬡",
-        "color": "#119eff"
-      },
-      {
-        "name": "Tomcat",
-        "icon": "🐱",
-        "color": "#f8dc75",
-        "dark": true
-      }
-    ],
-    "Bases de Datos": [
-      {
-        "name": "MySQL",
-        "icon": "🗄",
-        "color": "#4479a1"
-      },
-      {
-        "name": "PostgreSQL",
-        "icon": "🐘",
-        "color": "#336791"
-      },
-      {
-        "name": "SQLite",
-        "icon": "📦",
-        "color": "#3b7ebf"
-      },
-      {
-        "name": "Supabase",
-        "icon": "⚡",
-        "color": "#3ecf8e",
-        "dark": true
-      }
-    ],
-    "Cloud & Deployment": [
-      {
-        "name": "AWS",
-        "icon": "☁",
-        "color": "#1a1a1a"
-      },
-      {
-        "name": "Vercel",
-        "icon": "▲",
-        "color": "#222222"
-      },
-      {
-        "name": "GitHub",
-        "icon": "⬟",
-        "color": "#24292e"
-      },
-      {
-        "name": "Docker",
-        "icon": "🐳",
-        "color": "#2496ed"
-      }
-    ]
-  },
-  "skills": [
-    "Java",
-    "C++",
-    "JavaScript",
-    "TypeScript",
-    "Dart",
-    "Python",
-    "React",
-    "Next.js",
-    "Flutter",
-    ".NET",
-    "Node.js",
-    "Electron",
-    "Capacitor",
-    "Tomcat",
-    "MySQL",
-    "PostgreSQL",
-    "SQLite",
-    "Supabase",
-    "AWS",
-    "Vercel",
-    "Docker",
-    "GitHub",
-    "Svelte",
-    "Rust"
-  ],
-  "interests": [
-    {
-      "icon": "🔐",
-      "title": "Ciberseguridad",
-      "description": "Seguridad ofensiva y defensiva, gestión de datos cifrados y control total del usuario sobre su información."
-    },
-    {
-      "icon": "🌐",
-      "title": "Redes & CCNA",
-      "description": "Arquitectura de red, protocolos IPv4/IPv6, VLANs y automatización. En camino a la certificación CCNA."
-    },
-    {
-      "icon": "📱",
-      "title": "Desarrollo Multiplataforma",
-      "description": "Software que corre en desktop y móvil desde una misma base de código, con Flutter y Electron."
-    },
-    {
-      "icon": "🏗",
-      "title": "Arquitectura de Software",
-      "description": "Diseño de sistemas limpios y modulares con foco en rendimiento, escalabilidad y mantenibilidad a largo plazo."
-    }
-  ],
-  "featured_degree": {
-    "title": "Técnico Profesional en Soporte de Sistemas e Informática",
-    "institution": "CUN – Corporación Unificada Nacional de Educación Superior",
-    "year": 2026,
-    "registro_men": "102262",
-    "icon": "🎓",
-    "description": "Título otorgado por el Ministerio de Educación Nacional de Colombia. Formación técnica en infraestructura, soporte de hardware/software y redes informáticas.",
-    "url": "https://www.linkedin.com/in/juan-esteban-herrera-herrera/overlay/Certifications/350599974/treasury/?profileId=ACoAAFzS0TcBP9NliGVaa5dgsedpP9fhyGJSEGs"
-  },
-  "featured_oracle": {
-    "title": "Oracle Next Education (ONE) — Tech Foundation",
-    "institution": "Oracle / Alura Latam",
-    "year": 2026,
-    "icon": "🏛",
-    "description": "Finalización exitosa de la ruta hiperespecializada en Tech Foundation (Back-End) con formación avanzada en ecosistemas empresariales.",
-    "tags": [
-      "Java POO",
-      "Spring",
-      "MySQL",
-      "APIs"
-    ],
-    "url": ""
-  },
   "certifications": [
     {
       "name": "Spring AI: Integra una aplicación con OpenAI",
@@ -1034,6 +1397,103 @@
       ],
       "url": "https://proyeccionsocial.cunapp.pro/printPDF/73705",
       "institution": "CUN"
+    }
+  ],
+  "education": [
+    {
+      "period": "2026",
+      "title": {
+        "es": "Técnico Profesional en Soporte de Sistemas e Informática",
+        "en": "Professional Technician in Systems Support and IT"
+      },
+      "institution": "Corporación Unificada Nacional de Educación Superior CUN",
+      "detail": {
+        "es": "Graduado el 26 de febrero de 2026. Formación en soporte, hardware, sistemas y redes.",
+        "en": "Graduated on February 26, 2026. Training in support, hardware, systems and networks."
+      }
+    },
+    {
+      "period": "En curso / In progress",
+      "title": {
+        "es": "Ingeniería de Sistemas · formación por ciclos",
+        "en": "Systems Engineering · education by cycles"
+      },
+      "institution": "Corporación Unificada Nacional de Educación Superior CUN",
+      "detail": {
+        "es": "Carrera de 10 semestres y tres titulaciones. Continúo el ciclo tecnológico, con título previsto para 2027.",
+        "en": "A ten-semester program with three qualifications. Continuing the technological cycle, with qualification expected in 2027."
+      }
+    },
+    {
+      "period": "2025 — 2026",
+      "title": {
+        "es": "Oracle Next Education / Alura · Back-End",
+        "en": "Oracle Next Education / Alura · Back-End"
+      },
+      "institution": "Oracle · Alura Latam",
+      "detail": {
+        "es": "Formación en Java, Spring Boot, APIs REST, persistencia y pruebas. Aplicada al trabajo colaborativo de TechMind / LogiTree.",
+        "en": "Training in Java, Spring Boot, REST APIs, persistence and testing. Applied to collaborative work in TechMind / LogiTree."
+      }
+    }
+  ],
+  "toolGroups": [
+    {
+      "title": {
+        "es": "Escritorio e IA local",
+        "en": "Desktop & local AI"
+      },
+      "tools": [
+        "C#",
+        ".NET",
+        "WPF",
+        "Rust",
+        "Tauri",
+        "ONNX",
+        "Tesseract"
+      ],
+      "context": {
+        "es": "xIas · Recorta · FileWatch",
+        "en": "xIas · Recorta · FileWatch"
+      }
+    },
+    {
+      "title": {
+        "es": "Web, backend y datos",
+        "en": "Web, backend & data"
+      },
+      "tools": [
+        "Java",
+        "Spring Boot",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PostgreSQL",
+        "Supabase"
+      ],
+      "context": {
+        "es": "LogiTree · Café Almacén · Dotaciones",
+        "en": "LogiTree · Café Almacén · Dotaciones"
+      }
+    },
+    {
+      "title": {
+        "es": "Redes y automatización",
+        "en": "Networking & automation"
+      },
+      "tools": [
+        "PowerShell",
+        "Python",
+        "Flutter",
+        "Dart",
+        "IPv4 / IPv6",
+        "VLAN",
+        "Excel"
+      ],
+      "context": {
+        "es": "CoexFix · Vlanets · Retorp · formación en ofimática",
+        "en": "CoexFix · Vlanets · Retorp · office software training"
+      }
     }
   ]
 }
