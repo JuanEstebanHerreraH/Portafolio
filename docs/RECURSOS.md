@@ -31,7 +31,7 @@ Consultar un README no equivale a instalar, ejecutar ni auditar la aplicación. 
 
 xIas, Recorta y LogiTree usan capturas de demostración conservadas de la revisión anterior. Las otras portadas son ilustraciones SVG originales y se identifican como tales.
 
-Las auroras, el terreno y las estrellas son procedurales. Los símbolos, las órbitas y la marca geométrica son SVG. No se han usado recursos de videojuegos ni anime.
+El cielo y las cortinas de aurora son SVG originales derivados de la geometría de la primera versión. La atmósfera se mueve por capas CSS. El átomo recupera sus órbitas y puntos interactivos. El asistente y la planta son ilustraciones SVG originales. Las demostraciones están identificadas como ejemplos; no hay recursos de videojuegos o anime.
 
 ## Fuentes
 

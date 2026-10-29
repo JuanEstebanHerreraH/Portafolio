@@ -1,6 +1,6 @@
 {
-  "version": "3.0",
-  "updated": "2026-10-26",
+  "version": "5.0",
+  "updated": "2026-10-29",
   "profile": {
     "name": "Juan Esteban Herrera Herrera",
     "shortName": "Juan Esteban Herrera",
@@ -1667,8 +1667,8 @@
         "en": "Understand the network. Find the problem."
       },
       "intro": {
-        "es": "Formación técnica y práctica universitaria, acompañadas por herramientas que construí para planificar y diagnosticar redes.",
-        "en": "Technical training and university practice, supported by tools I built to plan and diagnose networks."
+        "es": "Planifico y diagnostico redes en prácticas y proyectos.",
+        "en": "I plan and diagnose networks through practice and projects."
       },
       "knowledge": {
         "es": [
@@ -1685,12 +1685,12 @@
         ]
       },
       "practice": {
-        "es": "Tres años de práctica académica en redes y PowerShell. En Vlanets desarrollo cálculos y configuraciones Cisco; en CoexFix, diagnóstico WiFi/Bluetooth con respaldo y reversión.",
-        "en": "Three years of academic networking and PowerShell practice. Vlanets covers calculations and Cisco configurations; CoexFix supports WiFi/Bluetooth diagnostics with backup and rollback."
+        "es": "Vlanets: subnetting y configuración Cisco. CoexFix: diagnóstico WiFi/Bluetooth.",
+        "en": "Vlanets: subnetting and Cisco configuration. CoexFix: WiFi/Bluetooth diagnostics."
       },
       "status": {
-        "es": "Preparación CCNA en curso; certificación aún no obtenida. Interés en soporte, mesa de ayuda y soporte de aplicaciones.",
-        "en": "Preparing for CCNA; certification not yet obtained. Interested in IT support, service desk and application support."
+        "es": "3 años de práctica académica. Preparación CCNA en curso; aún sin certificación.",
+        "en": "3 years of academic practice. Preparing for CCNA; not yet certified."
       },
       "projects": [
         "Vlanets",
@@ -1709,8 +1709,8 @@
         "en": "From interface to data."
       },
       "intro": {
-        "es": "Construyo interfaces y servicios, conecto bases de datos y organizo flujos completos de una aplicación.",
-        "en": "I build interfaces and services, connect databases and organize complete application workflows."
+        "es": "Interfaces, APIs y bases de datos conectadas.",
+        "en": "Connected interfaces, APIs and databases."
       },
       "knowledge": {
         "es": [
@@ -1727,12 +1727,12 @@
         ]
       },
       "practice": {
-        "es": "Tres años de práctica académica en Java y .NET. En LogiTree colaboré como full stack con énfasis backend; en Café Almacén y Dotaciones conecté interfaz, datos y procesos.",
-        "en": "Three years of academic Java and .NET practice. I contributed to LogiTree as a full stack developer focused on backend; in Café Almacén and Dotaciones I connected interfaces, data and workflows."
+        "es": "LogiTree: full stack, con foco backend. Dotaciones: interfaz y base de datos. Café Almacén: trazabilidad.",
+        "en": "LogiTree: full stack, focused on backend. Dotaciones: interface and database. Café Almacén: traceability."
       },
       "status": {
-        "es": "Experiencia de proyectos personales, académicos y de equipo. Busco oportunidades junior para seguir trabajando con buenas prácticas.",
-        "en": "Personal, academic and team project experience. Seeking junior opportunities to keep applying good engineering practices."
+        "es": "3 años de práctica académica en Java/.NET y experiencia en proyectos de equipo. Perfil junior.",
+        "en": "3 years of academic Java/.NET practice and team projects. Junior profile."
       },
       "projects": [
         "logitree",
@@ -1751,8 +1751,8 @@
         "en": "Tools that work on your machine."
       },
       "intro": {
-        "es": "Aplicaciones para procesar documentos, imágenes y archivos, con modelos preentrenados y controles de revisión.",
-        "en": "Applications for documents, images and files, integrating pretrained models and review controls."
+        "es": "Aplicaciones para imágenes, documentos y archivos.",
+        "en": "Applications for images, documents and files."
       },
       "knowledge": {
         "es": [
@@ -1769,12 +1769,12 @@
         ]
       },
       "practice": {
-        "es": "xIas organiza y compara tablas; Recorta elimina fondos y permite corregir máscaras; FileWatch conserva y restaura versiones de archivos.",
-        "en": "xIas organizes and compares tables; Recorta removes backgrounds and supports mask corrections; FileWatch keeps and restores file versions."
+        "es": "xIas: tablas y OCR. Recorta: fondos y máscaras. FileWatch: versiones y restauración.",
+        "en": "xIas: tables and OCR. Recorta: backgrounds and masks. FileWatch: versions and restoration."
       },
       "status": {
-        "es": "Integro modelos existentes: no presento estos proyectos como entrenamiento de modelos propios. Los requisitos y límites están en cada repositorio.",
-        "en": "I integrate existing models; these projects do not represent training original models. Requirements and limits are documented in each repository."
+        "es": "Integro modelos preentrenados; requisitos y límites en cada repositorio.",
+        "en": "I integrate pretrained models; requirements and limitations are in each repository."
       },
       "projects": [
         "xIas",
@@ -1793,8 +1793,8 @@
         "en": "Clear information. Less repetitive work."
       },
       "intro": {
-        "es": "Organizo datos y documentos, preparo material y aplico automatizaciones con revisión de resultados.",
-        "en": "I organize data and documents, prepare materials and apply automation with reviewed results."
+        "es": "Datos ordenados, documentos claros y menos pasos manuales.",
+        "en": "Organized data, clear documents and fewer manual steps."
       },
       "knowledge": {
         "es": [
@@ -1811,12 +1811,12 @@
         ]
       },
       "practice": {
-        "es": "En xIas incorporé creación de tablas, importación/exportación, operaciones de datos y conexión con Google Sheets. Arcionr apoya la conversión y organización de archivos.",
-        "en": "In xIas I added table creation, import/export, data operations and a Google Sheets connection. Arcionr supports file conversion and organization."
+        "es": "xIas: limpieza y comparación de tablas. Arcionr: organización y conversión de archivos.",
+        "en": "xIas: table cleaning and comparison. Arcionr: file organization and conversion."
       },
       "status": {
-        "es": "El CV de ofimática está orientado a asistencia digital y documentación. Los años de práctica corresponden a estudio y proyectos, no a empleo formal.",
-        "en": "The office tools CV focuses on digital assistance and documentation. Practice years describe study and projects, not formal employment."
+        "es": "3 años de práctica académica con Excel y 2 con macros. Sin experiencia laboral formal.",
+        "en": "3 years of academic Excel practice and 2 with macros. No formal employment experience."
       },
       "projects": [
         "xIas",
@@ -1835,8 +1835,8 @@
         "en": "Speed up the process. Keep human judgment."
       },
       "intro": {
-        "es": "Uso desarrollo asistido por IA —también llamado vibe coding— para prototipar, iterar y documentar, con revisión y pruebas de lo generado.",
-        "en": "I use AI-assisted development, also called vibe coding, to prototype, iterate and document, while reviewing and testing generated work."
+        "es": "Desarrollo asistido por IA, con revisión y pruebas.",
+        "en": "AI-assisted development, with review and testing."
       },
       "knowledge": {
         "es": [
@@ -1853,12 +1853,12 @@
         ]
       },
       "practice": {
-        "es": "La IA apoya la construcción y la optimización. xIas y Recorta también la integran como función visible para la persona que usa la herramienta.",
-        "en": "AI supports building and optimization. xIas and Recorta also integrate it as a visible feature for the person using the tool."
+        "es": "OCR → datos. Similitud → revisión. Imagen → máscara → exportación.",
+        "en": "OCR → data. Similarity → review. Image → mask → export."
       },
       "status": {
-        "es": "Distingo automatización por reglas de inferencia con IA. Valido cambios, documento límites y dejo decisiones de revisión en manos del usuario.",
-        "en": "I distinguish rule-based automation from AI inference. I validate changes, document limits and leave review decisions to the user."
+        "es": "PowerShell, fundamentos de Python y modelos locales integrados en herramientas.",
+        "en": "PowerShell, Python fundamentals and local models integrated into tools."
       },
       "projects": [
         "xIas",

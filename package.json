@@ -1,8 +1,8 @@
 {
   "name": "juan-esteban-portfolio",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "private": true,
-  "description": "Portafolio inmersivo de herramientas de Juan Esteban Herrera.",
+  "description": "Portafolio con aurora y átomo animados, asistente visual y habilidades interactivas.",
   "scripts": {
     "sync": "node scripts/sync-data.mjs",
     "check": "node scripts/check.mjs",

@@ -1,44 +1,38 @@
-# Verificación · Aurora 3.0
+# Verificación · Aurora 5
 
-Fecha de entrega: 26 de octubre de 2026.
+Fecha: 29 de octubre de 2026.
 
-## Integridad
+## Archivos
 
-- Sintaxis de app.js, aurora.js y las herramientas de mantenimiento.
-- Datos JSON y copia JavaScript sincronizados.
-- 18 herramientas, cinco áreas de conocimiento y 48 cursos/rutas.
-- Identificadores únicos, referencias locales, anclas, referencias SVG y licencias de fuentes.
-- Cuatro PDF presentes con encabezado PDF válido y copias idénticas a los originales seleccionados.
-- Servidor local con respuesta 200 para los recursos y tipo application/pdf para los CV.
-- Archivo ZIP comprobado e inclusión de .nojekyll y .gitignore.
+- Sintaxis de content.js, app.js, aurora.js y skills.js.
+- Datos bilingües sincronizados, recursos locales, anclas, licencias y SVG válidos.
+- 18 proyectos, cinco áreas y 48 credenciales conservados.
+- Cuatro PDF presentes; contenido conservado respecto al respaldo anterior.
+- ZIP íntegro con index.html en la raíz, .nojekyll y .gitignore.
 
 ## Navegador
 
-Pruebas realizadas por HTTP en un navegador basado en Chromium:
+Revisión en Chromium por HTTP local, a 320, 390, 768 y 1366 px:
 
-- Anchos de 320, 390, 768 y 1366 píxeles; sin desbordamiento horizontal en la versión final.
-- Inicio con movimiento activo, rueda y auroras; control para pausar y reactivar.
-- Puntos de la escena que seleccionan herramientas.
-- Filtro de redes con Vlanets, CoexFix y Retorp.
-- Búsqueda sin resultados y recuperación de la lista.
-- Selección de una herramienta al final del listado y conservación del foco.
-- Avance desde la última herramienta a la primera, con desplazamiento del listado para mantenerla visible.
-- Recarga del enlace de una herramienta y del enlace de un caso.
-- Diálogo de caso adaptable y cierre con Escape.
-- Pestañas de conocimientos por clic y mediante flechas.
-- Cursos agrupados por áreas, búsqueda y carga de más resultados.
-- Cambio al inglés, traducciones de capacidades y nombres de CV.
-- Menú móvil, modo oscuro y cuatro enlaces de descarga.
-- Sin nuevos errores de consola durante la secuencia final de interacciones.
+- Sin desbordamiento horizontal observado ni etiquetas del átomo fuera de la portada.
+- Aurora y órbitas con animation-play-state en running al activarlas.
+- En móvil: una capa de aurora y órbitas; capa secundaria oculta y rueda sin animación aparte.
+- Fuera de la portada: aurora pausada.
+- Botón de pausa: animaciones de aurora y órbitas en none.
+- Selección de Recorta desde una órbita y apertura/cierre del caso Vlanets.
+- API de ejemplo: dos productos activos.
+- Redes: /26 da cuatro subredes y 62 hosts; /28 da 16 subredes y 14 hosts. Retorno a /24.
+- Tabla: tres filas pasan a dos, espacios normalizados y total de seis unidades.
+- Automatización: tres nombres normalizados y agrupados por extensión.
+- Imagen: alternancia entre fondo y transparencia.
+- Español/inglés; pestañas por teclado con selección visible.
+- Menú móvil, temas y footer; paleta azul petróleo conservada en modo oscuro.
+- Sin errores o advertencias de consola durante la secuencia final.
 
-Las imágenes de esta carpeta son capturas reales de la vista previa.
+Las capturas de portada, móvil, habilidades y footer de esta carpeta corresponden a esta versión.
 
 ## Límites
 
-La apertura con file:// está prevista por la estructura sin fetch ni módulos; el navegador de revisión no permite verificar ese protocolo. La revisión se realizó por HTTP.
+No se han medido FPS o consumo en un teléfono físico. La apertura directa por file:// está prevista por los scripts clásicos y las rutas relativas, pero la revisión de navegador se realizó por HTTP.
 
-Se comprobaron los archivos y enlaces de los cuatro CV; el lugar donde un navegador guarda una descarga depende de su configuración. No se probaron todos los navegadores ni equipos físicos, ni se realizó una auditoría formal de accesibilidad o rendimiento.
-
-Los README consultados respaldan el contenido de los casos complementarios. Esta revisión del portafolio no equivale a ejecutar o auditar cada aplicación presentada, ni verifica la disponibilidad permanente de todas las demos o credenciales.
-
-La web pública no cambia hasta que se suban los archivos al repositorio que publica GitHub Pages.
+La web pública no se ha modificado. Los repositorios, demos y certificados externos no se han auditado de nuevo en esta revisión.

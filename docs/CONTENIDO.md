@@ -25,11 +25,11 @@ El explorador muestra un proyecto a la vez; sus botones anterior/siguiente recor
 
 #herramienta/xIas selecciona una herramienta y lleva a su vista. #proyecto/xIas abre su caso. No se necesitan rutas de servidor.
 
-Los puntos de la escena inicial están en index.html y usan data-select-tool. Si cambias sus proyectos, actualiza sus nombres, textos y traducciones.
+La portada recupera el átomo. Sus cinco puntos usan data-select-tool para seleccionar aplicaciones. js/aurora.js controla mensajes preparados y visibilidad; assets/aurora-*.svg aporta la atmósfera.
 
 ## Capacidades
 
-El arreglo skills incluye etiqueta, título, introducción, conocimientos, práctica, estado y proyectos de evidencia. Los textos tienen versiones es y en.
+El arreglo skills conserva el inventario de conocimientos bilingüe. La interfaz muestra demostraciones y etiquetas en js/skills.js; renderSkills en app.js gestiona sus pestañas. No se muestran los párrafos extensos del inventario.
 
 Los conocimientos de redes incluyen direccionamiento, VLSM, VLAN, trunking, inter-VLAN, routing, NAT/ACL, Packet Tracer y soporte Windows. Ofimática tiene su área propia; la automatización asistida por IA también.
 
@@ -45,11 +45,11 @@ Los tres hitos principales se escriben en los diccionarios es/en de js/app.js:
 
 certifications conserva las 48 evidencias con nombre, institución, fecha, etiquetas y enlace. La función certArea las organiza por áreas, y certType distingue rutas y cursos. Si añades una credencial de otro tipo, revisa su clasificación.
 
-Cada área muestra seis resultados inicialmente y permite cargar más. Buscar filtra dentro del área elegida. Cambiar de área limpia la búsqueda.
+El bloque de cursos empieza plegado. Al abrirlo, cada área muestra seis resultados inicialmente y permite cargar más. Buscar filtra dentro del área elegida. Cambiar de área limpia la búsqueda.
 
 ## Perfil y traducciones
 
-Los textos estáticos en español están en index.html; su traducción está en el diccionario en de js/app.js. Actualiza ambos.
+Los textos estáticos en español están en index.html; su traducción y los ajustes de copia están en los diccionarios es/en de js/app.js, antes de const state. Las demostraciones tienen su diccionario en js/skills.js y el asistente en js/aurora.js. Actualiza ambos idiomas.
 
 Los textos de proyectos y capacidades se editan en content.json. content.js es la copia generada para permitir abrir el HTML sin fetch.
 

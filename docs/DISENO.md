@@ -1,39 +1,41 @@
-# Diseño y movimiento
+# Diseño y rendimiento · Aurora 5
 
-## Dirección
+## Identidad recuperada
 
-La experiencia toma ideas de menús de campaña y entornos de exploración: atmósfera, profundidad, señales y una navegación que deja elegir un destino. La composición, los gráficos y las animaciones son originales.
+La portada recupera las tres órbitas, la rueda central, las herramientas y el horizonte de la versión original. Conserva la tipografía más legible de la revisión anterior. El asistente acompaña la escena con mensajes preparados.
 
-La portada es un cielo azul con auroras, terreno y una constelación de herramientas. Cada punto enlaza una aplicación real. El logotipo conserva una rueda geométrica en rotación. El encabezado mantiene su atmósfera al recorrer las secciones.
+La paleta interior de papel y verde se mantiene. El footer usa azul petróleo, texto claro y verdes suaves. Se retiró el bloque redundante de experiencia; su contexto queda junto a las herramientas.
 
-El explorador sustituye el catálogo por una lista de selección y una escena dedicada al proyecto activo. Los casos muestran primero la herramienta y su recorrido de uso; después, el problema y la implementación.
+## Habilidades visuales
 
-Se conserva la paleta de papel, tinta verde, lima y arcilla en las secciones interiores y el cierre cálido.
+Cinco modos sustituyen las listas de conocimientos:
 
-## Tipografía
+- Backend/Web: cliente → API → base de datos; filtra dos productos activos de una colección de muestra.
+- Escritorio/IA: vista de una ilustración con/sin fondo.
+- Redes: /24, /26 y /28 con rangos y capacidad calculados.
+- Ofimática: normalización, duplicados por código y suma de cantidades.
+- Automatización: normalización de nombres y agrupación por extensión.
 
-Montserrat para títulos, Open Sans para lectura y Roboto Mono para etiquetas. Las fuentes se incluyen localmente. No hay solicitudes de fuentes durante una visita.
+Las tecnologías se muestran como etiquetas; cada modo enlaza sus herramientas de evidencia. Los ejemplos están identificados y no se presentan como un servicio generativo real.
 
-## Movimiento
+## Movimiento eficiente
 
-El movimiento está activo por defecto, de acuerdo con la dirección solicitada. El botón del encabezado permite pausarlo; esa elección se guarda. No se reproducen sonidos y no hay una pantalla que obligue a esperar para entrar.
+La aurora está formada por SVG estáticos rasterizados por el navegador y movidos mediante transformaciones/opacidad CSS. No hay un ciclo requestAnimationFrame ni dibujo Canvas continuo.
 
-El cielo se dibuja en Canvas a una frecuencia limitada de aproximadamente 24 cuadros por segundo. Su resolución está acotada; se detiene cuando queda fuera de vista o la pestaña está oculta. Las órbitas, la rueda y el ambiente del encabezado usan CSS. El puntero aporta una inclinación suave en equipos que tienen un puntero preciso.
+En escritorio hay cuatro animaciones: dos capas de aurora, las órbitas y la rueda central. En anchos de hasta 980 px quedan dos: una aurora y las órbitas. La capa secundaria no se muestra y la rueda no gira aparte.
 
-El portafolio no ejecuta inferencia ni descarga modelos de IA. Las funciones de IA corresponden a algunas de las aplicaciones presentadas.
+Al salir la portada de la vista o al ocultarse la pestaña se pausa animation-play-state. El botón de pausa desactiva todas las animaciones. Los mensajes se escriben con un temporizador finito y se completan al pausar o salir de la portada.
 
-## Adaptación y accesibilidad
+No hay seguimiento del puntero, texturas fijas sobre toda la página ni desenfoques de fondo.
 
-En móvil, la escena se acomoda debajo del menú principal y las herramientas se eligen en una fila desplazable. El panel de capacidades usa pestañas con navegación de flechas y foco visible. Los cursos se presentan en la página, por áreas.
+## Accesibilidad y controles
 
-Se incluyen salto al contenido, encabezados, etiquetas, estados de selección, mensajes de resultado, cierre con Escape y un diálogo nativo para los casos.
+La primera visita respeta prefers-reduced-motion. Una activación expresa con el botón de movimiento prevalece y se conserva en el equipo. Se mantienen zoom, foco visible, navegación por teclado, menú móvil y diálogos nativos.
 
-Las capturas reales y las ilustraciones se distinguen en la vista y en sus textos alternativos. Los PDF tienen enlaces con etiquetas descriptivas. El modo oscuro se aplica al contenido manteniendo el cielo inicial.
+Las pestañas de habilidades se desplazan para mantener visible la seleccionada. Las etiquetas de la escena están ancladas dentro de sus límites.
 
-No se declara una conformidad WCAG auditada.
+## Hardware y límites
 
-## Hardware
+Un navegador moderno con CSS Grid y dialog. No requiere GPU dedicada, modelos de IA ni instalación para visitar la web. Node.js se usa solo para mantenimiento opcional.
 
-Un navegador moderno con Canvas, dialog, CSS Grid e IntersectionObserver. No exige GPU dedicada ni una instalación de desarrollo para la visita. No se ha establecido un mínimo de RAM con mediciones en equipos físicos.
-
-Node.js 18 o posterior se utiliza solamente para los comandos opcionales de mantenimiento. No es necesario para los visitantes.
+No se han medido FPS, RAM o batería en teléfonos físicos; no se promete una velocidad uniforme. La optimización reduce el trabajo continuo del procesador y las capas de móvil, preservando la idea visual.

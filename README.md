@@ -1,70 +1,73 @@
 # Juan Esteban Herrera · Aurora
 
-Portafolio de desarrollo, sistemas y herramientas. Una escena interactiva con auroras abre el recorrido; el visitante elige una aplicación, explora su uso y consulta su implementación.
+Portafolio de aplicaciones, sistemas y herramientas. Aurora y átomo animados, asistente visual y habilidades que se pueden probar.
 
 ![Portada](docs/portada.jpg)
 
-## Experiencia
+## Qué incluye
 
-- Encabezado con cielo animado, rueda de marca, órbitas y puntos que llevan a proyectos reales.
-- Movimiento activado al entrar, con opción de pausa y preferencia guardada.
-- Tipografías locales: Montserrat, Open Sans y Roboto Mono.
-- Explorador único de 18 herramientas, con búsqueda y filtros. Una herramienta se muestra a la vez, en una vista amplia.
-- Casos con flujo de uso, propósito, participación, implementación y límites.
-- Cinco áreas de conocimiento: redes/soporte, web/backend, escritorio/IA local, ofimática e IA/automatización.
-- Tres hitos visibles: título técnico obtenido, formación ONE/Alura e Ingeniería de Sistemas en curso.
-- 48 cursos y rutas organizados por áreas, con explicación, buscador y carga progresiva.
-- Cuatro CV descargables: desarrollo, soporte/redes, ofimática y desarrollo ENG.
-- Español/inglés, modo claro/oscuro y diseño adaptable.
+- Escena de átomo con cinco accesos a proyectos.
+- Aurora animada por capas, sin redibujar un Canvas en cada fotograma.
+- Asistente visual con mensajes preparados al explorar las órbitas.
+- Cinco demostraciones: consulta de productos, vista de recorte, subnetting, limpieza/suma de una tabla y organización de archivos.
+- Tecnologías y herramientas de evidencia junto a cada demostración.
+- 18 proyectos con capturas o ilustraciones identificadas; un caso se abre a la vez.
+- Tres hitos de formación y cursos complementarios en un bloque desplegable.
+- Cuatro CV PDF, español/inglés y tema claro/oscuro.
+- Footer en azul petróleo y verdes, coherente con la portada.
 
-La paleta cálida de las secciones se conserva. La barra de progreso, la numeración de secciones, las tarjetas de catálogo y el bloque separado de exploraciones se retiraron.
+La experiencia se presenta junto a las herramientas como práctica personal, académica y en equipo. No hay un bloque adicional que repita colaboraciones o enlaces al CV.
+
+## Movimiento y móvil
+
+En escritorio se animan dos capas de aurora, las órbitas y la rueda central. Hasta 980 px se conserva una capa de aurora y el giro del átomo. La tipografía de lectura sigue en 16–18 px.
+
+El movimiento se pausa fuera de la portada, al ocultar la pestaña o al usar el botón de pausa. La primera visita respeta la preferencia de movimiento reducido; el botón permite activar el movimiento de forma explícita y guardar esa elección.
+
+La revisión de tamaños de pantalla no sustituye una medición de FPS en un teléfono físico.
+
+## Qué hacen las demostraciones
+
+Las interacciones de tabla, red y nombres de archivos calculan sus resultados sobre datos de ejemplo. La API es una consulta simulada sobre datos incluidos; la imagen alterna una ilustración con/sin fondo.
+
+El asistente usa respuestas preparadas. Esta web no ejecuta inferencia, segmentación ni OCR, no descarga modelos de IA ni envía archivos. Las funciones de IA reales se explican en los repositorios de las aplicaciones.
 
 ## Abrir
 
-Extrae el ZIP y abre **index.html**. Mantén juntas todas las carpetas. El sitio usa recursos relativos y scripts clásicos para permitir abrirlo sin instalar herramientas.
+Extrae el ZIP y abre **index.html**, conservando todas las carpetas. No necesitas instalar paquetes.
 
-Para la vista por HTTP, con Node.js 18 o posterior:
+Vista por HTTP opcional con Node.js 18 o posterior:
 
-```text
+~~~text
 npm run preview
-```
+~~~
 
-Abre http://127.0.0.1:8080. Detén la vista previa con Ctrl+C. No es necesario instalar paquetes.
+Abre http://127.0.0.1:8080. Detén el servidor con Ctrl+C.
 
 ## Actualizar GitHub Pages
 
 1. Conserva una copia de tu versión actual.
-2. Copia el contenido de esta carpeta a la raíz del repositorio Portafolio. index.html debe quedar en la raíz.
-3. Incluye .nojekyll, .gitignore, assets/cv y las fuentes. Conserva la carpeta .git si trabajas sobre una copia local del repositorio.
-4. Guarda y sube los cambios a la rama que ya publica GitHub Pages.
-5. Comprueba https://juanestebanherrerah.github.io/Portafolio/ después de la publicación.
+2. Copia todo el contenido del ZIP a la raíz del repositorio Portafolio.
+3. Incluye css, js, data, assets, .nojekyll y .gitignore. Conserva la carpeta .git si ya tienes el repositorio local.
+4. Sube los cambios a la rama configurada para GitHub Pages.
+5. Revisa la portada, las demostraciones y las cuatro descargas.
 
-No se ha modificado la web pública desde este paquete.
+Esta entrega modifica los archivos locales y prepara el ZIP. No publica automáticamente en GitHub.
 
-## Contenido y mantenimiento
+## Mantenimiento
 
-Edita data/content.json para modificar proyectos y capacidades. Luego ejecuta:
+Edita data/content.json para proyectos y formación. Después:
 
-```text
+~~~text
 npm run sync
 npm run check
-```
+~~~
 
-Los textos de portada y perfil están en index.html; la traducción al inglés y los textos de hitos/CV están en js/app.js. Consulta [la guía de contenido](docs/CONTENIDO.md).
+Textos y navegación: index.html y js/app.js. Atmósfera/asistente: js/aurora.js y assets/aurora-*.svg. Demostraciones: js/skills.js.
 
-## CV
-
-Los cuatro archivos se encuentran en assets/cv y son copias de los PDF ATS de octubre de 2026 disponibles en el espacio de trabajo. Se han añadido como descargas; su contenido no se ha reescrito en esta revisión del sitio.
-
-Al publicar el portafolio, esos PDF formarán parte de los archivos públicos. Para sustituirlos, conserva los nombres o actualiza las referencias en js/app.js y en el bloque noscript de index.html.
-
-## Documentación
-
-- [Contenido y archivos](docs/CONTENIDO.md)
+- [Contenido](docs/CONTENIDO.md)
 - [Diseño y rendimiento](docs/DISENO.md)
-- [Recursos y fuentes de información](docs/RECURSOS.md)
 - [Verificación](docs/VERIFICACION.md)
+- [Recursos](docs/RECURSOS.md)
 
-No requiere servicios, claves, modelos de IA ni base de datos para funcionar. No utiliza analítica ni envía formularios. Los enlaces externos abren sus propios sitios.
-
-La identidad, fotografía y contenido profesional pertenecen a su titular. Las fuentes incluyen sus licencias OFL. No se añade una licencia general al portafolio ni se reutilizan imágenes, música, logotipos o recursos de Halo o Jujutsu Kaisen.
+Los cuatro CV se conservan sin cambiar su contenido. Las fuentes locales incluyen sus licencias OFL. El sitio no requiere claves, cuenta, base de datos ni servicio de IA.

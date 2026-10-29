@@ -38,7 +38,7 @@ for (const project of data.projects) {
 }
 for (const [i, item] of data.certifications.entries()) https(item.url, 'Certificado ' + i);
 for (const item of data.education) { bilingual(item.title, 'Título'); bilingual(item.detail, 'Educación'); }
-for (const relative of ['data/content.js','js/app.js','js/aurora.js']) {
+for (const relative of ['data/content.js','js/app.js','js/aurora.js','js/skills.js']) {
   try { new vm.Script(await read(relative), {filename:relative}); }
   catch (error) { errors.push(error.message); }
 }
