@@ -33,7 +33,7 @@ for (const project of data.projects) {
     assert(Array.isArray(project.contributions?.[lang]) && project.contributions[lang].length > 0, project.id + ': faltan aportes ' + lang);
   }
   assert(await exists(project.image), 'Imagen ausente: ' + project.image);
-  assert(['screenshot','concept'].includes(project.imageType), 'Tipo de imagen inválido: ' + project.id);
+  assert(['screenshot','concept','logo'].includes(project.imageType), 'Tipo de imagen inválido: ' + project.id);
   for (const field of ['url','demo','download']) if (project[field]) https(project[field], project.id + '.' + field);
 }
 for (const [i, item] of data.certifications.entries()) https(item.url, 'Certificado ' + i);
