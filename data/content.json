@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "updated": "2026-10-29",
+  "updated": "2026-11-08",
   "profile": {
     "name": "Juan Esteban Herrera Herrera",
     "shortName": "Juan Esteban Herrera",
@@ -18,6 +18,125 @@
     }
   },
   "projects": [
+    {
+      "id": "DpIA",
+      "name": "DpIA",
+      "categories": [
+        "ai",
+        "desktop"
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tauri",
+        "Capacitor",
+        "ONNX Runtime Web"
+      ],
+      "url": "https://github.com/JuanEstebanHerreraH/DpIA",
+      "download": "https://github.com/JuanEstebanHerreraH/DpIA/releases",
+      "demo": null,
+      "summary": {
+        "es": "Fotografías listas para imprimir: ajustes, tamaños y superresolución con IA local opcional.",
+        "en": "Print-ready photos: adjustments, sizing and optional local AI super-resolution."
+      },
+      "role": {
+        "es": "Proyecto personal: desarrollo de la aplicación e integración de un modelo preentrenado.",
+        "en": "Personal project: application development and pretrained model integration."
+      },
+      "problem": {
+        "es": "Preparar fotografías para impresión o uso digital sin subir los archivos a un servidor.",
+        "en": "Prepare photos for print or digital use without uploading files to a server."
+      },
+      "contributions": {
+        "es": [
+          "Interfaz de ajustes y comparación antes/después en React y TypeScript.",
+          "Motor compartido con Web Workers; Tauri en Windows y Capacitor en Android.",
+          "Integración de RealESR general x4 en CPU, con progreso y cancelación.",
+          "Exportación PNG, JPEG/JFIF, WebP, AVIF y PDF, con tamaños de impresión."
+        ],
+        "en": [
+          "React and TypeScript adjustment interface with before/after comparison.",
+          "Shared Web Worker engine; Tauri on Windows and Capacitor on Android.",
+          "CPU integration of RealESR general x4 with progress and cancellation.",
+          "PNG, JPEG/JFIF, WebP, AVIF and PDF export, with print sizing."
+        ]
+      },
+      "limits": {
+        "es": "Prototipo 0.2.0: IA en CPU, sin aceleración GPU ni procesamiento por lotes. El resultado depende de la foto y debe revisarse; APK de prueba.",
+        "en": "Version 0.2.0 prototype: CPU AI, without GPU acceleration or batch processing. Results depend on the photo and require review; test APK."
+      },
+      "image": "assets/shots/DpIA.svg",
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Ajusta la fotografía",
+          "Compara con o sin IA",
+          "Elige tamaño y exporta"
+        ],
+        "en": [
+          "Adjust the photo",
+          "Compare with or without AI",
+          "Choose size and export"
+        ]
+      }
+    },
+    {
+      "id": "Retazos",
+      "name": "Retazos · Edición CABA",
+      "categories": [
+        "web"
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/JuanEstebanHerreraH/Retazos",
+      "demo": "https://retazoscaba.vercel.app/",
+      "download": null,
+      "summary": {
+        "es": "Una identidad de papelería de barrio convertida en un sitio web responsive.",
+        "en": "A neighborhood stationery identity translated into a responsive website."
+      },
+      "role": {
+        "es": "Programación frontend por Juan Esteban Herrera. Diseño de Evelin Standke; colaboración diseño-desarrollo.",
+        "en": "Frontend programming by Juan Esteban Herrera. Design by Evelin Standke; design-development collaboration."
+      },
+      "problem": {
+        "es": "Llevar una maqueta visual a la web y adaptarla a escritorio, tablet y celular conservando su identidad.",
+        "en": "Translate a visual design into a website for desktop, tablet and mobile while preserving its identity."
+      },
+      "contributions": {
+        "es": [
+          "Implementación de la maqueta con HTML, CSS y JavaScript sin dependencias.",
+          "Carrusel con teclado y gestos, menú móvil y navegación entre barrios.",
+          "Adaptación responsive y soporte de movimiento reducido."
+        ],
+        "en": [
+          "HTML, CSS and JavaScript implementation without dependencies.",
+          "Keyboard and gesture carousel, mobile menu and neighborhood navigation.",
+          "Responsive layout and reduced-motion support."
+        ]
+      },
+      "limits": {
+        "es": "El formulario valida el correo y muestra confirmación local; no envía datos ni está conectado a un servicio de newsletter.",
+        "en": "The form validates email and displays a local confirmation; it does not submit data or connect to a newsletter service."
+      },
+      "image": "assets/shots/Retazos.svg",
+      "imageType": "concept",
+      "flow": {
+        "es": [
+          "Explora la identidad",
+          "Recorre los barrios",
+          "Prueba la navegación"
+        ],
+        "en": [
+          "Explore the identity",
+          "Browse neighborhoods",
+          "Try the navigation"
+        ]
+      }
+    },
     {
       "id": "xIas",
       "name": "xIas",
