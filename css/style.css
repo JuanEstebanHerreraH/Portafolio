@@ -186,3 +186,7 @@ html[data-motion=on][data-hero-visible=true][data-page-visible=true] .core-wheel
 
 /* Services */
 .service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:32px 0}.service-card{padding:28px;border:1px solid var(--line,#8897a744);border-radius:18px;display:flex;flex-direction:column;gap:16px;background:var(--surface,transparent)}.service-card h3{font-size:1.35rem;line-height:1.25;margin:0}.service-card p{line-height:1.65;margin:0}.service-card .text-link{margin-top:auto}.service-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;border-top:1px solid var(--line,#8897a744)}.service-cta p{max-width:620px;line-height:1.6}@media(max-width:800px){.service-grid{grid-template-columns:1fr}.service-cta{align-items:flex-start;flex-direction:column}}
+
+/* Show complete screenshots and project identities without cropping. */
+.stage-screen[data-image-type="screenshot"] img,.case-preview[data-image-type="screenshot"] img{object-fit:contain;background:#101712}
+.stage-screen[data-image-type="logo"] img,.case-preview[data-image-type="logo"] img{object-fit:contain;padding:28px;background:var(--night)}
