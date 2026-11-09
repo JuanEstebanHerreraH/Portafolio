@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "profile": {
     "name": "Juan Esteban Herrera Herrera",
     "shortName": "Juan Esteban Herrera",
@@ -65,8 +65,8 @@
         "es": "Prototipo 0.2.0: IA en CPU, sin aceleración GPU ni procesamiento por lotes. El resultado depende de la foto y debe revisarse; APK de prueba.",
         "en": "Version 0.2.0 prototype: CPU AI, without GPU acceleration or batch processing. Results depend on the photo and require review; test APK."
       },
-      "image": "assets/shots/DpIA.svg",
-      "imageType": "concept",
+      "image": "assets/shots/DpIA.png",
+      "imageType": "screenshot",
       "flow": {
         "es": [
           "Ajusta la fotografía",
@@ -122,8 +122,8 @@
         "es": "El formulario valida el correo y muestra confirmación local; no envía datos ni está conectado a un servicio de newsletter.",
         "en": "The form validates email and displays a local confirmation; it does not submit data or connect to a newsletter service."
       },
-      "image": "assets/shots/Retazos.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Retazos.png",
+      "imageType": "screenshot",
       "flow": {
         "es": [
           "Explora la identidad",
@@ -424,8 +424,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/Arcionr.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Arcionr-logo.svg",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Selecciona archivos",
@@ -483,8 +483,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/StanSsion.svg",
-      "imageType": "concept",
+      "image": "assets/shots/StanSsion.png",
+      "imageType": "screenshot",
       "flow": {
         "es": [
           "Elige sonidos",
@@ -601,8 +601,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/Vlanets.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Vlanets.png",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Define la red",
@@ -686,7 +686,7 @@
       ],
       "url": "https://github.com/samuelgcruz/dotaciones-app",
       "download": null,
-      "demo": null,
+      "demo": "https://dotaciones-app.vercel.app/",
       "summary": {
         "es": "Catálogo y pedidos de dotaciones: tallas, accesorios e inventario conectado a base de datos.",
         "en": "Uniform catalog and orders: sizes, accessories and database-connected inventory."
@@ -715,8 +715,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/dotaciones.svg",
-      "imageType": "concept",
+      "image": "assets/shots/dotaciones.png",
+      "imageType": "screenshot",
       "flow": {
         "es": [
           "Explora el catálogo",
@@ -772,8 +772,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/Focus.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Focus.png",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Define pasos concretos",
@@ -829,8 +829,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/Iyiris.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Iyiris-web.png",
+      "imageType": "screenshot",
       "flow": {
         "es": [
           "Elige un color",
@@ -888,8 +888,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/Retorp.svg",
-      "imageType": "concept",
+      "image": "assets/shots/Retorp.png",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Explora tu red",
@@ -946,8 +946,8 @@
         "es": "Proyecto de aprendizaje y mejora continua. El repositorio documenta el alcance y las instrucciones de uso.",
         "en": "A project for learning and continuous improvement. The repository documents its scope and usage."
       },
-      "image": "assets/shots/ApEn---App-File-Environment.svg",
-      "imageType": "concept",
+      "image": "assets/shots/ApEn.png",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Añade tus aplicaciones",
@@ -1120,8 +1120,8 @@
         "es": "Prototipo de aprendizaje. No se presenta como una herramienta de seguridad auditada.",
         "en": "Learning prototype. Not presented as an audited security tool."
       },
-      "image": "assets/shots/VaHet.svg",
-      "imageType": "concept",
+      "image": "assets/shots/VaHet.png",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Crea un espacio local",
@@ -1177,8 +1177,8 @@
         "es": "Prototipo de aprendizaje. No se recomienda como gestor de credenciales de producción.",
         "en": "Learning prototype. Not recommended as a production credential manager."
       },
-      "image": "assets/shots/AccNized.svg",
-      "imageType": "concept",
+      "image": "assets/shots/AccNized.jpg",
+      "imageType": "logo",
       "flow": {
         "es": [
           "Registra una cuenta",
