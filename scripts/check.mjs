@@ -61,7 +61,7 @@ for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
   if (value.startsWith('#')) {
     assert(htmlIds.has(value.slice(1)), 'Ancla ausente: ' + value);
   } else if (!/^(https:|mailto:)/.test(value)) {
-    assert(await exists(value), 'Recurso HTML ausente: ' + value);
+      assert(await exists(value.split(/[?#]/)[0]), 'Recurso HTML ausente: ' + value);
   }
 }
 const cssFiles = ['css/style.css','assets/fonts/fonts.css'];
