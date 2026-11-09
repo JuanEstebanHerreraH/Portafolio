@@ -1,22 +1,24 @@
-# Capturas de pantalla
+# Imágenes de proyectos
 
-Poné acá un PNG por proyecto, con el nombre exacto del campo `slug` en `data/content.json`:
+Actualizado el 9 de noviembre de 2026.
 
-```
-Coexfix.png
-Arcionr.png
-Iyiris.png
-FileWatch.png
-Vlanets.png
-Sistema_Trazabilidad_Cafetero.png
-tiendahibrida.java.png
-...
-```
+Las capturas reales se muestran completas. Los logotipos e imágenes oficiales del README se identifican como «IMAGEN OFICIAL DEL PROYECTO», sin presentarlos como capturas de la aplicación.
 
-**Formato:** 1600×900 px (16:9), PNG. Si falta el archivo, la tarjeta dibuja
-un patrón con el color del proyecto — no se rompe nada, pero una captura real
-vale mucho más.
+| Proyecto | Archivo usado | Origen verificado |
+|---|---|---|
+| DpIA | DpIA.png | Captura del README de JuanEstebanHerreraH/DpIA |
+| Retazos | Retazos.png | https://retazoscaba.vercel.app/ |
+| StanSsion | StanSsion.png | https://stan-ssion.vercel.app/ |
+| Iyiris | Iyiris-web.png | https://iyiris-mocha.vercel.app/ |
+| Dotaciones | dotaciones.png | https://dotaciones-app.vercel.app/ (enlace del repositorio samuelgcruz/dotaciones-app) |
+| Arcionr | Arcionr-logo.svg | README: desktop/public/logo.svg |
+| Vlanets | Vlanets.png | README: assets/icon.png |
+| Foco / Focus | Focus.png | Logotipo del README de JuanEstebanHerreraH/Focus |
+| Retorp | Retorp.png | README: Assets/retorp_logo.png |
+| ApEn | ApEn.png | README: Assets/apen_logo.png |
+| VaHet | VaHet.png | README: assets/logo.png |
+| AccNized | AccNized.jpg | README: LogoAppNized.jpg |
 
-**Qué capturar:** la pantalla donde el proyecto hace lo suyo. En Vlanets, un
-cálculo de VLSM resuelto. En FileWatch, el historial de versiones. En iyiris,
-una paleta con el panel de contraste abierto. No el splash ni el menú vacío.
+Se conservaron las capturas existentes de xIas, Recorta y LogiTree. Café Almacén, FileWatch, CoexFix, Tienda Web Pro y PixelGate conservan sus ilustraciones: no se encontró una captura adecuada en los README revisados. PixelGate mostró únicamente la portada de entrada durante la revisión.
+
+No se alteraron los archivos originales de las aplicaciones. Las imágenes adicionales de README se conservaron como recursos de referencia.
