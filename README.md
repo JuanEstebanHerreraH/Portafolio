@@ -13,7 +13,7 @@ Portafolio de Juan Esteban Herrera: aplicaciones, sistemas y herramientas con de
 - Asistente visual con mensajes preparados al explorar las órbitas.
 - Cinco demostraciones: consulta de productos, vista de recorte, subnetting, limpieza/suma de una tabla y organización de archivos.
 - Tecnologías y herramientas de evidencia junto a cada demostración.
-- 18 proyectos con capturas o ilustraciones identificadas; un caso se abre a la vez.
+- 20 proyectos con capturas o ilustraciones identificadas; un caso se abre a la vez.
 - Tres hitos de formación y cursos complementarios en un bloque desplegable.
 - Cuatro CV PDF: desarrollo, soporte TI, ofimática y desarrollo en inglés.
 - Footer en azul petróleo y verdes, coherente con la portada.
@@ -68,3 +68,8 @@ Textos y navegación: index.html y js/app.js. Atmósfera/asistente: js/aurora.js
 
 Los CV están disponibles desde la web. Las fuentes locales incluyen sus licencias OFL. El sitio no requiere claves, cuenta, base de datos ni servicio de IA.
 
+
+
+### Experiencia profesional
+
+<img width="1265" height="712" alt="Experiencia freelance y práctica en la CUN, sección publicada del portafolio" src="https://github.com/user-attachments/assets/d651cdf5-4ccd-4482-810e-f904f691c7b3" />
