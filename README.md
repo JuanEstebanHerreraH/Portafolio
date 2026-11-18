@@ -1,6 +1,8 @@
 # Juan Esteban Herrera · Aurora
 
-Portafolio de aplicaciones, sistemas y herramientas. Aurora y átomo animados, asistente visual y habilidades que se pueden probar.
+Portafolio de Juan Esteban Herrera: aplicaciones, sistemas y herramientas con demostraciones interactivas y acceso a sus repositorios.
+
+**[Visitar el portafolio](https://juanestebanherrerah.github.io/Portafolio/) · [Perfil de GitHub](https://github.com/JuanEstebanHerreraH)**
 
 ![Portada](docs/portada.jpg)
 
@@ -34,7 +36,7 @@ El asistente usa respuestas preparadas. Esta web no ejecuta inferencia, segmenta
 
 ## Abrir
 
-Extrae el ZIP y abre **index.html**, conservando todas las carpetas. No necesitas instalar paquetes.
+Clona o descarga el repositorio y abre **index.html**, conservando todas las carpetas. Para la vista estática no necesitas instalar paquetes.
 
 Vista por HTTP opcional con Node.js 18 o posterior:
 
@@ -44,15 +46,9 @@ npm run preview
 
 Abre http://127.0.0.1:8080. Detén el servidor con Ctrl+C.
 
-## Actualizar GitHub Pages
+## Publicación
 
-1. Conserva una copia de tu versión actual.
-2. Copia todo el contenido del ZIP a la raíz del repositorio Portafolio.
-3. Incluye css, js, data, assets, .nojekyll y .gitignore. Conserva la carpeta .git si ya tienes el repositorio local.
-4. Sube los cambios a la rama configurada para GitHub Pages.
-5. Revisa la portada, las demostraciones y las cuatro descargas.
-
-Esta entrega modifica los archivos locales y prepara el ZIP. No publica automáticamente en GitHub.
+El sitio público está en [GitHub Pages](https://juanestebanherrerah.github.io/Portafolio/). Para actualizarlo, sube los cambios a la fuente configurada para Pages y comprueba la portada, las demostraciones y los enlaces a CV.
 
 ## Mantenimiento
 
@@ -70,4 +66,4 @@ Textos y navegación: index.html y js/app.js. Atmósfera/asistente: js/aurora.js
 - [Verificación](docs/VERIFICACION.md)
 - [Recursos](docs/RECURSOS.md)
 
-Los cuatro CV se conservan sin cambiar su contenido. Las fuentes locales incluyen sus licencias OFL. El sitio no requiere claves, cuenta, base de datos ni servicio de IA.
+Los CV están disponibles desde la web. Las fuentes locales incluyen sus licencias OFL. El sitio no requiere claves, cuenta, base de datos ni servicio de IA.
