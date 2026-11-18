@@ -15,10 +15,10 @@ Portafolio de Juan Esteban Herrera: aplicaciones, sistemas y herramientas con de
 - Tecnologías y herramientas de evidencia junto a cada demostración.
 - 18 proyectos con capturas o ilustraciones identificadas; un caso se abre a la vez.
 - Tres hitos de formación y cursos complementarios en un bloque desplegable.
-- Cuatro CV PDF, español/inglés y tema claro/oscuro.
+- Cuatro CV PDF: desarrollo, soporte TI, ofimática y desarrollo en inglés.
 - Footer en azul petróleo y verdes, coherente con la portada.
 
-La experiencia se presenta junto a las herramientas como práctica personal, académica y en equipo. No hay un bloque adicional que repita colaboraciones o enlaces al CV.
+La sección Experiencia incluye servicios freelance desde enero de 2023 y la práctica en gestión documental y recursos digitales en la CUN, de agosto a noviembre de 2025. Los proyectos personales, académicos y colaborativos se describen por separado.
 
 ## Movimiento y móvil
 
@@ -67,3 +67,4 @@ Textos y navegación: index.html y js/app.js. Atmósfera/asistente: js/aurora.js
 - [Recursos](docs/RECURSOS.md)
 
 Los CV están disponibles desde la web. Las fuentes locales incluyen sus licencias OFL. El sitio no requiere claves, cuenta, base de datos ni servicio de IA.
+

@@ -44,7 +44,7 @@
 <div class="header-inner wrap">
 <a class="brand" href="#inicio" aria-label="Juan Esteban Herrera, inicio"><svg class="brand-wheel" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-wheel"/></svg><span>JUAN ESTEBAN<small data-i18n="brandSub">DESARROLLO · SISTEMAS · HERRAMIENTAS</small></span></a>
 <nav class="desktop-nav" aria-label="Navegación principal">
-<a href="#herramientas" data-i18n="navTools">Herramientas</a><a href="#capacidades" data-i18n="navSkills">Habilidades</a><a href="#formacion" data-i18n="navLearning">Formación</a><a href="#servicios" data-i18n="navServices">Servicios</a><a href="#cv">CV</a><a href="#contacto" data-i18n="navContact">Contacto</a>
+<a href="#herramientas" data-i18n="navTools">Herramientas</a><a href="#capacidades" data-i18n="navSkills">Habilidades</a><a href="#experiencia" data-i18n="navExperience">Experiencia</a><a href="#formacion" data-i18n="navLearning">Formación</a><a href="#servicios" data-i18n="navServices">Servicios</a><a href="#cv">CV</a><a href="#contacto" data-i18n="navContact">Contacto</a>
 </nav>
 <div class="header-controls">
 <button id="language-toggle" class="language-toggle" aria-label="Switch to English">ES<span>/ EN</span></button>
@@ -53,7 +53,7 @@
 <button id="menu-toggle" class="icon-button menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" viewBox="0 0 24 24"><use href="#i-menu"/></svg></button>
 </div>
 </div>
-<nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden><a href="#herramientas" data-i18n="navTools">Herramientas</a><a href="#capacidades" data-i18n="navSkills">Habilidades</a><a href="#formacion" data-i18n="navLearning">Formación</a><a href="#servicios" data-i18n="navServices">Servicios</a><a href="#cv" data-i18n="downloadCV">Descargar CV</a><a href="#contacto" data-i18n="navContact">Contacto</a></nav>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden><a href="#herramientas" data-i18n="navTools">Herramientas</a><a href="#capacidades" data-i18n="navSkills">Habilidades</a><a href="#experiencia" data-i18n="navExperience">Experiencia</a><a href="#formacion" data-i18n="navLearning">Formación</a><a href="#servicios" data-i18n="navServices">Servicios</a><a href="#cv" data-i18n="downloadCV">Descargar CV</a><a href="#contacto" data-i18n="navContact">Contacto</a></nav>
 </header>
 
 <main id="contenido">
@@ -100,7 +100,7 @@
 <div class="tool-stage" id="tool-stage" aria-live="polite" aria-atomic="true"></div>
 </div>
 <div class="empty-tools" id="empty-tools" hidden><h3 data-i18n="emptyTools">No encontré esa herramienta.</h3><p data-i18n="emptyHint">Prueba con Java, redes, IA o el nombre de una aplicación.</p><button class="button button-dark" id="reset-search" data-i18n="clearSearch">Limpiar búsqueda</button></div>
-<div class="project-context"><span data-i18n="projectNote">Práctica personal, académica y en equipo.</span><span data-i18n="workModeValue">Prioridad remoto · Híbrido en Bogotá</span></div>
+<div class="project-context"><span data-i18n="projectNote">Proyectos personales, académicos y en equipo. Experiencia freelance desde 2023.</span><span data-i18n="workModeValue">Prioridad remoto · Híbrido en Bogotá</span></div>
 </section>
 
 <section id="capacidades" class="skills-section section-space" aria-labelledby="skills-title">
@@ -109,6 +109,12 @@
 </div>
 </section>
 
+<section id="experiencia" class="services-section section-space wrap" aria-labelledby="experience-title">
+<div class="section-heading"><div><p class="eyebrow" data-i18n="experienceKicker">MI TRAYECTORIA</p><h2 id="experience-title" data-i18n-html="experienceTitle">Experiencia.<br><span>Servicios y gestión digital.</span></h2></div><p class="section-lead" data-i18n="experienceLead">Trabajo freelance y práctica institucional, junto con mi formación y mis proyectos.</p></div>
+<div class="service-grid">
+<article class="service-card"><p class="eyebrow" data-i18n="freelanceDate">ENERO 2023 - ACTUALIDAD</p><h3 data-i18n="freelanceTitle">Desarrollo y servicios informáticos freelance</h3><p data-i18n="freelanceBody">Desarrollo de páginas web y aplicaciones, servicios de cómputo y asistencia informática. Orientación técnica en tareas y proyectos, con alcance acordado para cada servicio.</p></article>
+<article class="service-card"><p class="eyebrow" data-i18n="internDate">AGOSTO - NOVIEMBRE 2025</p><h3 data-i18n="internTitle">Practicante en gestión documental y recursos digitales</h3><p data-i18n="internCompany">Corporación Unificada Nacional de Educación Superior CUN</p><p data-i18n="internBody">Administración de documentación técnica y recursos digitales institucionales. Diseño y optimización de la estructura organizativa de archivos digitales. Organización y clasificación de información informática para facilitar su consulta y análisis.</p></article>
+</div></section>
 <section id="formacion" class="education-section section-space wrap" aria-labelledby="education-title">
 <div class="section-heading"><div><p class="eyebrow" data-i18n="educationKicker">MI FORMACIÓN</p><h2 id="education-title" data-i18n-html="educationTitle">Una base técnica.<br><span>En evolución.</span></h2></div><p class="section-lead" data-i18n="educationLead">Técnico graduado, formación ONE/Alura e Ingeniería de Sistemas en curso.</p></div>
 <div id="credential-milestones" class="credential-milestones"></div>
@@ -138,3 +144,4 @@
 <noscript><div class="noscript-note">Activa JavaScript para explorar herramientas. Puedes consultar <a href="https://github.com/JuanEstebanHerreraH">los repositorios en GitHub</a> o descargar los CV: <a href="assets/cv/CV-Juan-Esteban-Desarrollo.pdf">Desarrollo</a>, <a href="assets/cv/CV-Juan-Esteban-Soporte-TI.pdf">Soporte TI</a>, <a href="assets/cv/CV-Juan-Esteban-Ofimatica.pdf">Ofimática</a> y <a href="assets/cv/CV-Juan-Esteban-Desarrollo-ENG.pdf">Desarrollo ENG</a>.</div></noscript>
 </body>
 </html>
+
